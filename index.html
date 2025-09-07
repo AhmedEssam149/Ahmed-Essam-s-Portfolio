@@ -18,51 +18,33 @@
             theme: {
                 extend: {
                     colors: {
-                        slate: {
-                            '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8',
-                            '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a'
-                        }
+                        slate: { '50': '#f8fafc', '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8', '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a', '950': '#020617' }
                     }
                 }
             }
         }
     </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        body { font-family: 'Inter', sans-serif; }
         .gradient-text {
             background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
-        }
-        .kpi-value {
-            font-variant-numeric: tabular-nums;
-        }
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
+        .kpi-value { font-variant-numeric: tabular-nums; }
     </style>
 </head>
 <body class="relative bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300">
     <div id="particles-js"></div>
 
     <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md" id="navbar">
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold gradient-text">Ahmed Essam</a>
             <div class="flex items-center space-x-4 md:space-x-6">
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">About</a>
-                    <a href="#experience" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Experience</a>
-                    <a href="#skills" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Skills</a>
-                    <a href="#dashboard" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Dashboard</a>
-                    <a href="#contact" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Contact</a>
+                <nav class="hidden md:flex space-x-8" id="desktop-nav">
+                    <!-- Nav links will be injected here -->
                 </nav>
                 <button id="theme-toggle" class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition-colors" aria-label="Toggle theme">
                     <svg id="theme-icon-sun" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
@@ -75,11 +57,7 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 dark:bg-slate-900/80">
-            <a href="#about" class="block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">About</a>
-            <a href="#experience" class="block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Experience</a>
-            <a href="#skills" class="block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Skills</a>
-            <a href="#dashboard" class="block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Dashboard</a>
-            <a href="#contact" class="block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">Contact</a>
+            <!-- Mobile nav links will be injected here -->
         </div>
     </header>
 
@@ -88,12 +66,8 @@
         <!-- Hero Section -->
         <section id="about" class="min-h-screen flex items-center relative">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-6xl md:text-8xl font-black mb-2 leading-tight animate-target">
-                    Ahmed Essam
-                </h1>
-                <h2 class="text-4xl md:text-5xl font-bold mb-8 animate-target">
-                    <span class="gradient-text">MIS Specialist & Data Analyst</span>
-                </h2>
+                <h1 class="text-6xl md:text-8xl font-black mb-2 leading-tight animate-target">Ahmed Essam</h1>
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 animate-target"><span class="gradient-text">MIS Specialist & Data Analyst</span></h2>
                 <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-8 max-w-3xl animate-target mx-auto text-justify">
                     I'm passionate about finding the story within the data. My expertise lies in bridging the gap between raw information and strategic decision-making, crafting enterprise-level MIS solutions and intuitive dashboards that empower teams and drive digital transformation.
                 </p>
@@ -107,32 +81,22 @@
             <!-- Scroll Down Indicator -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
                 <a href="#experience" class="animate-bounce block p-2" aria-label="Scroll to next section">
-                    <svg class="w-8 h-8 text-slate-500 dark:text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
+                    <svg class="w-8 h-8 text-slate-500 dark:text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
                 </a>
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- Dynamic Sections -->
         <section id="experience" class="py-16">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text animate-target">Career Journey</h2>
-            <div class="relative max-w-6xl mx-auto border-l-2 border-sky-500/30">
-                <!-- Timeline items will be injected here by JS -->
-            </div>
+            <div class="relative max-w-6xl mx-auto border-l-2 border-sky-500/30"></div>
         </section>
 
-
-        <!-- Skills Section -->
         <section id="skills" class="py-16">
             <h2 class="text-4xl font-bold text-center mb-16 gradient-text animate-target">My Tool Kit</h2>
-             <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-8">
-                 <!-- Skills will be injected here by JS -->
-            </div>
+             <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-8"></div>
         </section>
 
-
-        <!-- Dashboard Section -->
         <section id="dashboard" class="py-16">
             <div class="text-center">
                 <h2 class="text-4xl font-bold mb-4 gradient-text animate-target">Live Dashboard Demo</h2>
@@ -141,87 +105,31 @@
                 </p>
             </div>
             
-            <div class="max-w-7xl mx-auto p-4 md:p-8 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md animate-target">
-                <!-- KPIs -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8">
-                    <div class="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-300 hover:scale-105">
-                        <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">NPS</h4>
-                        <div class="flex items-baseline justify-center gap-2">
-                            <p id="kpi-nps" class="text-4xl font-black text-sky-500 kpi-value">0 %</p>
-                            <div id="kpi-nps-change" class="font-semibold text-xs"></div>
-                        </div>
-                    </div>
-                     <div class="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-300 hover:scale-105">
-                        <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">Avg. Handling Time</h4>
-                         <div class="flex items-baseline justify-center gap-2">
-                            <p id="kpi-aht" class="text-4xl font-black text-violet-500 kpi-value">0 sec</p>
-                            <div id="kpi-aht-change" class="font-semibold text-xs"></div>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-300 hover:scale-105">
-                        <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">FCR</h4>
-                        <div class="flex items-baseline justify-center gap-2">
-                            <p id="kpi-fcr" class="text-4xl font-black text-emerald-500 kpi-value">0 %</p>
-                             <div id="kpi-fcr-change" class="font-semibold text-xs"></div>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-300 hover:scale-105">
-                        <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">Open Tickets</h4>
-                        <div class="flex items-baseline justify-center gap-2">
-                            <p id="kpi-tickets" class="text-4xl font-black text-amber-500 kpi-value">0</p>
-                            <div id="kpi-tickets-change" class="font-semibold text-xs"></div>
-                        </div>
-                    </div>
+            <div class="max-w-6xl mx-auto p-4 md:p-8 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md animate-target">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8" id="kpi-container">
+                    <!-- KPIs will be injected here -->
                 </div>
                 
-                <!-- Filters -->
-                <div class="flex justify-center items-center gap-4 mb-8">
+                <div class="flex justify-center items-center gap-4 mb-8" id="dashboard-filters">
                     <span class="text-sm font-semibold">Filter by Team:</span>
-                    <button class="data-filter bg-sky-500 text-white py-1 px-3 rounded-md text-sm transition-colors" data-team="All">All</button>
-                    <button class="data-filter bg-slate-300 dark:bg-slate-700 py-1 px-3 rounded-md text-sm transition-colors" data-team="Tech">Tech</button>
-                    <button class="data-filter bg-slate-300 dark:bg-slate-700 py-1 px-3 rounded-md text-sm transition-colors" data-team="Billing">Billing</button>
+                    <!-- Filter buttons will be injected here -->
                 </div>
                 
-                <!-- Charts Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg">
-                        <h3 class="font-bold text-center mb-2">Tickets by Priority</h3>
-                        <div id="bar-chart" class="w-full h-80"></div>
-                    </div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg">
-                        <h3 class="font-bold text-center mb-2">Tickets per Day</h3>
-                        <div id="line-chart" class="w-full h-80"></div>
-                    </div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg">
-                        <h3 class="font-bold text-center mb-2">Tickets by Channel</h3>
-                        <div id="donut-chart-container" class="w-full h-80 flex flex-col md:flex-row items-center justify-center">
-                            <div id="donut-chart" class="flex-grow h-full w-full"></div>
-                            <div id="donut-legend" class="flex-shrink-0 p-2 space-y-1"></div>
-                        </div>
-                    </div>
-                     <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg">
-                        <h3 class="font-bold text-center mb-2">Top Agents by Tickets Solved</h3>
-                        <div id="agent-chart" class="w-full h-80"></div>
-                    </div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Priority</h3><div id="bar-chart" class="w-full h-80"></div></div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets per Day</h3><div id="line-chart" class="w-full h-80"></div></div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Channel</h3><div id="donut-chart-container" class="w-full h-80 flex flex-col md:flex-row items-center justify-center"><div id="donut-chart" class="flex-grow h-full w-full"></div><div id="donut-legend" class="flex-shrink-0 p-2 space-y-1"></div></div></div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Top Agents by Tickets Solved</h3><div id="agent-chart" class="w-full h-80"></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-16">
             <div class="text-center">
                 <h2 class="text-4xl font-bold mb-4 gradient-text animate-target">Let's Connect</h2>
                 <p class="text-slate-500 dark:text-slate-400 mb-8 max-w-xl mx-auto animate-target">I'm always excited to discuss new projects, share insights on data challenges, or simply connect with fellow professionals. Feel free to reach out—my inbox is always open.</p>
-                <div class="flex justify-center space-x-8 mt-8 animate-target">
-                    <a href="mailto:ahmed.essam14998@gmail.com" target="_blank" class="text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors" aria-label="Email">
-                        <svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/ahmedessam14998" target="_blank" class="text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors" aria-label="LinkedIn">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-                    </a>
-                    <a href="https://github.com/AhmedEssam149" target="_blank" class="text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors" aria-label="GitHub">
-                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
-                    </a>
+                <div class="flex justify-center space-x-8 mt-8 animate-target" id="social-links-container">
+                    <!-- Social links will be injected here -->
                 </div>
             </div>
         </section>
@@ -234,96 +142,157 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-        gsap.registerPlugin(TextPlugin);
+        gsap.registerPlugin(TextPlugin, ScrollTrigger);
         
-        let dashboardInitialized = false;
-        let particlesInstance;
-        let mockData = [];
-        const margin = {top: 20, right: 30, bottom: 40, left: 70};
-        const chartElements = {}; 
+        // --- CONFIGURATION & DATA ---
+        const APP_CONFIG = {
+            navLinks: [ { href: "#about", title: "About" }, { href: "#experience", title: "Experience" }, { href: "#skills", title: "Skills" }, { href: "#dashboard", title: "Dashboard" }, { href: "#contact", title: "Contact" } ],
+            experiences: [ { role: "Senior MIS Specialist", company: "e& CX Solutions", period: "Jul 2025 - Present", details: ["As a core part of the data team, I architect and launch MIS solutions that serve the entire enterprise. My primary focus is on breaking down data silos, which has boosted data accessibility for key stakeholders.", "I specialize in transforming complex datasets into clear, compelling narratives. By building dynamic, automated dashboards, I've slashed executive reporting time from days to hours.", "I actively champion and lead digital transformation projects. This involves aligning our data and MIS strategies with core business objectives to ensure we're not just supporting the business, but actively driving its growth."] }, { role: "Training and Quality Engineer", company: "BEDO Innovating Education", period: "Jan 2024 - June 2025", details: ["At BEDO, I took the lead on refining our quality assurance processes. I developed and implemented new testing protocols for consumer electronics that led to faster testing cycle and a measurable improvement in product quality.", "My role involved overseeing QA for a diverse portfolio of over 20 concurrent projects. My efforts directly contributed to increase in overall project reliability and client satisfaction.", "I also had the opportunity to share my technical knowledge by designing and delivering training programs for our clients, achieving the highest satisfaction rate through clear, hands-on, and effective instruction."] }, { role: "Data Analyst", company: "Srour Group", period: "Sep 2021 - Dec 2023", details: ["During my time at Srour Group, I was a key contributor to a major software development project. My work in providing advanced analytics was a significant factor in the company's impressive revenue growth.", "I identified a major bottleneck in our reporting process and took the initiative to automate it. By developing new workflows using VBA and python, I eliminated hours of manual data processing each week for my team.", "I conducted deep-dive root cause analyses on our operational data, uncovering critical insights that enabled us to implement targeted fixes, leading to a 50% reduction in system downtime."] } ],
+            skills: [{ name: "Power BI", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zM16 8h6v13h-6V8z"/></svg>' }, { name: "SQL", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>' }, { name: "Advanced Excel", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>' }, { name: "Python", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 9.5a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 0 0 6.33 2.17.5.5 0 0 1 .84.52 4.5 4.5 0 0 1-8.17-2.69v-1a4.5 4.5 0 0 1 9 0v1a.5.5 0 0 1-1 0v-1z"/><path d="M9.5 14.5a3.5 3.5 0 0 0 7 0v-1a3.5 3.5 0 0 0-6.33-2.17.5.5 0 0 1-.84-.52 4.5 4.5 0 0 1 8.17 2.69v1a4.5 4.5 0 0 1-9 0v-1a.5.5 0 0 1 1 0v1z"/></svg>' }, { name: "Data Warehousing", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' }, { name: "ETL Processes", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12l4 4M4 12l4-4M20 12l-4 4M20 12l-4-4"/></svg>' }, { name: "Power Query", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 12.2c.4-.7.4-1.6 0-2.3l-2-3.5c-.4-.7-1.2-1-2-1h-4.2c-.8 0-1.6.3-2 .9l-2 3.5c-.4.7-.4 1.6 0 2.3l2 3.5c.4.7 1.2 1 2 1h4.2c.8 0 1.6-.3 2-1l2-3.5z"/><path d="M12 15.5V18"/><path d="M12 6v6.5"/></svg>' }, { name: "VBA", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>' }, { name: "Agile Practices", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>' }, { name: "ISTQB", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>' }],
+            socials: [ { href: "mailto:ahmed.essam14998@gmail.com", label: "Email", icon: '<svg class="w-9 h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>' }, { href: "https://linkedin.com/in/ahmedessam14998", label: "LinkedIn", icon: '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>' }, { href: "https://github.com/AhmedEssam149", label: "GitHub", icon: '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>' } ],
+            dashboard: {
+                kpis: [
+                    { id: 'nps', title: 'NPS', color: 'text-sky-500', good: 'up', unit: '%' },
+                    { id: 'aht', title: 'Avg. Handling Time', color: 'text-violet-500', good: 'down', unit: ' sec' },
+                    { id: 'fcr', title: 'FCR', color: 'text-emerald-500', good: 'up', unit: '%' },
+                    { id: 'tickets', title: 'Open Tickets', color: 'text-amber-500', good: 'down', unit: '' }
+                ],
+                filters: ['All', 'Tech', 'Billing'],
+                chartMargin: {top: 20, right: 30, bottom: 40, left: 70}
+            }
+        };
 
-        // --- THEME SWITCHER ---
-        const themeToggle = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('theme-icon-sun');
-        const moonIcon = document.getElementById('theme-icon-moon');
-        
+        // --- GLOBAL STATE ---
+        let state = {
+            theme: localStorage.getItem('theme') || 'light',
+            dashboardInitialized: false,
+            particlesInstance: null,
+            mockData: [],
+            chartElements: {},
+            resizeTimer: null
+        };
+
+        // --- DOM HELPER ---
+        const $ = (selector) => document.querySelector(selector);
+        const $$ = (selector) => document.querySelectorAll(selector);
+
+        // --- DYNAMIC CONTENT INJECTION ---
+        function populateContent() {
+            // Navigation
+            const navLinksHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="hover:text-sky-500 dark:hover:text-sky-400 transition-colors">${link.title}</a>`).join('');
+            $('#desktop-nav').innerHTML = navLinksHTML;
+            const mobileNavLinksHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">${link.title}</a>`).join('');
+            $('#mobile-menu').innerHTML = mobileNavLinksHTML;
+
+            // Experience
+            const expContainer = $('#experience .relative');
+            expContainer.innerHTML = APP_CONFIG.experiences.map(exp => `
+                <div class="mb-12 relative animate-target pl-12">
+                    <div class="absolute w-4 h-4 bg-sky-500 rounded-full left-[-8.5px] top-1.5 border-4 border-slate-50 dark:border-slate-950"></div>
+                    <div class="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md transition-transform duration-300 hover:scale-[1.02]">
+                        <p class="text-sm text-sky-500 dark:text-sky-400 font-medium">${exp.period}</p>
+                        <h3 class="text-2xl font-bold mt-1">${exp.role}</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">${exp.company}</p>
+                        <ul class="text-justify list-disc list-inside text-slate-600 dark:text-slate-300 space-y-3">${exp.details.map(d => `<li>${d}</li>`).join('')}</ul>
+                    </div>
+                </div>`).join('');
+
+            // Skills
+            const skillsContainer = $('#skills .grid');
+            skillsContainer.innerHTML = APP_CONFIG.skills.map(skill => `
+                <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-lg p-4 text-center transition-transform duration-300 hover:scale-105 hover:bg-white/90 dark:hover:bg-slate-900/80">
+                    <div class="text-sky-500 dark:text-sky-400 w-10 h-10 mx-auto mb-2 flex items-center justify-center">${skill.icon}</div>
+                    <h3 class="font-semibold text-slate-700 dark:text-slate-200">${skill.name}</h3>
+                </div>`).join('');
+            
+            // Socials
+             $('#social-links-container').innerHTML = APP_CONFIG.socials.map(social => `
+                <a href="${social.href}" target="_blank" class="text-slate-400 hover:text-sky-500 dark:hover:text-sky-400 transition-colors" aria-label="${social.label}">${social.icon}</a>
+             `).join('');
+
+            // Dashboard KPIs and Filters
+            $('#kpi-container').innerHTML = APP_CONFIG.dashboard.kpis.map(kpi => `
+                <div class="p-4 bg-slate-100 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-300 hover:scale-105">
+                    <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">${kpi.title}</h4>
+                    <div class="flex-col items-baseline justify-center gap-2">
+                        <p id="kpi-${kpi.id}" class="text-4xl font-black ${kpi.color} kpi-value">0</p>
+                        <div id="kpi-${kpi.id}-change" class="font-semibold text-xs"></div>
+                    </div>
+                </div>
+            `).join('');
+            
+            $('#dashboard-filters').innerHTML += APP_CONFIG.dashboard.filters.map((filter, index) => `
+                <button class="data-filter ${index === 0 ? 'bg-sky-500 text-white' : 'bg-slate-300 dark:bg-slate-700'} py-1 px-3 rounded-md text-sm transition-colors" data-team="${filter}">${filter}</button>
+            `).join('');
+        }
+
+        // --- THEME MANAGEMENT ---
         function applyTheme(theme) {
-            if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            } else {
-                document.documentElement.classList.remove('dark');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            $('#theme-icon-sun').classList.toggle('hidden', theme !== 'dark');
+            $('#theme-icon-moon').classList.toggle('hidden', theme === 'dark');
+
+            if (state.particlesInstance) {
+                const color = theme === 'dark' ? '#475569' : '#94a3b8';
+                state.particlesInstance.options.particles.color.value = color;
+                state.particlesInstance.options.particles.links.color.value = color;
+                state.particlesInstance.refresh();
             }
-            if (particlesInstance) {
-                particlesInstance.options.particles.color.value = theme === 'dark' ? '#475569' : '#94a3b8';
-                particlesInstance.options.particles.links.color.value = theme === 'dark' ? '#475569' : '#94a3b8';
-                particlesInstance.refresh();
-            }
-            if (dashboardInitialized) {
-                updateDashboard(document.querySelector('.data-filter.bg-sky-500').dataset.team, false);
+            if (state.dashboardInitialized) {
+                updateDashboard($('.data-filter.bg-sky-500').dataset.team, false);
             }
         }
         
-        let currentTheme = localStorage.getItem('theme') || 'light';
-        applyTheme(currentTheme);
+        function setupThemeToggle() {
+            applyTheme(state.theme);
+            $('#theme-toggle').addEventListener('click', () => {
+                state.theme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+                localStorage.setItem('theme', state.theme);
+                applyTheme(state.theme);
+            });
+        }
         
-        themeToggle.addEventListener('click', () => {
-            const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-            localStorage.setItem('theme', newTheme);
-            applyTheme(newTheme);
-        });
-        
-        // --- MOBILE MENU ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        });
-        
-        // --- DYNAMIC CONTENT (Experience & Skills) ---
-        const experiences = [ { role: "Senior MIS Specialist", company: "e& CX Solutions", period: "Jul 2025 - Present", details: ["As a core part of the data team, I architect and launch MIS solutions that serve the entire enterprise. My primary focus is on breaking down data silos, which has boosted data accessibility for key stakeholders.", "I specialize in transforming complex datasets into clear, compelling narratives. By building dynamic, automated dashboards, I've slashed executive reporting time from days to hours.", "I actively champion and lead digital transformation projects. This involves aligning our data and MIS strategies with core business objectives to ensure we're not just supporting the business, but actively driving its growth."] }, { role: "Training and Quality Engineer", company: "BEDO Innovating Education", period: "Jan 2024 - June 2025", details: ["At BEDO, I took the lead on refining our quality assurance processes. I developed and implemented new testing protocols for consumer electronics that led to faster testing cycle and a measurable improvement in product quality.", "My role involved overseeing QA for a diverse portfolio of over 20 concurrent projects. My efforts directly contributed to increase in overall project reliability and client satisfaction.", "I also had the opportunity to share my technical knowledge by designing and delivering training programs for our clients, achieving the highest satisfaction rate through clear, hands-on, and effective instruction."] }, { role: "Data Analyst", company: "Srour Group", period: "Sep 2021 - Dec 2023", details: ["During my time at Srour Group, I was a key contributor to a major software development project. My work in providing advanced analytics was a significant factor in the company's impressive revenue growth.", "I identified a major bottleneck in our reporting process and took the initiative to automate it. By developing new workflows using VBA and python, I eliminated hours of manual data processing each week for my team.", "I conducted deep-dive root cause analyses on our operational data, uncovering critical insights that enabled us to implement targeted fixes, leading to a 50% reduction in system downtime."] } ];
-        const experienceContainer = document.querySelector('#experience .relative');
-        experiences.forEach((exp) => { experienceContainer.innerHTML += `<div class="mb-12 relative animate-target pl-12"><div class="absolute w-4 h-4 bg-sky-500 rounded-full left-[-8.5px] top-1.5 border-4 border-slate-50 dark:border-slate-950"></div><div class="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md transition-transform duration-300 hover:scale-[1.02]"><p class="text-sm text-sky-500 dark:text-sky-400 font-medium">${exp.period}</p><h3 class="text-2xl font-bold mt-1">${exp.role}</h3><p class="text-slate-500 dark:text-slate-400 mb-4">${exp.company}</p><ul class="text-justify list-disc list-inside text-slate-600 dark:text-slate-300 space-y-3">${exp.details.map(d => `<li>${d}</li>`).join('')}</ul></div></div>`; });
-        
-        const skills = [{ name: "Power BI", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zM16 8h6v13h-6V8z"/></svg>' }, { name: "SQL", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>' }, { name: "Advanced Excel", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>' }, { name: "Python", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 9.5a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 0 0 6.33 2.17.5.5 0 0 1 .84.52 4.5 4.5 0 0 1-8.17-2.69v-1a4.5 4.5 0 0 1 9 0v1a.5.5 0 0 1-1 0v-1z"/><path d="M9.5 14.5a3.5 3.5 0 0 0 7 0v-1a3.5 3.5 0 0 0-6.33-2.17.5.5 0 0 1-.84-.52 4.5 4.5 0 0 1 8.17 2.69v1a4.5 4.5 0 0 1-9 0v-1a.5.5 0 0 1 1 0v1z"/></svg>' }, { name: "Data Warehousing", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>' }, { name: "ETL Processes", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12l4 4M4 12l4-4M20 12l-4 4M20 12l-4-4"/></svg>' }, { name: "Power Query", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 12.2c.4-.7.4-1.6 0-2.3l-2-3.5c-.4-.7-1.2-1-2-1h-4.2c-.8 0-1.6.3-2 .9l-2 3.5c-.4.7-.4 1.6 0 2.3l2 3.5c.4.7 1.2 1 2 1h4.2c.8 0 1.6-.3 2-1l2-3.5z"/><path d="M12 15.5V18"/><path d="M12 6v6.5"/></svg>' }, { name: "VBA", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>' }, { name: "Agile Practices", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>' }, { name: "ISTQB", icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>' }];
-        const skillsContainer = document.querySelector('#skills .grid');
-        skills.forEach(skill => { skillsContainer.innerHTML += `<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-lg p-4 text-center transition-transform duration-300 hover:scale-105 hover:bg-white/90 dark:hover:bg-slate-900/80"><div class="text-sky-500 dark:text-sky-400 w-10 h-10 mx-auto mb-2 flex items-center justify-center">${skill.icon}</div><h3 class="font-semibold text-slate-700 dark:text-slate-200">${skill.name}</h3></div>`; });
-        
-        gsap.utils.toArray('.animate-target').forEach(el => {
-            gsap.from(el, { opacity: 0, y: 50, duration: 0.6, scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
-        });
-        
-        // --- ADVANCED DASHBOARD SCRIPT ---
+        // --- UI & INTERACTIONS ---
+        function setupMobileMenu() {
+            $('#mobile-menu-button').addEventListener('click', () => $('#mobile-menu').classList.toggle('hidden'));
+            $('#mobile-menu').addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    $('#mobile-menu').classList.add('hidden');
+                }
+            });
+        }
+
+        function setupAnimations() {
+            gsap.utils.toArray('.animate-target').forEach(el => {
+                gsap.from(el, { opacity: 0, y: 50, duration: 0.6, scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
+            });
+        }
+
+        function setupParticles() {
+            tsParticles.load("particles-js", {
+                fpsLimit: 60,
+                interactivity: { events: { onHover: { enable: true, mode: "repulse" }, resize: true }, modes: { repulse: { distance: 100, duration: 0.4 } } },
+                particles: {
+                    color: { value: state.theme === 'dark' ? '#475569' : '#94a3b8' },
+                    links: { color: { value: state.theme === 'dark' ? '#475569' : '#94a3b8' }, distance: 150, enable: true, opacity: 0.2, width: 1 },
+                    move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: false, speed: 1, straight: false },
+                    number: { density: { enable: true, area: 800 }, value: 80 },
+                    opacity: { value: 0.2 },
+                    shape: { type: "circle" },
+                    size: { value: { min: 1, max: 3 } },
+                },
+                detectRetina: true,
+            }).then(container => state.particlesInstance = container);
+        }
+
+        // --- DASHBOARD LOGIC ---
         function generateMockData() {
-            const teams = ["Tech", "Billing"];
-            const agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] };
-            const priorities = ["High", "Medium", "Low"];
-            const channels = ["Phone", "Email", "Chat"];
-            const data = [];
+            const teams = ["Tech", "Billing"], agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] }, priorities = ["High", "Medium", "Low"], channels = ["Phone", "Email", "Chat"], data = [];
             const today = new Date("2025-09-07T12:00:00Z");
-
             for (let i = 0; i < 2000; i++) {
-                const team = teams[Math.floor(Math.random() * teams.length)];
-                const agent = agents[team][Math.floor(Math.random() * agents[team].length)];
-                const date = new Date(today);
+                const team = teams[Math.floor(Math.random() * teams.length)], date = new Date(today);
                 date.setDate(today.getDate() - Math.floor(Math.random() * 60));
-
-                const npsScore = Math.random() < 0.7 
-                    ? Math.floor(Math.random() * 2) + 9 
-                    : Math.floor(Math.random() * 8) + 1;
-
-                data.push({
-                    id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agent,
-                    priority: priorities[Math.floor(Math.random() * priorities.length)],
-                    channel: channels[Math.floor(Math.random() * channels.length)],
-                    handlingTime: Math.floor(Math.random() * 300) + 5,
-                    fcr: Math.random() > 0.15,
-                    nps: npsScore
-                });
+                data.push({ id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agents[team][Math.floor(Math.random() * agents[team].length)], priority: priorities[Math.floor(Math.random() * priorities.length)], channel: channels[Math.floor(Math.random() * channels.length)], handlingTime: Math.floor(Math.random() * 300) + 5, fcr: Math.random() > 0.15, nps: Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 9 : Math.floor(Math.random() * 8) + 1 });
             }
             return data;
         }
@@ -332,128 +301,125 @@
             if (data.length === 0) return { nps: 0, aht: 0, fcr: 0, tickets: 0 };
             const promoters = data.filter(d => d.nps >= 9).length;
             const detractors = data.filter(d => d.nps <= 6).length;
-            const nps = Math.round(((promoters - detractors) / data.length) * 100);
-            const totalHandlingTime = data.reduce((acc, curr) => acc + curr.handlingTime, 0);
-            const aht = Math.round(totalHandlingTime / data.length);
-            const fcrCount = data.filter(d => d.fcr).length;
-            const fcr = Math.round((fcrCount / data.length) * 100);
-            return { nps, aht, fcr, tickets: data.length };
+            return {
+                nps: Math.round(((promoters - detractors) / data.length) * 100),
+                aht: Math.round(data.reduce((acc, curr) => acc + curr.handlingTime, 0) / data.length),
+                fcr: Math.round(data.filter(d => d.fcr).length / data.length * 100),
+                tickets: data.length
+            };
         }
 
         function updateKPIs(currentData, previousData, useTransition = true) {
             const currentMetrics = calculateMetrics(currentData);
             const previousMetrics = calculateMetrics(previousData);
 
-            const kpiConfig = [
-                { id: 'nps', good: 'up', unit: '%', ...getChange(currentMetrics.nps, previousMetrics.nps) },
-                { id: 'aht', good: 'down', unit: 'sec', ...getChange(currentMetrics.aht, previousMetrics.aht) },
-                { id: 'fcr', good: 'up', unit: '%', ...getChange(currentMetrics.fcr, previousMetrics.fcr) },
-                { id: 'tickets', good: 'down', unit: '', ...getChange(currentMetrics.tickets, previousMetrics.tickets) }
-            ];
-
-            kpiConfig.forEach(kpi => {
-                const changeEl = document.getElementById(`kpi-${kpi.id}-change`);
-                if (kpi.change !== null) {
-                    const isGood = (kpi.good === 'up' && kpi.change >= 0) || (kpi.good === 'down' && kpi.change <= 0);
-                    changeEl.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-red-500'}">${kpi.arrow} ${kpi.change.toFixed(1)}%</span> vs LMTD`;
+            APP_CONFIG.dashboard.kpis.forEach(kpi => {
+                const getChange = (current, previous) => {
+                    if (previous === 0) return { change: null, arrow: '' };
+                    const change = ((current - previous) / previous) * 100;
+                    return { change, arrow: change >= 0 ? '▲' : '▼' };
+                };
+                const changeData = getChange(currentMetrics[kpi.id], previousMetrics[kpi.id]);
+                const changeEl = $(`#kpi-${kpi.id}-change`);
+                
+                if (changeData.change !== null) {
+                    const isGood = (kpi.good === 'up' && changeData.change >= 0) || (kpi.good === 'down' && changeData.change <= 0);
+                    changeEl.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-red-500'}">${changeData.arrow} ${changeData.change.toFixed(1)}%</span> vs LMTD`;
                 } else {
                     changeEl.textContent = 'vs LMTD';
                 }
                 
-                const target = document.getElementById(`kpi-${kpi.id}`);
-                const endValue = kpi.current;
-                 gsap.to(target, { 
-                    textContent: endValue, 
-                    duration: useTransition ? 1.5 : 0, 
-                    ease: "power1.inOut", 
-                    snap: { textContent: 1 },
-                    onUpdate: () => target.textContent = `${Math.round(target.textContent)}${kpi.unit}`
-                });
+                const target = $(`#kpi-${kpi.id}`);
+                gsap.to(target, { textContent: currentMetrics[kpi.id], duration: useTransition ? 1.5 : 0, ease: "power1.inOut", snap: { textContent: 1 }, onUpdate: () => target.textContent = `${Math.round(parseFloat(target.textContent))}${kpi.unit}` });
             });
-
-            function getChange(current, previous) {
-                if (previous === 0) return { current, previous, change: null, arrow: '' };
-                const change = ((current - previous) / previous) * 100;
-                return { current, previous, change, arrow: change >= 0 ? '▲' : '▼' };
+        }
+        
+        function initChart(chartId, chartConfig) {
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const el = $(chartId);
+            const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", "100%");
+            
+            if (chartId !== '#donut-chart') {
+                const g = svg.append("g").attr("transform", `translate(${chartMargin.left},${chartMargin.top})`);
+                g.append("g").attr("class", "x-axis");
+                g.append("g").attr("class", "y-axis");
+                g.append("defs"); // For gradients
+                state.chartElements[chartId] = { el, svg: g, ...chartConfig };
+            } else {
+                 state.chartElements[chartId] = { el, svg: svg.append("g"), ...chartConfig };
             }
         }
-
-        function drawBarChart(data, useTransition = true) {
-            const { svg, x, y, el } = chartElements.bar;
-            const width = el.clientWidth - margin.left - margin.right;
-            const height = el.clientHeight - margin.top - margin.bottom;
-            
-            const priorityData = d3.rollups(data, v => v.length, d => d.priority).map(([key, value]) => ({priority: key, value: value}));
-            const priorities = ["High", "Medium", "Low"];
-            x.domain(priorities).range([0, width]);
-            y.domain([0, d3.max(priorityData, d => d.value) || 10]).range([height, 0]);
         
+        function getChartColors() {
             const isDark = document.documentElement.classList.contains('dark');
-            const axisColor = isDark ? "#475569" : "#cbd5e1";
-            const textColor = isDark ? "#94a3b8" : "#64748b";
-            const t = useTransition ? d3.transition().duration(750) : d3.transition().duration(0);
-        
+            return {
+                axisColor: isDark ? "#475569" : "#cbd5e1",
+                textColor: isDark ? "#94a3b8" : "#64748b",
+                lineColor: isDark ? "#818cf8" : "#6366f1",
+            };
+        }
+
+        // --- CHART DRAWING FUNCTIONS ---
+        function drawBarChart(data, useTransition) {
+            const { el, svg, x, y } = state.chartElements['#bar-chart'];
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const width = el.clientWidth - chartMargin.left - chartMargin.right;
+            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors();
+            const t = d3.transition().duration(useTransition ? 750 : 0);
+            
+            const priorityData = d3.rollups(data, v => v.length, d => d.priority).map(([key, value]) => ({priority: key, value}));
+            const priorities = ["High", "Medium", "Low"];
+            x.domain(priorities).range([0, width]).padding(0.4);
+            y.domain([0, d3.max(priorityData, d => d.value) || 10]).range([height, 0]);
+
             svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
             svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", axisColor);
-            svg.selectAll(".tick text").style("fill", textColor);
-            
-            const color = d3.scaleOrdinal().domain(priorities).range(["#ef4444", "#f59e0b", "#10b981"]);
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor);
+
+            const colorScale = d3.scaleOrdinal().domain(priorities).range(["#ef4444", "#f59e0b", "#10b981"]);
             const bars = svg.selectAll(".bar").data(priorityData, d => d.priority);
-        
-            bars.enter().append("rect").attr("class", "bar")
-                .attr("fill", d => color(d.priority))
-                .attr("x", d => x(d.priority)).attr("y", y(0))
-                .attr("width", x.bandwidth()).attr("height", 0)
-              .merge(bars).transition(t)
-                .attr("x", d => x(d.priority)).attr("width", x.bandwidth())
-                .attr("y", d => y(d.value)).attr("height", d => height - y(d.value));
-        
+
+            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.priority)).attr("x", d => x(d.priority)).attr("y", y(0)).attr("width", x.bandwidth()).attr("height", 0)
+                .merge(bars).transition(t).attr("x", d => x(d.priority)).attr("width", x.bandwidth()).attr("y", d => y(d.value)).attr("height", d => height - y(d.value));
             bars.exit().transition(t).attr("y", y(0)).attr("height", 0).remove();
         }
         
-        function drawLineChart(data, useTransition = true) {
-            const { svg, x, y, el } = chartElements.line;
-            const width = el.clientWidth - margin.left - margin.right;
-            const height = el.clientHeight - margin.top - margin.bottom;
-        
-            const dailyData = d3.rollups(data, v => v.length, d => d.date)
-                .map(([key, value]) => ({date: d3.timeParse("%Y-%m-%d")(key), value: value}))
-                .sort((a, b) => a.date - b.date);
-        
+        function drawLineChart(data, useTransition) {
+             const { el, svg, x, y } = state.chartElements['#line-chart'];
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const width = el.clientWidth - chartMargin.left - chartMargin.right;
+            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors();
+            const t = d3.transition().duration(useTransition ? 750 : 0);
+
+            const dailyData = d3.rollups(data, v => v.length, d => d.date).map(([key, value]) => ({date: d3.timeParse("%Y-%m-%d")(key), value})).sort((a, b) => a.date - b.date);
+
             x.domain(d3.extent(dailyData, d => d.date)).range([0, width]);
             y.domain([0, d3.max(dailyData, d => d.value) || 10]).range([height, 0]);
-        
-            const isDark = document.documentElement.classList.contains('dark');
-            const axisColor = isDark ? "#475569" : "#cbd5e1";
-            const textColor = isDark ? "#94a3b8" : "#64748b";
-            const lineColor = isDark ? "#818cf8" : "#6366f1";
-            const t = useTransition ? d3.transition().duration(750) : d3.transition().duration(0);
-        
+
             svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat("%b %d")));
             svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", axisColor);
-            svg.selectAll(".tick text").style("fill", textColor);
-        
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor);
+
             const line = d3.line().x(d => x(d.date)).y(d => y(d.value)).curve(d3.curveMonotoneX);
             const area = d3.area().x(d => x(d.date)).y0(height).y1(d => y(d.value)).curve(d3.curveMonotoneX);
 
-            // Gradient for area
             const gradient = svg.select("defs").html("").append("linearGradient").attr("id", "area-gradient").attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
-            gradient.append("stop").attr("offset", "0%").attr("stop-color", lineColor).attr("stop-opacity", 0.4);
-            gradient.append("stop").attr("offset", "100%").attr("stop-color", lineColor).attr("stop-opacity", 0);
+            gradient.append("stop").attr("offset", "0%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0.4);
+            gradient.append("stop").attr("offset", "100%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0);
 
-            svg.selectAll(".area-path").data([dailyData]).join("path").attr("class", "area-path")
-                .attr("fill", "url(#area-gradient)").transition(t).attr("d", area);
-            svg.selectAll(".line-path").data([dailyData]).join("path").attr("class", "line-path")
-                .attr("fill", "none").attr("stroke", lineColor).attr("stroke-width", 2.5).transition(t).attr("d", line);
+            svg.selectAll(".area-path").data([dailyData]).join("path").attr("class", "area-path").attr("fill", "url(#area-gradient)").transition(t).attr("d", area);
+            svg.selectAll(".line-path").data([dailyData]).join("path").attr("class", "line-path").attr("fill", "none").attr("stroke", colors.lineColor).attr("stroke-width", 2.5).transition(t).attr("d", line);
         }
 
-        function drawDonutChart(data, useTransition = true) {
-            const { svg, el } = chartElements.donut;
-            const width = el.clientWidth;
-            const height = el.clientHeight;
+        function drawDonutChart(data, useTransition) {
+            const { el, svg } = state.chartElements['#donut-chart'];
+            const width = el.clientWidth, height = el.clientHeight;
             const radius = Math.min(width, height) / 2.5;
+            const t = d3.transition().duration(useTransition ? 750 : 0);
 
             svg.attr("transform", `translate(${width / 2}, ${height / 2})`);
             const channelData = d3.rollups(data, v => v.length, d => d.channel);
@@ -461,20 +427,17 @@
             const color = d3.scaleOrdinal().domain(channelData.map(d => d[0])).range(["#38bdf8", "#818cf8", "#c084fc"]);
             const pie = d3.pie().value(d => d[1]).sort(null);
             const arc = d3.arc().innerRadius(radius * 0.6).outerRadius(radius);
-            const t = useTransition ? d3.transition().duration(750) : d3.transition().duration(0);
 
             const slices = svg.selectAll("path").data(pie(channelData), d => d.data[0]);
-            slices.enter().append("path").attr("fill", d => color(d.data[0]))
-                .each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
-              .merge(slices).transition(t)
-                .attrTween("d", function(d) {
+            slices.enter().append("path").attr("fill", d => color(d.data[0])).each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
+                .merge(slices).transition(t).attrTween("d", function(d) {
                     const i = d3.interpolate(this._current, d);
                     this._current = i(0);
                     return t => arc(i(t));
                 });
             slices.exit().transition(t).attrTween("d", function(d) {
-                 const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle});
-                 return t => arc(i(t));
+                const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle});
+                return t => arc(i(t));
             }).remove();
 
             const legendContainer = d3.select("#donut-legend").html("");
@@ -485,135 +448,111 @@
             legendItems.exit().remove();
         }
 
-        function drawAgentChart(data, useTransition = true) {
-            const { svg, x, y, el } = chartElements.agent;
-            const width = el.clientWidth - margin.left - margin.right;
-            const height = el.clientHeight - margin.top - margin.bottom;
+        function drawAgentChart(data, useTransition) {
+             const { el, svg, x, y } = state.chartElements['#agent-chart'];
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const width = el.clientWidth - chartMargin.left - chartMargin.right;
+            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors();
+            const t = d3.transition().duration(useTransition ? 750 : 0);
 
-            const agentData = d3.rollups(data, v => v.length, d => d.agent)
-                .map(([key, value]) => ({agent: key, value: value}))
-                .sort((a,b) => b.value - a.value)
-                .slice(0, 8); // Top 8 agents
-
+            const agentData = d3.rollups(data, v => v.length, d => d.agent).map(([key, value]) => ({agent: key, value})).sort((a,b) => b.value - a.value).slice(0, 8);
+            
             y.domain(agentData.map(d => d.agent)).range([0, height]).padding(0.2);
             x.domain([0, d3.max(agentData, d => d.value) || 10]).range([0, width]);
-            
-            const isDark = document.documentElement.classList.contains('dark');
-            const axisColor = isDark ? "#475569" : "#cbd5e1";
-            const textColor = isDark ? "#94a3b8" : "#64748b";
-            const t = useTransition ? d3.transition().duration(750) : d3.transition().duration(0);
 
             svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
             svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", axisColor);
-            svg.selectAll(".tick text").style("fill", textColor);
-            
-            const color = d3.scaleOrdinal(d3.schemeTableau10).domain(agentData.map(d => d.agent));
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor);
 
+            const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(agentData.map(d => d.agent));
             const bars = svg.selectAll(".bar").data(agentData, d => d.agent);
 
-            bars.enter().append("rect").attr("class", "bar")
-                .attr("fill", d => color(d.agent))
-                .attr("x", x(0)).attr("y", d => y(d.agent))
-                .attr("width", 0).attr("height", y.bandwidth())
-              .merge(bars).transition(t)
-                .attr("width", d => x(d.value)).attr("y", d => y(d.agent))
-                .attr("height", y.bandwidth());
-
+            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.agent)).attr("x", x(0)).attr("y", d => y(d.agent)).attr("width", 0).attr("height", y.bandwidth())
+                .merge(bars).transition(t).attr("width", d => x(d.value)).attr("y", d => y(d.agent)).attr("height", y.bandwidth());
             bars.exit().transition(t).attr("width", 0).remove();
         }
         
+        // --- DASHBOARD CONTROLLER ---
         function updateDashboard(team, useTransition = true) {
             const today = new Date("2025-09-07T12:00:00Z");
-            const currentPeriodStart = new Date(today.getFullYear(), today.getMonth(), 1);
+            const sevenDaysAgo = new Date(today);
+            sevenDaysAgo.setDate(today.getDate() - 6);
+            
             const previousPeriodEnd = new Date(today.getFullYear(), today.getMonth(), 0);
             const previousPeriodStart = new Date(previousPeriodEnd.getFullYear(), previousPeriodEnd.getMonth(), 1);
 
             const parseDate = d3.timeParse("%Y-%m-%d");
-            const baseData = (team === "All") ? mockData : mockData.filter(d => d.team === team);
+            const baseData = (team === "All") ? state.mockData : state.mockData.filter(d => d.team === team);
 
-            const currentData = baseData.filter(d => parseDate(d.date) >= currentPeriodStart && parseDate(d.date) <= today);
-            const previousData = baseData.filter(d => parseDate(d.date) >= previousPeriodStart && parseDate(d.date) <= previousPeriodEnd);
-            
+            const currentData = baseData.filter(d => {
+                const date = parseDate(d.date);
+                return date >= sevenDaysAgo && date <= today;
+            });
+            const previousData = baseData.filter(d => {
+                const date = parseDate(d.date);
+                return date >= previousPeriodStart && date <= previousPeriodEnd;
+            });
+
             updateKPIs(currentData, previousData, useTransition);
             drawBarChart(currentData, useTransition);
             drawLineChart(currentData, useTransition);
             drawDonutChart(currentData, useTransition);
             drawAgentChart(currentData, useTransition);
         }
-        
+
         function initDashboard() {
-            if (dashboardInitialized) return;
+            if (state.dashboardInitialized) return;
             
-            const chartConfigs = {
-                bar: { selector: '#bar-chart', x: d3.scaleBand(), y: d3.scaleLinear() },
-                line: { selector: '#line-chart', x: d3.scaleTime(), y: d3.scaleLinear() },
-                donut: { selector: '#donut-chart' },
-                agent: { selector: '#agent-chart', x: d3.scaleLinear(), y: d3.scaleBand() }
-            };
-
-            for (const [key, config] of Object.entries(chartConfigs)) {
-                const el = document.querySelector(config.selector);
-                const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", "100%");
-                chartElements[key] = { el, svg, x: config.x, y: config.y };
-
-                if (key !== 'donut') {
-                    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
-                    chartElements[key].svg = g;
-                    g.append("g").attr("class", "x-axis");
-                    g.append("g").attr("class", "y-axis");
-                    g.append("defs"); // For gradients
-                } else {
-                     chartElements[key].svg = svg.append("g");
-                }
-            }
-
-            mockData = generateMockData();
+            initChart('#bar-chart', { x: d3.scaleBand(), y: d3.scaleLinear() });
+            initChart('#line-chart', { x: d3.scaleTime(), y: d3.scaleLinear() });
+            initChart('#donut-chart', {});
+            initChart('#agent-chart', { x: d3.scaleLinear(), y: d3.scaleBand() });
+            
+            state.mockData = generateMockData();
             updateDashboard("All", false);
-            dashboardInitialized = true;
+            state.dashboardInitialized = true;
+        }
+
+        function setupDashboardControls() {
+            $$('.data-filter').forEach(button => {
+                button.addEventListener('click', function() {
+                    $$('.data-filter').forEach(btn => {
+                        btn.classList.remove('bg-sky-500', 'text-white');
+                        btn.classList.add('bg-slate-300', 'dark:bg-slate-700');
+                    });
+                    this.classList.add('bg-sky-500', 'text-white');
+                    this.classList.remove('bg-slate-300', 'dark:bg-slate-700');
+                    updateDashboard(this.dataset.team, true);
+                });
+            });
         }
         
         function handleResize() {
-            if (!dashboardInitialized) return;
-            updateDashboard(document.querySelector('.data-filter.bg-sky-500').dataset.team, false);
+            if (!state.dashboardInitialized) return;
+            updateDashboard($('.data-filter.bg-sky-500').dataset.team, false);
         }
         
-        document.querySelectorAll('.data-filter').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.data-filter').forEach(btn => {
-                    btn.classList.remove('bg-sky-500', 'text-white');
-                    btn.classList.add('bg-slate-300', 'dark:bg-slate-700');
-                });
-                this.classList.add('bg-sky-500', 'text-white');
-                this.classList.remove('bg-slate-300', 'dark:bg-slate-700');
-                updateDashboard(this.dataset.team, true);
+        // --- INITIALIZATION ---
+        function init() {
+            populateContent();
+            setupThemeToggle();
+            setupMobileMenu();
+            setupAnimations();
+            setupParticles();
+            setupDashboardControls();
+            
+            ScrollTrigger.create({ trigger: "#dashboard", start: "top 80%", onEnter: initDashboard, once: true });
+            
+            window.addEventListener("resize", () => {
+                clearTimeout(state.resizeTimer);
+                state.resizeTimer = setTimeout(handleResize, 150);
             });
-        });
-        
-        let resizeTimer;
-        window.addEventListener("resize", () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(handleResize, 100);
-        });
-        
-        ScrollTrigger.create({ trigger: "#dashboard", start: "top 80%", onEnter: initDashboard, once: true });
-        
-        tsParticles.load("particles-js", {
-            fpsLimit: 60,
-            interactivity: { events: { onHover: { enable: true, mode: "repulse" }, resize: true }, modes: { repulse: { distance: 100, duration: 0.4 } } },
-            particles: {
-                color: { value: currentTheme === 'dark' ? '#475569' : '#94a3b8' },
-                links: { color: { value: currentTheme === 'dark' ? '#475569' : '#94a3b8' }, distance: 150, enable: true, opacity: 0.2, width: 1 },
-                move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: false, speed: 1, straight: false },
-                number: { density: { enable: true, area: 800 }, value: 80 },
-                opacity: { value: 0.2 },
-                shape: { type: "circle" },
-                size: { value: { min: 1, max: 3 } },
-            },
-            detectRetina: true,
-        }).then(container => particlesInstance = container);
+        }
+
+        init();
     });
     </script>
 </body>
 </html>
-
