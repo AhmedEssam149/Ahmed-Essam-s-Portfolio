@@ -1,909 +1,892 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Essam | Senior MIS Specialist & Data Analyst</title>
-    <meta name="description" content="Professional portfolio of Ahmed Essam showcasing expertise in Management Information Systems, Data Analysis, and Business Intelligence solutions.">
-    <link rel="canonical" href="https://ahmedessam.dev">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Ahmed Essam | Senior MIS Specialist & Data Analyst">
-    <meta property="og:description" content="Professional portfolio showcasing expertise in Management Information Systems and Data Analysis.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ahmedessam.dev">
-    <meta property="og:image" content="https://placehold.co/1200x630/0ea5e9/ffffff?text=AE">
-    
-    <!-- Favicon (using placeholder for demonstration) -->
-    <link rel="icon" href="https://placehold.co/32x32/0ea5e9/ffffff?text=AE">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style">
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Essam | Senior MIS Specialist & Data Analyst</title>
+    <meta name="description" content="Professional portfolio of Ahmed Essam showcasing expertise in Management Information Systems, Data Analysis, and Business Intelligence solutions.">
+    <link rel="canonical" href="https://ahmedessam.dev">
+    
+        <meta property="og:title" content="Ahmed Essam | Senior MIS Specialist & Data Analyst">
+    <meta property="og:description" content="Professional portfolio showcasing expertise in Management Information Systems and Data Analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmedessam.dev">
+    <meta property="og:image" content="https://placehold.co/1200x630/0ea5e9/ffffff?text=AE">
+    
+        <link rel="icon" href="https://placehold.co/32x32/0ea5e9/ffffff?text=AE">
+    
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    
 	
-    <!-- CSS & JS Libraries -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        slate: { '50': '#f8fafc', '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8', '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a', '950': '#020617' },
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif']
-                    },
-                    animation: {
-                        'blob': 'blob 7s ease-in-out infinite',
-                        'gradient': 'gradient 8s ease infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(20px, -30px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }
-                        },
-                        gradient: {
-                            '0%': { 'background-position': '0% 50%' },
-                            '50%': { 'background-position': '100% 50%' },
-                            '100%': { 'background-position': '0% 50%' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { font-family: 'Montserrat', sans-serif; }
-        .gradient-text {
-            background: linear-gradient(90deg, #0ea5e9, #7c3aed, #ec4899);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient 8s ease infinite;
-        }
-        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
-        .kpi-value { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
-        .card-hover {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .text-balance { text-wrap: balance; }
-        .tooltip { position: relative; }
-        .tooltip .tooltip-text {
-            visibility: hidden; width: 120px; background-color: theme('colors.slate.800'); color: theme('colors.white');
-            text-align: center; border-radius: 6px; padding: 5px; position: absolute; z-index: 1; bottom: 125%; left: 50%;
-            transform: translateX(-50%); opacity: 0; transition: opacity 0.3s; font-size: 0.875rem;
-        }
-        .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
-        .underline-animation { position: relative; display: inline-block; }
-        .underline-animation::after {
-            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0;
-            background: linear-gradient(90deg, #0ea5e9, #7c3aed); transform-origin: bottom right; transition: transform 0.3s ease-out;
-        }
-        .underline-animation:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        .typewriter-cursor {
-            display: inline-block; width: 3px; height: 1em; background-color: currentColor;
-            animation: blink 0.7s infinite; vertical-align: bottom;
-        }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { '50': '#f8fafc', '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8', '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a', '950': '#020617' },
+                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif']
+                    },
+                    animation: {
+                        'blob': 'blob 7s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(20px, -30px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }
+                        },
+                        gradient: {
+                            '0%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                            '100%': { 'background-position': '0% 50%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #0ea5e9, #7c3aed, #ec4899);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 8s ease infinite;
+        }
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
+        .kpi-value { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+        .card-hover {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .text-balance { text-wrap: balance; }
+        .tooltip { position: relative; }
+        .tooltip .tooltip-text {
+            visibility: hidden; width: 120px; background-color: theme('colors.slate.800'); color: theme('colors.white');
+            text-align: center; border-radius: 6px; padding: 5px; position: absolute; z-index: 1; bottom: 125%; left: 50%;
+            transform: translateX(-50%); opacity: 0; transition: opacity 0.3s; font-size: 0.875rem;
+        }
+        .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+        .underline-animation { position: relative; display: inline-block; }
+        .underline-animation::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0;
+            background: linear-gradient(90deg, #0ea5e9, #7c3aed); transform-origin: bottom right; transition: transform 0.3s ease-out;
+        }
+        .underline-animation:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+        .typewriter-cursor {
+            display: inline-block; width: 3px; height: 1em; background-color: currentColor;
+            animation: blink 0.7s infinite; vertical-align: bottom;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
 </head>
 <body class="relative bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-200">
-    <div id="particles-js"></div>
+    <div id="particles-js"></div>
 
-    <!-- Preloader -->
-    <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-slate-950 transition-opacity duration-500">
-        <div class="relative w-24 h-24">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-20 animate-spin"></div>
-            <div class="absolute inset-2 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 blur-sm opacity-30 animate-spin" style="animation-delay: 200ms;"></div>
-            <div class="absolute inset-4 flex items-center justify-center rounded-full bg-white dark:bg-slate-900">
-                <div class="w-6 h-6 rounded-full bg-primary-500 animate-pulse"></div>
-            </div>
-        </div>
-    </div>
+        <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-slate-950 transition-opacity duration-500">
+        <div class="relative w-24 h-24">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-20 animate-spin"></div>
+            <div class="absolute inset-2 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 blur-sm opacity-30 animate-spin" style="animation-delay: 200ms;"></div>
+            <div class="absolute inset-4 flex items-center justify-center rounded-full bg-white dark:bg-slate-900">
+                <div class="w-6 h-6 rounded-full bg-primary-500 animate-pulse"></div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Header & Navigation -->
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#about" class="text-2xl font-bold gradient-text flex items-center">
-                
-                <span class="hidden sm:inline">Ahmed Essam</span>
-            </a>
-            
-            <div class="flex items-center space-x-4 md:space-x-6">
-                <nav class="hidden md:flex space-x-8" id="desktop-nav">
-                    <!-- Nav links will be injected here -->
-                </nav>
-                
-                <button id="theme-toggle" class="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors tooltip" aria-label="Toggle theme">
-                    <svg id="theme-icon-sun" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    <svg id="theme-icon-moon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    <span class="tooltip-text">Toggle Theme</span>
-                </button>
-                
-                 <button id="mobile-menu-button" class="md:hidden text-2xl text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400">
-                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-                 </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
-            <!-- Mobile nav links will be injected here -->
-        </div>
-    </header>
+        <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#about" class="text-2xl font-bold gradient-text flex items-center">
+                
+                <span class="hidden sm:inline">Ahmed Essam</span>
+            </a>
+            
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <nav class="hidden md:flex space-x-8" id="desktop-nav">
+                                    </nav>
+                
+                <button id="theme-toggle" class="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors tooltip" aria-label="Toggle theme">
+                    <svg id="theme-icon-sun" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg id="theme-icon-moon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <span class="tooltip-text">Toggle Theme</span>
+                </button>
+                
+                 <button id="mobile-menu-button" class="md:hidden text-2xl text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400">
+                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                 </button>
+            </div>
+        </div>
+                <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
+                    </div>
+    </header>
 
-    <main class="container mx-auto px-6 pt-24 overflow-x-hidden">
+    <main class="container mx-auto px-6 pt-24 overflow-x-hidden">
 
-        <!-- Hero Section -->
-        <section id="about" class="min-h-screen flex items-center relative">
-            <div class="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-50 items-center">
-                <div class="order-2 lg:order-1 text-center lg:text-left">
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 leading-tight animate-target">
-                        <span class="gradient-text">Ahmed Essam</span>
-                    </h1>
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-600 dark:text-slate-400 sm:h-auto">
-                        <span id="typewriter"></span><span class="typewriter-cursor"></span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 animate-target text-justify">
-                        Transforming raw data into strategic insights with enterprise-level MIS solutions. I specialize in crafting intuitive dashboards and automated reporting systems that drive digital transformation and empower data-driven decision making.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 animate-target">
-                        <a href="#contact" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-primary-500/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            Get In Touch
-                        </a>
-                        <a href="#projects" class="w-full sm:w-auto flex items-center justify-center gap-2 border border-primary-500 text-primary-500 dark:text-primary-400 hover:bg-primary-500/10 font-medium py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                            View Projects
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="order-1 lg:order-2 relative animate-target">
-                    <div class="relative w-full max-w-md mx-auto">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-primary-400 to-primary-600 rounded-3xl blur-xl opacity-20 animate-pulse"></div>
-                        <div class="relative overflow-hidden rounded-2xl border-8 border-white dark:border-slate-900 shadow-2xl">
-                            <img src="./me.png" alt="Ahmed Essam" class="w-full h-auto object-cover" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                <h3 class="text-xl font-bold">Ahmed Essam</h3>
-                                <p class="text-primary-200">Data & Analytics Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="hidden lg:block absolute -z-10 w-64 h-64 rounded-full bg-primary-400/10 blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                    <div class="hidden lg:block absolute -z-10 w-96 h-96 rounded-full bg-purple-400/10 blur-3xl top-1/3 right-0 animate-blob"></div>
-                </div>
-            </div>
-            
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
-                <a href="#experience" class="animate-bounce block p-2" aria-label="Scroll to next section">
-                    <svg class="w-8 h-8 text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
-                </a>
-            </div>
-        </section>
+                <section id="about" class="min-h-screen flex items-center relative">
+            <div class="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-50 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left">
+                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 leading-tight animate-target">
+                        <span class="gradient-text">Ahmed Essam</span>
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-600 dark:text-slate-400 sm:h-auto">
+                        <span id="typewriter"></span><span class="typewriter-cursor"></span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 animate-target text-justify">
+                        Transforming raw data into strategic insights with enterprise-level MIS solutions. I specialize in crafting intuitive dashboards and automated reporting systems that drive digital transformation and empower data-driven decision making.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 animate-target">
+                        <a href="#contact" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-primary-500/20">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            Get In Touch
+                        </a>
+                        <a href="#projects" class="w-full sm:w-auto flex items-center justify-center gap-2 border border-primary-500 text-primary-500 dark:text-primary-400 hover:bg-primary-500/10 font-medium py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 relative animate-target">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary-400 to-primary-600 rounded-3xl blur-xl opacity-20 animate-pulse"></div>
+                        <div class="relative overflow-hidden rounded-2xl border-8 border-white dark:border-slate-900 shadow-2xl">
+                            <img src="./me.png" alt="Ahmed Essam" class="w-full h-auto object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <h3 class="text-xl font-bold">Ahmed Essam</h3>
+                                <p class="text-primary-200">Data & Analytics Professional</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hidden lg:block absolute -z-10 w-64 h-64 rounded-full bg-primary-400/10 blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="hidden lg:block absolute -z-10 w-96 h-96 rounded-full bg-purple-400/10 blur-3xl top-1/3 right-0 animate-blob"></div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                <a href="#experience" class="animate-bounce block p-2" aria-label="Scroll to next section">
+                    <svg class="w-8 h-8 text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+                </a>
+            </div>
+        </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-16 md:py-24">
-            <div class="text-center mb-16">
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Career Journey</span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Professional Experience</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                    My career path has been focused on leveraging data to drive business value and operational efficiency.
-                </p>
-            </div>
-            
-            <div id="experience-container" class="relative max-w-6xl mx-auto">
-                 <div class="absolute left-1/2 top-0 h-full w-0.5 bg-slate-200 dark:bg-slate-800 -translate-x-1/2">
-                     <div id="timeline-progress" class="w-full bg-gradient-to-b from-primary-500 to-purple-500" style="height: 0%"></div>
-                 </div>
-                 <!-- Experience items will be injected by JS -->
-            </div>
-        </section>
+                <section id="experience" class="py-16 md:py-24">
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Career Journey</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Professional Experience</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
+                    My career path has been focused on leveraging data to drive business value and operational efficiency.
+                </p>
+            </div>
+            
+            <div id="experience-container" class="relative max-w-6xl mx-auto">
+                 <div class="absolute left-1/2 top-0 h-full w-0.5 bg-slate-200 dark:bg-slate-800 -translate-x-1/2">
+                     <div id="timeline-progress" class="w-full bg-gradient-to-b from-primary-500 to-purple-500" style="height: 0%"></div>
+                 </div>
+                             </div>
+        </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-16 md:py-24 bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Expertise</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">My Tool Kit</h2>
-                </div>
-                
-                <div id="skills-container" class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-                    <!-- Skills will be injected by JavaScript -->
-                </div>
-            </div>
-        </section>
-        
-        <!-- Featured Projects Section -->
-        <section id="projects" class="py-16 md:py-24">
-             <div class="text-center mb-16">
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">My Work</span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Featured Projects</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                    Here are some of the projects I'm proud to have worked on.
-                </p>
-            </div>
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <img src="./dashboard.png" alt="Project 1" class="w-full h-auto object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Enterprise KPI Dashboard</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">An interactive Power BI dashboard for monitoring enterprise-wide Key Performance Indicators, providing real-time insights to executive leadership.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Power BI</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">DAX</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">SQL</span>
-                        </div>
-                        <a href="#dashboard" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            View Demo 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                 </div>
-                 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <img src="./Automation.png" alt="Project 2" class="w-full h-auto object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Automated Reporting System</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Developed a suite of Python & VBA scripts to fully automate the generation of weekly operational reports, saving hours of manual work per week.</p>
-                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Python</span>
-                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">VBA</span>
-                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Pandas</span>
-                        </div>
-                        <a href="https://github.com/AhmedEssam149" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-600 dark:text-purple-400 inline-flex items-center group">
-                            View on GitHub 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                 </div>
-            </div>
-        </section>
+                <section id="skills" class="py-16 md:py-24 bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Expertise</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">My Tool Kit</h2>
+                </div>
+                
+                <div id="skills-container" class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                                    </div>
+            </div>
+        </section>
+        
+                <section id="projects" class="py-16 md:py-24">
+             <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">My Work</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Featured Projects</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
+                    Here are some of the projects I'm proud to have worked on.
+                </p>
+            </div>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
+                    <img src="./dashboard.png" alt="Project 1" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Enterprise KPI Dashboard</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">An interactive Power BI dashboard for monitoring enterprise-wide Key Performance Indicators, providing real-time insights to executive leadership.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Power BI</span>
+                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">DAX</span>
+                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">SQL</span>
+                        </div>
+          _                <a href="#dashboard" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
+                            View Demo 
+                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                 </div>
+                 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
+                    <img src="./Automation.png" alt="Project 2" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Automated Reporting System</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Developed a suite of Python & VBA scripts to fully automate the generation of weekly operational reports, saving hours of manual work per week.</p>
+                         <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Python</span>
+                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">VBA</span>
+                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Pandas</span>
+                        </div>
+                        <a href="https://github.com/AhmedEssam149" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-600 dark:text-purple-400 inline-flex items-center group">
+                            View on GitHub 
+                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                 </div>
+                                  <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
+                    <img src="https://placehold.co/600x400/1e293b/94a3b8?text=New+Project" alt="New Project" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">New Project Title</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">A brief description of this new and exciting project will go here. It showcases skills in various modern technologies and data-driven approaches.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-semibold bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-200 px-2 py-1 rounded-full">Technology 1</span>
+                            <span class="text-xs font-semibold bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-200 px-2 py-1 rounded-full">Technology 2</span>
+                            <span class="text-xs font-semibold bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-200 px-2 py-1 rounded-full">Technology 3</span>
+                        </div>
+                        <a href="#" class="font-semibold text-sky-600 dark:text-sky-400 inline-flex items-center group">
+                            Learn More
+                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        </section>
 
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="py-16 md:py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Live Dashboard Demo</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-3xl mx-auto animate-target text-justify">
-                    <b>A Real-World Scenario:</b> This interactive dashboard simulates a Customer Service MIS I would design and build. The core objective is to empower managers with a live, consolidated view of their support operations. It's built to instantly highlight performance trends, pinpoint potential bottlenecks, and track agent efficiency, ultimately driving improvements in customer satisfaction.
-                </p>
-            </div>
-            
-            <div class="max-w-6xl mx-auto p-4 md:p-8 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-lg animate-target">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8" id="kpi-container">
-                    <!-- KPIs will be injected here -->
-                </div>
-                
-                <div class="flex flex-wrap justify-center items-center gap-4 mb-8" id="dashboard-filters">
-                    <span class="text-sm font-semibold">Filter by Team:</span>
-                    <!-- Filter buttons will be injected here -->
-                </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Priority</h3><div id="bar-chart" class="w-full h-80"></div></div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets per Day</h3><div id="line-chart" class="w-full h-80"></div></div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Channel</h3><div id="donut-chart-container" class="w-full h-[24rem] flex flex-col md:flex-row items-center justify-center"><div id="donut-chart" class="flex-grow h-full w-full"></div><div id="donut-legend" class="flex-shrink-0 p-2 space-y-1"></div></div></div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Top Agents by Tickets Solved</h3><div id="agent-chart" class="w-full h-80"></div></div>
-                </div>
-            </div>
-        </section>
+                <section id="dashboard" class="py-16 md:py-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Live Dashboard Demo</h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-3xl mx-auto animate-target text-justify">
+                    <b>A Real-World Scenario:</b> This interactive dashboard simulates a Customer Service MIS I would design and build. The core objective is to empower managers with a live, consolidated view of their support operations. It's built to instantly highlight performance trends, pinpoint potential bottlenecks, and track agent efficiency, ultimately driving improvements in customer satisfaction.
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto p-4 md:p-8 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-lg animate-target">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8" id="kpi-container">
+                                    </div>
+                
+                <div class="flex flex-wrap justify-center items-center gap-4 mb-8" id="dashboard-filters">
+                    <span class="text-sm font-semibold">Filter by Team:</span>
+                                    </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Priority</h3><div id="bar-chart" class="w-full h-80"></div></div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets per Day</h3><div id="line-chart" class="w-full h-80"></div></div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Channel</h3><div id="donut-chart-container" class="w-full h-[24rem] flex flex-col md:flex-row items-center justify-center"><div id="donut-chart" class="flex-grow h-full w-full"></div><div id="donut-legend" class="flex-shrink-0 p-2 space-y-1"></div></div></div>
+                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Top Agents by Tickets Solved</h3><div id="agent-chart" class="w-full h-80"></div></div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-16 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Endorsements</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">What Colleagues Say</h2>
-                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                        Feedback from managers and peers I've collaborated with on projects.
-                    </p>
-                </div>
-                
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="https://placehold.co/100x100/e0f2fe/334155?text=MA" alt="Mohamed Ali" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">Mohamed Ali</h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Director of Operations</p>
-                            </div>
-                        </div>
-                        <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">"Ahmed transformed our reporting process. His dashboards provide real-time visibility that has helped us reduce response times by 30%."</p>
-                        </div>
-                    </div>
-                    
-                    <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="https://placehold.co/100x100/e0f2fe/334155?text=NH" alt="Nadia Hassan" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">Nadia Hassan</h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Head of Customer Experience</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">"Working with Ahmed was a game-changer. He has an exceptional ability to translate complex data into clear visualizations that our whole team can understand."</p>
-                        </div>
-                    </div>
-                     <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="https://placehold.co/100x100/e0f2fe/334155?text=KF" alt="Khaled Fathy" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">Khaled Fathy</h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Senior Data Engineer</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">"Ahmed is a master of automation. The Python scripts he developed for our ETL pipelines are not only efficient but also incredibly reliable."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24">
-             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Let's Collaborate</h2>
-                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team.
-                    </p>
-                </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-target">
-                    <div class="bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col items-center text-center card-hover">
-                         <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center mb-4">
-                             <svg class="w-8 h-8 text-primary-600 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Email Me</h3>
-                        <p class="text-slate-500 dark:text-slate-400 mb-4">Reach out for project inquiries or collaborations.</p>
-                        <a href="mailto:ahmed.essam14998@gmail.com" class="font-semibold text-primary-600 dark:text-primary-400 underline-animation">ahmed.essam14998@gmail.com</a>
-                    </div>
-                     <div class="bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col items-center text-center card-hover">
-                         <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8 text-primary-600 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Connect on LinkedIn</h3>
-                        <p class="text-slate-500 dark:text-slate-400 mb-4">Let's connect and expand our professional network.</p>
-                        <a href="https://linkedin.com/in/ahmedessam14998" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 underline-animation">ahmedessam14998</a>
-                    </div>
-                </div>
-             </div>
-        </section>
+                <section id="testimonials" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Endorsements</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">What Colleagues Say</h2>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
+                        Feedback from managers and peers I've collaborated with on projects.
+                    </p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="ml-0">                                 <h4 class="font-bold text-slate-700 dark:text-slate-200">Mohamed Ali</h4>
+                                <p class="text-sm text-primary-500 dark:text-primary-400">Director of Operations</p>
+                            </div>
+                        </div>
+                        <div class="text-slate-600 dark:text-slate-300 mb-4">
+                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
+                            <p class="italic">"Ahmed transformed our reporting process. His dashboards provide real-time visibility that has helped us reduce response times by 30%."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="ml-0">                                 <h4 class="font-bold text-slate-700 dark:text-slate-200">Nadia Hassan</h4>
+                                <p class="text-sm text-primary-500 dark:text-primary-400">Head of Customer Experience</p>
+                            </div>
+                        </div>
+                         <div class="text-slate-600 dark:text-slate-300 mb-4">
+                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
+                            <p class="italic">"Working with Ahmed was a game-changer. He has an exceptional ability to translate complex data into clear visualizations that our whole team can understand."</p>
+                        </div>
+                    </div>
+                     <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
+                        <div class="flex items-center mb-4">
+                            <div class="ml-0">                                 <h4 class="font-bold text-slate-700 dark:text-slate-200">Khaled Fathy</h4>
+                                <p class="text-sm text-primary-500 dark:text-primary-400">Senior Data Engineer</p>
+                            </div>
+                        </div>
+                         <div class="text-slate-600 dark:text-slate-300 mb-4">
+                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
+                            <p class="italic">"Ahmed is a master of automation. The Python scripts he developed for our ETL pipelines are not only efficient but also incredibly reliable."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+                <section id="contact" class="py-16 md:py-24">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Let's Collaborate</h2>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious team.
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-target">
+                    <div class="bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col items-center text-center card-hover">
+                         <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center mb-4">
+                             <svg class="w-8 h-8 text-primary-600 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Email Me</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">Reach out for project inquiries or collaborations.</p>
+                        <a href="mailto:ahmed.essam14998@gmail.com" class="font-semibold text-primary-600 dark:text-primary-400 underline-animation">ahmed.essam14998@gmail.com</a>
+                    </div>
+                     <div class="bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col items-center text-center card-hover">
+                         <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-primary-600 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Connect on LinkedIn</h3>
+                        <p class="text-slate-500 dark:text-slate-400 mb-4">Let's connect and expand our professional network.</p>
+                        <a href="https://linkedin.com/in/ahmedessam14998" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 underline-animation">ahmedessam14998</a>
+                    </div>
+                </div>
+             </div>
+        </section>
 
-    </main>
-    
-    <!-- Footer -->
-    <footer class="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div class="container mx-auto px-6 py-8 text-center text-slate-500 dark:text-slate-400">
-            <p>&copy; <span id="current-year"></span> Ahmed Essam. All rights reserved.</p>
-        </div>
-    </footer>
+    </main>
+    
+        <footer class="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500 dark:text-slate-400">
+            <p>&copy; <span id="current-year"></span> Ahmed Essam. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white shadow-lg opacity-0 translate-y-4 transition-all duration-200 hover:bg-primary-600 hover:scale-110" aria-label="Back to top">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
-    </button>
+    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white shadow-lg opacity-0 translate-y-4 transition-all duration-200 hover:bg-primary-600 hover:scale-110" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+    </button>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin);
-        
-        // --- CONFIGURATION & DATA --- , { href: "#dashboard", title: "Dashboard" }
-        const APP_CONFIG = {
-            navLinks: [ { href: "#about", title: "About" }, { href: "#experience", title: "Experience" }, { href: "#skills", title: "Skills" }, { href: "#projects", title: "Projects" }, { href: "#testimonials", title: "Endorsements"}, { href: "#contact", title: "Contact" } ],
-            experiences: [
-                { period: "Jul 2025 - Present", role: "Senior MIS Specialist", company: "e& CX Solutions", details: ["Architected and launched MIS solutions that serve the entire enterprise. My primary focus is on breaking down data silos, which has boosted data accessibility for key stakeholders. ", "Developed dynamic, automated dashboards that reduced executive reporting time from days to hours.", "Led digital transformation initiatives that aligned data strategies with business objectives."] },
-                { period: "Jan 2024 - Jun 2025", role: "Training and Quality Engineer", company: "Egyptian Company for Innovating Education Technologies (BEDO)", details: ["Redesigned QA processes, achieving faster testing cycles and measurable quality improvements.", "Developed and delivered technical training programs that achieved the highest client satisfaction ratings."] },
-                { period: "Sep 2021 - Dec 2023", role: "Data Analyst", company: "Srour Group", details: ["Automated reporting workflows using VBA and Python, saving hours of manual work weekly.", "Conducted root cause analyses that identified operational bottlenecks, leading to a 50% reduction in system downtime."] }
-            ],
-            skills: [
-                { name: "Power BI", icon: `<path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zM16 8h6v13h-6V8z"/>` },
-                { name: "SQL", icon: `<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>` },
-                { name: "Advanced Excel", icon: `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>` },
-                { name: "Python", icon: `<path d="M14.5 9.5a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 0 0 6.33 2.17.5.5 0 0 1 .84.52 4.5 4.5 0 0 1-8.17-2.69v-1a4.5 4.5 0 0 1 9 0v1a.5.5 0 0 1-1 0v-1z"/><path d="M9.5 14.5a3.5 3.5 0 0 0 7 0v-1a3.5 3.5 0 0 0-6.33-2.17.5.5 0 0 1-.84-.52 4.5 4.5 0 0 1 8.17 2.69v1a4.5 4.5 0 0 1-9 0v-1a.5.5 0 0 1 1 0v1z"/>` },
-                { name: "Data Warehousing", icon: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>` },
-                { name: "ETL Processes", icon: `<path d="M2 12h4l3 8 3-16 3 8h4"/>` },
-                { name: "Power Query", icon: `<path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/>` },
-                { name: "VBA", icon: `<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>` },
-                { name: "Agile Practices", icon: `<path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>` },
-                { name: "ISTQB", icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>` }
-            ],
-            dashboard: {
-                kpis: [ { id: 'nps', title: 'NPS', color: 'text-sky-500', good: 'up', unit: '%' }, { id: 'aht', title: 'Avg. Handling Time', color: 'text-violet-500', good: 'down', unit: 's' }, { id: 'fcr', title: 'FCR', color: 'text-emerald-500', good: 'up', unit: '%' }, { id: 'tickets', title: 'Open Tickets', color: 'text-amber-500', good: 'down', unit: '' } ],
-                filters: ['All', 'Tech', 'Billing'],
-                chartMargin: {top: 20, right: 30, bottom: 40, left: 70}
-            }
-        };
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin);
+        
+        // --- CONFIGURATION & DATA --- , { href: "#dashboard", title: "Dashboard" }
+        const APP_CONFIG = {
+            navLinks: [ { href: "#about", title: "About" }, { href: "#experience", title: "Experience" }, { href: "#skills", title: "Skills" }, { href: "#projects", title: "Projects" }, { href: "#testimonials", title: "Endorsements"}, { href: "#contact", title: "Contact" } ],
+            experiences: [
+                { period: "Jul 2025 - Present", role: "Senior MIS Specialist", company: "e& CX Solutions", details: ["Architected and launched MIS solutions that serve the entire enterprise. My primary focus is on breaking down data silos, which has boosted data accessibility for key stakeholders. ", "Developed dynamic, automated dashboards that reduced executive reporting time from days to hours.", "Led digital transformation initiatives that aligned data strategies with business objectives."] },
+                { period: "Jan 2024 - Jun 2025", role: "Training and Quality Engineer", company: "Egyptian Company for Innovating Education Technologies (BEDO)", details: ["Redesigned QA processes, achieving faster testing cycles and measurable quality improvements.", "Developed and delivered technical training programs that achieved the highest client satisfaction ratings."] },
+                { period: "Sep 2021 - Dec 2023", role: "Data Analyst", company: "Srour Group", details: ["Automated reporting workflows using VBA and Python, saving hours of manual work weekly.", "Conducted root cause analyses that identified operational bottlenecks, leading to a 50% reduction in system downtime."] }
+            ],
+            skills: [
+                { name: "Power BI", icon: `<path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zM16 8h6v13h-6V8z"/>` },
+                { name: "SQL", icon: `<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>` },
+                { name: "Advanced Excel", icon: `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>` },
+                { name: "Python", icon: `<path d="M14.5 9.5a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 0 0 6.33 2.17.5.5 0 0 1 .84.52 4.5 4.5 0 0 1-8.17-2.69v-1a4.5 4.5 0 0 1 9 0v1a.5.5 0 0 1-1 0v-1z"/><path d="M9.5 14.5a3.5 3.5 0 0 0 7 0v-1a3.5 3.5 0 0 0-6.33-2.17.5.5 0 0 1-.84-.52 4.5 4.5 0 0 1 8.17 2.69v1a4.5 4.5 0 0 1-9 0v-1a.5.5 0 0 1 1 0v1z"/>` },
+                { name: "Data Warehousing", icon: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>` },
+                { name: "ETL Processes", icon: `<path d="M2 12h4l3 8 3-16 3 8h4"/>` },
+                { name: "Power Query", icon: `<path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/>` },
+                { name: "VBA", icon: `<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>` },
+                { name: "Agile Practices", icon: `<path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>` },
+                { name: "ISTQB", icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>` }
+            ],
+            dashboard: {
+                kpis: [ { id: 'nps', title: 'NPS', color: 'text-sky-500', good: 'up', unit: '%' }, { id: 'aht', title: 'Avg. Handling Time', color: 'text-violet-500', good: 'down', unit: 's' }, { id: 'fcr', title: 'FCR', color: 'text-emerald-500', good: 'up', unit: '%' }, { id: 'tickets', title: 'Open Tickets', color: 'text-amber-500', good: 'down', unit: '' } ],
+                filters: ['All', 'Tech', 'Billing'],
+                chartMargin: {top: 20, right: 30, bottom: 40, left: 70}
+            }
+        };
 
-        // --- GLOBAL STATE ---
-        let state = {
-            theme: localStorage.getItem('theme') || 'light',
-            dashboardInitialized: false,
-            particlesInstance: null,
-            mockData: [],
-            chartElements: {},
-            resizeTimer: null
-        };
+        // --- GLOBAL STATE ---
+        let state = {
+            theme: localStorage.getItem('theme') || 'light',
+            dashboardInitialized: false,
+            particlesInstance: null,
+            mockData: [],
+            chartElements: {},
+            resizeTimer: null
+        };
 
-        // --- DOM HELPER ---
-        const $ = (selector) => document.querySelector(selector);
-        const $$ = (selector) => document.querySelectorAll(selector);
+        // --- DOM HELPER ---
+        const $ = (selector) => document.querySelector(selector);
+        const $$ = (selector) => document.querySelectorAll(selector);
 
-        // --- DYNAMIC CONTENT INJECTION ---
-        function populateContent() {
-            // Navigation
-            const navLinksHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium underline-animation">${link.title}</a>`).join('');
-            $('#desktop-nav').innerHTML = navLinksHTML;
-            const mobileNavLinksHTML = `<nav class="flex flex-col space-y-4">${APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="nav-link block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">${link.title}</a>`).join('')}</nav>`;
-            $('#mobile-menu').innerHTML = mobileNavLinksHTML;
+        // --- DYNAMIC CONTENT INJECTION ---
+        function populateContent() {
+            // Navigation
+            const navLinksHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium underline-animation">${link.title}</a>`).join('');
+            $('#desktop-nav').innerHTML = navLinksHTML;
+            const mobileNavLinksHTML = `<nav class="flex flex-col space-y-4">${APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="nav-link block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">${link.title}</a>`).join('')}</nav>`;
+            $('#mobile-menu').innerHTML = mobileNavLinksHTML;
 
-            // Experience
-            const expContainer = $('#experience-container');
-            expContainer.innerHTML += APP_CONFIG.experiences.map((exp, index) => {
-                const isEven = index % 2 === 0;
-                const timelineClass = isEven ? 'md:flex-row-reverse' : '';
-                const contentAlign = isEven ? 'md:pl-16' : 'md:pr-16';
-                const timeAlign = isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left';
+            // Experience
+            const expContainer = $('#experience-container');
+            expContainer.innerHTML += APP_CONFIG.experiences.map((exp, index) => {
+                const isEven = index % 2 === 0;
+                const timelineClass = isEven ? 'md:flex-row-reverse' : '';
+                const contentAlign = isEven ? 'md:pl-16' : 'md:pr-16';
+                const timeAlign = isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left';
 
-                return `
-                <div class="relative animate-target mb-12">
-                     <div class="absolute hidden md:block w-5 h-5 rounded-full bg-primary-500 border-4 border-slate-50 dark:border-slate-950 shadow-lg top-1 left-1/2 -translate-x-1/2"></div>
-                    <div class="md:flex items-start ${timelineClass}">
-                        <div class="md:w-1/2 ${contentAlign}">
-                             <div class="md:hidden mb-4 text-sm font-medium text-primary-600 dark:text-primary-400">${exp.period}</div>
-                            <div class="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-sm card-hover">
-                                <h3 class="text-2xl font-bold mb-1">${exp.role}</h3>
-                                <p class="text-primary-500 dark:text-primary-400 font-medium mb-4">${exp.company}</p>
-                                <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-justify">
-                                    ${exp.details.map(d => `<li class="flex items-start"><svg class="flex-shrink-0 h-5 w-5 text-primary-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>${d}</span></li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hidden md:flex md:w-1/2 flex-shrink-0 pt-2 relative items-center ${timeAlign} ${isEven ? 'justify-end' : 'justify-start'}">
-                            <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200">${exp.period}</span>
-                        </div>
-                    </div>
-                </div>`;
-            }).join('');
+                return `
+                <div class="relative animate-target mb-12">
+                     <div class="absolute hidden md:block w-5 h-5 rounded-full bg-primary-500 border-4 border-slate-50 dark:border-slate-950 shadow-lg top-1 left-1/2 -translate-x-1/2"></div>
+                    <div class="md:flex items-start ${timelineClass}">
+                        <div class="md:w-1/2 ${contentAlign}">
+                             <div class="md:hidden mb-4 text-sm font-medium text-primary-600 dark:text-primary-400">${exp.period}</div>
+                            <div class="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-sm card-hover">
+                                <h3 class="text-2xl font-bold mb-1">${exp.role}</h3>
+                                <p class="text-primary-500 dark:text-primary-400 font-medium mb-4">${exp.company}</p>
+                                <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-justify">
+                                    ${exp.details.map(d => `<li class="flex items-start"><svg class="flex-shrink-0 h-5 w-5 text-primary-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>${d}</span></li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex md:w-1/2 flex-shrink-0 pt-2 relative items-center ${timeAlign} ${isEven ? 'justify-end' : 'justify-start'}">
+                            <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200">${exp.period}</span>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
 
-            // Skills
-            const skillsContainer = $('#skills-container');
-            skillsContainer.innerHTML = APP_CONFIG.skills.map(skill => `
-                <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-4 sm:p-6 text-center transition-all duration-200 hover:scale-105 card-hover">
-                    <div class="text-primary-500 dark:text-primary-400 w-12 h-12 mx-auto mb-4 flex items-center justify-center text-3xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${skill.icon}</svg>
-                    </div>
-                    <h3 class="font-semibold text-slate-700 dark:text-slate-200">${skill.name}</h3>
-                </div>
-            `).join('');
-            
-            // Dashboard KPIs and Filters
-             $('#kpi-container').innerHTML = APP_CONFIG.dashboard.kpis.map(kpi => `
-                <div class="p-4 bg-slate-100/50 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-200 hover:scale-105">
-                    <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">${kpi.title}</h4>
-                    <div class="flex-col items-baseline justify-center gap-2">
-                        <p id="kpi-${kpi.id}" class="text-4xl font-black ${kpi.color} kpi-value">0</p>
-                        <div id="kpi-${kpi.id}-change" class="font-semibold text-xs"></div>
-                    </div>
-                </div>
-            `).join('');
+            // Skills
+            const skillsContainer = $('#skills-container');
+            skillsContainer.innerHTML = APP_CONFIG.skills.map(skill => `
+                <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-4 sm:p-6 text-center transition-all duration-200 hover:scale-105 card-hover">
+                    <div class="text-primary-500 dark:text-primary-400 w-12 h-12 mx-auto mb-4 flex items-center justify-center text-3xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${skill.icon}</svg>
+                    </div>
+                    <h3 class="font-semibold text-slate-700 dark:text-slate-200">${skill.name}</h3>
+                </div>
+            `).join('');
+            
+            // Dashboard KPIs and Filters
+             $('#kpi-container').innerHTML = APP_CONFIG.dashboard.kpis.map(kpi => `
+                <div class="p-4 bg-slate-100/50 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-200 hover:scale-105">
+                    <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">${kpi.title}</h4>
+                    <div class="flex-col items-baseline justify-center gap-2">
+                        <p id="kpi-${kpi.id}" class="text-4xl font-black ${kpi.color} kpi-value">0</p>
+                        <div id="kpi-${kpi.id}-change" class="font-semibold text-xs"></div>
+                    </div>
+                </div>
+            `).join('');
 
-            $('#dashboard-filters').innerHTML += APP_CONFIG.dashboard.filters.map((filter, index) => `
-                <button class="data-filter ${index === 0 ? 'bg-primary-500 text-white font-semibold' : 'bg-slate-200 dark:bg-slate-700'} py-1 px-3 rounded-md text-sm transition-colors" data-team="${filter}">${filter}</button>
-            `).join('');
-        }
+            $('#dashboard-filters').innerHTML += APP_CONFIG.dashboard.filters.map((filter, index) => `
+                <button class="data-filter ${index === 0 ? 'bg-primary-500 text-white font-semibold' : 'bg-slate-200 dark:bg-slate-700'} py-1 px-3 rounded-md text-sm transition-colors" data-team="${filter}">${filter}</button>
+            `).join('');
+        }
 
-        // --- THEME MANAGEMENT ---
-        function applyTheme(theme) {
-            document.documentElement.classList.toggle('dark', theme === 'dark');
-            $('#theme-icon-sun').classList.toggle('hidden', theme !== 'dark');
-            $('#theme-icon-moon').classList.toggle('hidden', theme === 'dark');
+        // --- THEME MANAGEMENT ---
+        function applyTheme(theme) {
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            $('#theme-icon-sun').classList.toggle('hidden', theme !== 'dark');
+            $('#theme-icon-moon').classList.toggle('hidden', theme === 'dark');
 
-            if (state.particlesInstance) {
-                const colors = theme === 'dark' ? ["#334155", "#4338ca", "#be185d"] : ["#0ea5e9", "#7c3aed", "#ec4899"];
-                state.particlesInstance.options.particles.color.value = colors;
-                state.particlesInstance.refresh();
-            }
-            if (state.dashboardInitialized) {
-                updateDashboard($('.data-filter.bg-primary-500').dataset.team, false);
-            }
-        }
-        
-        function setupThemeToggle() {
-            applyTheme(state.theme);
-            $('#theme-toggle').addEventListener('click', () => {
-                state.theme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-                localStorage.setItem('theme', state.theme);
-                applyTheme(state.theme);
-            });
-        }
-        
-        // --- UI & INTERACTIONS ---
-        function setupMobileMenu() {
-            $('#mobile-menu-button').addEventListener('click', () => $('#mobile-menu').classList.toggle('hidden'));
-            $$('#mobile-menu .nav-link').forEach(link => {
-                link.addEventListener('click', () => $('#mobile-menu').classList.add('hidden'));
-            });
-        }
+            if (state.particlesInstance) {
+                const colors = theme === 'dark' ? ["#334155", "#4338ca", "#be185d"] : ["#0ea5e9", "#7c3aed", "#ec4899"];
+                state.particlesInstance.options.particles.color.value = colors;
+                state.particlesInstance.refresh();
+            }
+            if (state.dashboardInitialized) {
+                updateDashboard($('.data-filter.bg-primary-500').dataset.team, false);
+            }
+        }
+        
+        function setupThemeToggle() {
+            applyTheme(state.theme);
+            $('#theme-toggle').addEventListener('click', () => {
+                state.theme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+                localStorage.setItem('theme', state.theme);
+                applyTheme(state.theme);
+            });
+        }
+        
+        // --- UI & INTERACTIONS ---
+        function setupMobileMenu() {
+            $('#mobile-menu-button').addEventListener('click', () => $('#mobile-menu').classList.toggle('hidden'));
+            $$('#mobile-menu .nav-link').forEach(link => {
+                link.addEventListener('click', () => $('#mobile-menu').classList.add('hidden'));
+            });
+        }
 
-        function setupAnimations() {
-            // Typewriter effect
-            gsap.to('#typewriter', {
-                text: "Senior MIS Specialist & Data Analyst",
-                duration: 3, ease: "none", delay: 1
-            });
+        function setupAnimations() {
+            // Typewriter effect
+            gsap.to('#typewriter', {
+                text: "Senior MIS Specialist & Data Analyst",
+                duration: 3, ease: "none", delay: 1
+            });
 
-            // General element fade-in
-            gsap.utils.toArray('.animate-target').forEach(el => {
-                gsap.from(el, { opacity: 0, y: 50, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
-            });
-            
-            // Timeline progress animation
-            gsap.to("#timeline-progress", {
-                height: "100%", ease: 'none',
-                scrollTrigger: {
-                    trigger: "#experience-container",
-                    start: "top center", end: "bottom center", scrub: true
-                }
-            });
-        }
+            // General element fade-in
+            gsap.utils.toArray('.animate-target').forEach(el => {
+                gsap.from(el, { opacity: 0, y: 50, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
+            });
+            
+            // Timeline progress animation
+            gsap.to("#timeline-progress", {
+                height: "100%", ease: 'none',
+                scrollTrigger: {
+                    trigger: "#experience-container",
+                    start: "top center", end: "bottom center", scrub: true
+                }
+            });
+        }
 
-        function setupParticles() {
-            const colors = state.theme === 'dark' ? ["#334155", "#4338ca", "#be185d"] : ["#0ea5e9", "#7c3aed", "#ec4899"];
-            tsParticles.load("particles-js", {
-                fpsLimit: 60,
-                particles: {
-                    number: { value: 50, density: { enable: true, value_area: 800 } },
-                    color: { value: colors },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-                    size: { value: 3, random: true },
-                    move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out" },
-                },
-                interactivity: { events: { onhover: { enable: true, mode: "bubble" }, resize: true }, modes: { bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 } } },
-                detectRetina: true,
-            }).then(container => state.particlesInstance = container);
-        }
+        function setupParticles() {
+            const colors = state.theme === 'dark' ? ["#334155", "#4338ca", "#be185d"] : ["#0ea5e9", "#7c3aed", "#ec4899"];
+            tsParticles.load("particles-js", {
+                fpsLimit: 60,
+                particles: {
+                    number: { value: 50, density: { enable: true, value_area: 800 } },
+                    color: { value: colors },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+                    size: { value: 3, random: true },
+                    move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out" },
+                },
+                interactivity: { events: { onhover: { enable: true, mode: "bubble" }, resize: true }, modes: { bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 } } },
+                detectRetina: true,
+            }).then(container => state.particlesInstance = container);
+        }
 
-        function setupSmoothScroll() {
-            $$('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    // Set duration to 0 for an instant jump
-                    gsap.to(window, { duration: 0, scrollTo: { y: this.getAttribute('href'), offsetY: 80 } });
-                });
-            });
-        }
-        
-        function setupBackToTop() {
-            const toTopBtn = $('#back-to-top');
-            gsap.to(toTopBtn, {
-                autoAlpha: 1, y: 0,
-                scrollTrigger: {
-                    trigger: 'body', start: '20% top',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-            toTopBtn.addEventListener('click', () => {
-                // Set duration to 0 for an instant jump
-                gsap.to(window, { duration: 0, scrollTo: 0 });
-            });
-        }
+        function setupSmoothScroll() {
+            $$('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Set duration to 0 for an instant jump
+                    gsap.to(window, { duration: 0, scrollTo: { y: this.getAttribute('href'), offsetY: 80 } });
+                });
+            });
+        }
+        
+        function setupBackToTop() {
+            const toTopBtn = $('#back-to-top');
+            gsap.to(toTopBtn, {
+                autoAlpha: 1, y: 0,
+                scrollTrigger: {
+                    trigger: 'body', start: '20% top',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+            toTopBtn.addEventListener('click', () => {
+                // Set duration to 0 for an instant jump
+                gsap.to(window, { duration: 0, scrollTo: 0 });
+            });
+        }
 
-        // --- DASHBOARD LOGIC ---
-        function generateMockData() {
-            const teams = ["Tech", "Billing"], agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] }, priorities = ["High", "Medium", "Low"], channels = ["Phone", "Email", "Chat"], data = [];
-            const today = new Date("2025-09-14T12:00:00Z");
-            for (let i = 0; i < 2000; i++) {
-                const team = teams[Math.floor(Math.random() * teams.length)], date = new Date(today);
-                date.setDate(today.getDate() - Math.floor(Math.random() * 60));
-                data.push({ id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agents[team][Math.floor(Math.random() * agents[team].length)], priority: priorities[Math.floor(Math.random() * priorities.length)], channel: channels[Math.floor(Math.random() * channels.length)], handlingTime: Math.floor(Math.random() * 300) + 5, fcr: Math.random() > 0.15, nps: Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 9 : Math.floor(Math.random() * 8) + 1 });
-            }
-            return data;
-        }
+        // --- DASHBOARD LOGIC ---
+        function generateMockData() {
+            const teams = ["Tech", "Billing"], agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] }, priorities = ["High", "Medium", "Low"], channels = ["Phone", "Email", "Chat"], data = [];
+            const today = new Date("2025-09-14T12:00:00Z");
+            for (let i = 0; i < 2000; i++) {
+                const team = teams[Math.floor(Math.random() * teams.length)], date = new Date(today);
+                date.setDate(today.getDate() - Math.floor(Math.random() * 60));
+                data.push({ id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agents[team][Math.floor(Math.random() * agents[team].length)], priority: priorities[Math.floor(Math.random() * priorities.length)], channel: channels[Math.floor(Math.random() * channels.length)], handlingTime: Math.floor(Math.random() * 300) + 5, fcr: Math.random() > 0.15, nps: Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 9 : Math.floor(Math.random() * 8) + 1 });
+            }
+            return data;
+        }
 
-        function calculateMetrics(data) {
-            if (data.length === 0) return { nps: 0, aht: 0, fcr: 0, tickets: 0 };
-            const promoters = data.filter(d => d.nps >= 9).length;
-            const detractors = data.filter(d => d.nps <= 6).length;
-            return {
-                nps: Math.round(((promoters - detractors) / data.length) * 100),
-                aht: Math.round(data.reduce((acc, curr) => acc + curr.handlingTime, 0) / data.length),
-                fcr: Math.round(data.filter(d => d.fcr).length / data.length * 100),
-                tickets: data.length
-            };
-        }
+        function calculateMetrics(data) {
+            if (data.length === 0) return { nps: 0, aht: 0, fcr: 0, tickets: 0 };
+            const promoters = data.filter(d => d.nps >= 9).length;
+            const detractors = data.filter(d => d.nps <= 6).length;
+            return {
+                nps: Math.round(((promoters - detractors) / data.length) * 100),
+                aht: Math.round(data.reduce((acc, curr) => acc + curr.handlingTime, 0) / data.length),
+                fcr: Math.round(data.filter(d => d.fcr).length / data.length * 100),
+                tickets: data.length
+            };
+        }
 
-        function updateKPIs(currentData, previousData, useTransition = true) {
-            const currentMetrics = calculateMetrics(currentData);
-            const previousMetrics = calculateMetrics(previousData);
+        function updateKPIs(currentData, previousData, useTransition = true) {
+            const currentMetrics = calculateMetrics(currentData);
+            const previousMetrics = calculateMetrics(previousData);
 
-            APP_CONFIG.dashboard.kpis.forEach(kpi => {
-                const getChange = (current, previous) => {
-                    if (previous === 0) return { change: null, arrow: '' };
-                    const change = ((current - previous) / previous) * 100;
-                    return { change, arrow: change >= 0 ? '▲' : '▼' };
-                };
-                const changeData = getChange(currentMetrics[kpi.id], previousMetrics[kpi.id]);
-                const changeEl = $(`#kpi-${kpi.id}-change`);
-                
-                if (changeData.change !== null) {
-                    const isGood = (kpi.good === 'up' && changeData.change >= 0) || (kpi.good === 'down' && changeData.change <= 0);
-                    changeEl.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-red-500'}">${changeData.arrow} ${changeData.change.toFixed(1)}%</span> vs LMTD`;
-                } else {
-                    changeEl.textContent = 'vs LMTD';
-                }
-                
-                const target = $(`#kpi-${kpi.id}`);
-                gsap.to(target, { textContent: currentMetrics[kpi.id], duration: useTransition ? 1.5 : 0, ease: "power1.inOut", snap: { textContent: 1 }, onUpdate: () => target.textContent = `${Math.round(parseFloat(target.textContent))}${kpi.unit}` });
-            });
-        }
-        
-        function initChart(chartId, chartConfig) {
-            const el = $(chartId);
-            // This line was removed to prevent flickering on updates: d3.select(el).select("svg").remove();
-            const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", "100%");
-            if (chartId !== '#donut-chart') {
-                const { chartMargin } = APP_CONFIG.dashboard;
-                const g = svg.append("g").attr("transform", `translate(${chartMargin.left},${chartMargin.top})`);
-                g.append("g").attr("class", "x-axis");
-                g.append("g").attr("class", "y-axis");
-                g.append("defs");
-                state.chartElements[chartId] = { el, svg: g, ...chartConfig };
-            } else {
-                 state.chartElements[chartId] = { el, svg: svg.append("g"), ...chartConfig };
-            }
-        }
-        
-        function getChartColors() {
-            const isDark = document.documentElement.classList.contains('dark');
-            return {
-                axisColor: isDark ? "#475569" : "#cbd5e1",
-                textColor: isDark ? "#94a3b8" : "#64748b",
-                lineColor: isDark ? "#818cf8" : "#6366f1",
-            };
-        }
+            APP_CONFIG.dashboard.kpis.forEach(kpi => {
+                const getChange = (current, previous) => {
+                    if (previous === 0) return { change: null, arrow: '' };
+                    const change = ((current - previous) / previous) * 100;
+                    return { change, arrow: change >= 0 ? '▲' : '▼' };
+                };
+                const changeData = getChange(currentMetrics[kpi.id], previousMetrics[kpi.id]);
+                const changeEl = $(`#kpi-${kpi.id}-change`);
+                
+                if (changeData.change !== null) {
+                    const isGood = (kpi.good === 'up' && changeData.change >= 0) || (kpi.good === 'down' && changeData.change <= 0);
+                    changeEl.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-red-500'}">${changeData.arrow} ${changeData.change.toFixed(1)}%</span> vs LMTD`;
+          _      } else {
+                    changeEl.textContent = 'vs LMTD';
+                }
+                
+                const target = $(`#kpi-${kpi.id}`);
+                gsap.to(target, { textContent: currentMetrics[kpi.id], duration: useTransition ? 1.5 : 0, ease: "power1.inOut", snap: { textContent: 1 }, onUpdate: () => target.textContent = `${Math.round(parseFloat(target.textContent))}${kpi.unit}` });
+            });
+        }
+        
+        function initChart(chartId, chartConfig) {
+            const el = $(chartId);
+            // This line was removed to prevent flickering on updates: d3.select(el).select("svg").remove();
+            const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", "100%");
+            if (chartId !== '#donut-chart') {
+                const { chartMargin } = APP_CONFIG.dashboard;
+                const g = svg.append("g").attr("transform", `translate(${chartMargin.left},${chartMargin.top})`);
+                g.append("g").attr("class", "x-axis");
+                g.append("g").attr("class", "y-axis");
+                g.append("defs");
+                state.chartElements[chartId] = { el, svg: g, ...chartConfig };
+            } else {
+                 state.chartElements[chartId] = { el, svg: svg.append("g"), ...chartConfig };
+            }
+        }
+        
+        function getChartColors() {
+            const isDark = document.documentElement.classList.contains('dark');
+            return {
+                axisColor: isDark ? "#475569" : "#cbd5e1",
+                textColor: isDark ? "#94a3b8" : "#64748b",
+                lineColor: isDark ? "#818cf8" : "#6366f1",
+            };
+        }
 
-        // --- CHART DRAWING FUNCTIONS ---
-        function drawBarChart(data, useTransition) {
-            const { el, svg, x, y } = state.chartElements['#bar-chart'];
-            const { chartMargin } = APP_CONFIG.dashboard;
-            const width = el.clientWidth - chartMargin.left - chartMargin.right;
-            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors();
-            const t = d3.transition().duration(useTransition ? 500 : 0);
-            
-            const priorityData = d3.rollups(data, v => v.length, d => d.priority).map(([key, value]) => ({priority: key, value}));
-            const priorities = ["High", "Medium", "Low"];
-            x.domain(priorities).range([0, width]).padding(0.4);
-            y.domain([0, d3.max(priorityData, d => d.value) || 10]).range([height, 0]);
+        // --- CHART DRAWING FUNCTIONS ---
+        function drawBarChart(data, useTransition) {
+            const { el, svg, x, y } = state.chartElements['#bar-chart'];
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const width = el.clientWidth - chartMargin.left - chartMargin.right;
+            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors();
+            const t = d3.transition().duration(useTransition ? 500 : 0);
+            
+            const priorityData = d3.rollups(data, v => v.length, d => d.priority).map(([key, value]) => ({priority: key, value}));
+            const priorities = ["High", "Medium", "Low"];
+            x.domain(priorities).range([0, width]).padding(0.4);
+            y.domain([0, d3.max(priorityData, d => d.value) || 10]).range([height, 0]);
 
-            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor);
+            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
+            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor);
 
-            const colorScale = d3.scaleOrdinal().domain(priorities).range(["#ef4444", "#f59e0b", "#10b981"]);
-            const bars = svg.selectAll(".bar").data(priorityData, d => d.priority);
+            const colorScale = d3.scaleOrdinal().domain(priorities).range(["#ef4444", "#f59e0b", "#10b981"]);
+            const bars = svg.selectAll(".bar").data(priorityData, d => d.priority);
 
-            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.priority)).attr("rx", 3).attr("x", d => x(d.priority)).attr("y", y(0)).attr("width", x.bandwidth()).attr("height", 0)
-                .merge(bars).transition(t).attr("x", d => x(d.priority)).attr("width", x.bandwidth()).attr("y", d => y(d.value)).attr("height", d => height - y(d.value));
-            bars.exit().transition(t).attr("y", y(0)).attr("height", 0).remove();
-        }
-        
-        function drawLineChart(data, useTransition) {
-             const { el, svg, x, y } = state.chartElements['#line-chart'];
-            const { chartMargin } = APP_CONFIG.dashboard;
-            const width = el.clientWidth - chartMargin.left - chartMargin.right;
-            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors();
-            const t = d3.transition().duration(useTransition ? 500 : 0);
+            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.priority)).attr("rx", 3).attr("x", d => x(d.priority)).attr("y", y(0)).attr("width", x.bandwidth()).attr("height", 0)
+                .merge(bars).transition(t).attr("x", d => x(d.priority)).attr("width", x.bandwidth()).attr("y", d => y(d.value)).attr("height", d => height - y(d.value));
+            bars.exit().transition(t).attr("y", y(0)).attr("height", 0).remove();
+        }
+        
+        function drawLineChart(data, useTransition) {
+             const { el, svg, x, y } = state.chartElements['#line-chart'];
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const width = el.clientWidth - chartMargin.left - chartMargin.right;
+            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors();
+            const t = d3.transition().duration(useTransition ? 500 : 0);
 
-            const dailyData = d3.rollups(data, v => v.length, d => d.date).map(([key, value]) => ({date: d3.timeParse("%Y-%m-%d")(key), value})).sort((a, b) => a.date - b.date);
+            const dailyData = d3.rollups(data, v => v.length, d => d.date).map(([key, value]) => ({date: d3.timeParse("%Y-%m-%d")(key), value})).sort((a, b) => a.date - b.date);
 
-            x.domain(d3.extent(dailyData, d => d.date)).range([0, width]);
-            y.domain([0, d3.max(dailyData, d => d.value) || 10]).range([height, 0]);
+            x.domain(d3.extent(dailyData, d => d.date)).range([0, width]);
+            y.domain([0, d3.max(dailyData, d => d.value) || 10]).range([height, 0]);
 
-            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat("%b %d")));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor);
+            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat("%b %d")));
+            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor);
 
-            const line = d3.line().x(d => x(d.date)).y(d => y(d.value)).curve(d3.curveMonotoneX);
-            const area = d3.area().x(d => x(d.date)).y0(height).y1(d => y(d.value)).curve(d3.curveMonotoneX);
+            const line = d3.line().x(d => x(d.date)).y(d => y(d.value)).curve(d3.curveMonotoneX);
+            const area = d3.area().x(d => x(d.date)).y0(height).y1(d => y(d.value)).curve(d3.curveMonotoneX);
 
-            const gradient = svg.select("defs").html("").append("linearGradient").attr("id", "area-gradient").attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
-            gradient.append("stop").attr("offset", "0%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0.4);
-            gradient.append("stop").attr("offset", "100%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0);
+            const gradient = svg.select("defs").html("").append("linearGradient").attr("id", "area-gradient").attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
+            gradient.append("stop").attr("offset", "0%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0.4);
+            gradient.append("stop").attr("offset", "100%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0);
 
-            svg.selectAll(".area-path").data([dailyData]).join("path").attr("class", "area-path").attr("fill", "url(#area-gradient)").transition(t).attr("d", area);
-            svg.selectAll(".line-path").data([dailyData]).join("path").attr("class", "line-path").attr("fill", "none").attr("stroke", colors.lineColor).attr("stroke-width", 2.5).transition(t).attr("d", line);
-        }
+            svg.selectAll(".area-path").data([dailyData]).join("path").attr("class", "area-path").attr("fill", "url(#area-gradient)").transition(t).attr("d", area);
+            svg.selectAll(".line-path").data([dailyData]).join("path").attr("class", "line-path").attr("fill", "none").attr("stroke", colors.lineColor).attr("stroke-width", 2.5).transition(t).attr("d", line);
+        }
 
-        function drawDonutChart(data, useTransition) {
-            const { el, svg } = state.chartElements['#donut-chart'];
-            const width = el.clientWidth, height = el.clientHeight;
-            const radius = Math.min(width, height) / 2.5;
-            const t = d3.transition().duration(useTransition ? 500 : 0);
+        function drawDonutChart(data, useTransition) {
+            const { el, svg } = state.chartElements['#donut-chart'];
+            const width = el.clientWidth, height = el.clientHeight;
+            const radius = Math.min(width, height) / 2.5;
+            const t = d3.transition().duration(useTransition ? 500 : 0);
 
-            svg.attr("transform", `translate(${width / 2}, ${height / 2})`);
-            const channelData = d3.rollups(data, v => v.length, d => d.channel);
-            
-            const color = d3.scaleOrdinal().domain(channelData.map(d => d[0])).range(["#38bdf8", "#818cf8", "#c084fc"]);
-            const pie = d3.pie().value(d => d[1]).sort(null);
-            const arc = d3.arc().innerRadius(radius * 0.6).outerRadius(radius);
+            svg.attr("transform", `translate(${width / 2}, ${height / 2})`);
+            const channelData = d3.rollups(data, v => v.length, d => d.channel);
+            
+            const color = d3.scaleOrdinal().domain(channelData.map(d => d[0])).range(["#38bdf8", "#818cf8", "#c084fc"]);
+            const pie = d3.pie().value(d => d[1]).sort(null);
+            const arc = d3.arc().innerRadius(radius * 0.6).outerRadius(radius);
 
-            const slices = svg.selectAll("path").data(pie(channelData), d => d.data[0]);
-            slices.enter().append("path").attr("fill", d => color(d.data[0])).each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
-                .merge(slices).transition(t).attrTween("d", function(d) {
-                    const i = d3.interpolate(this._current, d);
-                    this._current = i(0);
-                    return t => arc(i(t));
-                });
-            slices.exit().transition(t).attrTween("d", function(d) {
-                const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle});
-                return t => arc(i(t));
-            }).remove();
+            const slices = svg.selectAll("path").data(pie(channelData), d => d.data[0]);
+            slices.enter().append("path").attr("fill", d => color(d.data[0])).each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
+                .merge(slices).transition(t).attrTween("d", function(d) {
+                    const i = d3.interpolate(this._current, d);
+                    this._current = i(0);
+                    return t => arc(i(t));
+                });
+            slices.exit().transition(t).attrTween("d", function(d) {
+                const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle});
+                return t => arc(i(t));
+            }).remove();
 
-            const legendContainer = d3.select("#donut-legend").html("");
-            const legendItems = legendContainer.selectAll(".legend-item").data(channelData, d => d[0]);
-            const legendEnter = legendItems.enter().append("div").attr("class", "legend-item flex items-center text-xs");
-            legendEnter.append("div").attr("class", "w-3 h-3 rounded-sm mr-2").style("background-color", d => color(d[0]));
-            legendEnter.append("span").text(d => `${d[0]} (${d[1]})`);
-            legendItems.exit().remove();
-        }
+            const legendContainer = d3.select("#donut-legend").html("");
+            const legendItems = legendContainer.selectAll(".legend-item").data(channelData, d => d[0]);
+            const legendEnter = legendItems.enter().append("div").attr("class", "legend-item flex items-center text-xs");
+            legendEnter.append("div").attr("class", "w-3 h-3 rounded-sm mr-2").style("background-color", d => color(d[0]));
+            legendEnter.append("span").text(d => `${d[0]} (${d[1]})`);
+            legendItems.exit().remove();
+        }
 
-        function drawAgentChart(data, useTransition) {
-             const { el, svg, x, y } = state.chartElements['#agent-chart'];
-            const { chartMargin } = APP_CONFIG.dashboard;
-            const width = el.clientWidth - chartMargin.left - chartMargin.right;
-            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors();
-            const t = d3.transition().duration(useTransition ? 500 : 0);
+        function drawAgentChart(data, useTransition) {
+             const { el, svg, x, y } = state.chartElements['#agent-chart'];
+            const { chartMargin } = APP_CONFIG.dashboard;
+            const width = el.clientWidth - chartMargin.left - chartMargin.right;
+            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors();
+            const t = d3.transition().duration(useTransition ? 500 : 0);
 
-            const agentData = d3.rollups(data, v => v.length, d => d.agent).map(([key, value]) => ({agent: key, value})).sort((a,b) => b.value - a.value).slice(0, 8);
-            
-            y.domain(agentData.map(d => d.agent)).range([0, height]).padding(0.2);
-            x.domain([0, d3.max(agentData, d => d.value) || 10]).range([0, width]);
+            const agentData = d3.rollups(data, v => v.length, d => d.agent).map(([key, value]) => ({agent: key, value})).sort((a,b) => b.value - a.value).slice(0, 8);
+            
+            y.domain(agentData.map(d => d.agent)).range([0, height]).padding(0.2);
+            x.domain([0, d3.max(agentData, d => d.value) || 10]).range([0, width]);
 
-            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor);
+            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
+            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor);
 
-            const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(agentData.map(d => d.agent));
-            const bars = svg.selectAll(".bar").data(agentData, d => d.agent);
+            const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(agentData.map(d => d.agent));
+            const bars = svg.selectAll(".bar").data(agentData, d => d.agent);
 
-            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.agent)).attr("rx", 3).attr("x", x(0)).attr("y", d => y(d.agent)).attr("width", 0).attr("height", y.bandwidth())
-                .merge(bars).transition(t).attr("width", d => x(d.value)).attr("y", d => y(d.agent)).attr("height", y.bandwidth());
-            bars.exit().transition(t).attr("width", 0).remove();
-        }
-        
-        // --- DASHBOARD CONTROLLER ---
-        function updateDashboard(team, useTransition = true) {
-            const today = new Date("2025-09-14T12:00:00Z");
-            const sevenDaysAgo = new Date(today);
-            sevenDaysAgo.setDate(today.getDate() - 6);
-            
-            const previousPeriodEnd = new Date(today.getFullYear(), today.getMonth(), 0);
-            const previousPeriodStart = new Date(previousPeriodEnd.getFullYear(), previousPeriodEnd.getMonth(), 1);
+            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.agent)).attr("rx", 3).attr("x", x(0)).attr("y", d => y(d.agent)).attr("width", 0).attr("height", y.bandwidth())
+                .merge(bars).transition(t).attr("width", d => x(d.value)).attr("y", d => y(d.agent)).attr("height", y.bandwidth());
+            bars.exit().transition(t).attr("width", 0).remove();
+        }
+        
+        // --- DASHBOARD CONTROLLER ---
+        function updateDashboard(team, useTransition = true) {
+            const today = new Date("2025-09-14T12:00:00Z");
+            const sevenDaysAgo = new Date(today);
+            sevenDaysAgo.setDate(today.getDate() - 6);
+            
+            const previousPeriodEnd = new Date(today.getFullYear(), today.getMonth(), 0);
+            const previousPeriodStart = new Date(previousPeriodEnd.getFullYear(), previousPeriodEnd.getMonth(), 1);
 
-            const parseDate = d3.timeParse("%Y-%m-%d");
-            const baseData = (team === "All") ? state.mockData : state.mockData.filter(d => d.team === team);
+            const parseDate = d3.timeParse("%Y-%m-%d");
+            const baseData = (team === "All") ? state.mockData : state.mockData.filter(d => d.team === team);
 
-            const currentData = baseData.filter(d => {
-                const date = parseDate(d.date);
-                return date >= sevenDaysAgo && date <= today;
-            });
-            const previousData = baseData.filter(d => {
-                const date = parseDate(d.date);
-                return date >= previousPeriodStart && date <= previousPeriodEnd;
-            });
-            
-            updateKPIs(currentData, previousData, useTransition);
-            drawBarChart(currentData, useTransition);
-            drawLineChart(currentData, useTransition);
-            drawDonutChart(currentData, useTransition);
-            drawAgentChart(currentData, useTransition);
-        }
+            const currentData = baseData.filter(d => {
+                const date = parseDate(d.date);
+                return date >= sevenDaysAgo && date <= today;
+            });
+            const previousData = baseData.filter(d => {
+                const date = parseDate(d.date);
+                return date >= previousPeriodStart && date <= previousPeriodEnd;
+            });
+            
+            updateKPIs(currentData, previousData, useTransition);
+            drawBarChart(currentData, useTransition);
+            drawLineChart(currentData, useTransition);
+            drawDonutChart(currentData, useTransition);
+            drawAgentChart(currentData, useTransition);
+        }
 
-        function initDashboard() {
-            if (state.dashboardInitialized) return;
-            
-            // Initialize charts ONCE to prevent flickering
-            initChart('#bar-chart', { x: d3.scaleBand(), y: d3.scaleLinear() });
-            initChart('#line-chart', { x: d3.scaleTime(), y: d3.scaleLinear() });
-            initChart('#donut-chart', {});
-            initChart('#agent-chart', { x: d3.scaleLinear(), y: d3.scaleBand() });
+        function initDashboard() {
+            if (state.dashboardInitialized) return;
+            
+            // Initialize charts ONCE to prevent flickering
+            initChart('#bar-chart', { x: d3.scaleBand(), y: d3.scaleLinear() });
+            initChart('#line-chart', { x: d3.scaleTime(), y: d3.scaleLinear() });
+            initChart('#donut-chart', {});
+            initChart('#agent-chart', { x: d3.scaleLinear(), y: d3.scaleBand() });
 
-            state.mockData = generateMockData();
-            updateDashboard("All", false);
-            state.dashboardInitialized = true;
-        }
+            state.mockData = generateMockData();
+            updateDashboard("All", false);
+            state.dashboardInitialized = true;
+        }
 
-        function setupDashboardControls() {
-            $$('.data-filter').forEach(button => {
-                button.addEventListener('click', function() {
-                    $$('.data-filter').forEach(btn => {
-                        btn.classList.remove('bg-primary-500', 'text-white', 'font-semibold');
-                        btn.classList.add('bg-slate-200', 'dark:bg-slate-700');
-                    });
-                    this.classList.add('bg-primary-500', 'text-white', 'font-semibold');
-                    this.classList.remove('bg-slate-200', 'dark:bg-slate-700');
-                    updateDashboard(this.dataset.team, true);
-                });
-            });
-        }
-        
-        function handleResize() {
-            if (!state.dashboardInitialized) return;
-            // Debounce resize events
-            clearTimeout(state.resizeTimer);
-            state.resizeTimer = setTimeout(() => {
-                 updateDashboard($('.data-filter.bg-primary-500').dataset.team, false);
-            }, 150);
-        }
-        
-        // --- INITIALIZATION ---
-        function init() {
-            populateContent();
-            setupThemeToggle();
-            setupMobileMenu();
-            setupAnimations();
-            setupParticles();
-            setupDashboardControls();
-            setupSmoothScroll();
-            setupBackToTop();
-            
-            $('#current-year').textContent = new Date().getFullYear();
+        function setupDashboardControls() {
+            $$('.data-filter').forEach(button => {
+                button.addEventListener('click', function() {
+                    $$('.data-filter').forEach(btn => {
+                        btn.classList.remove('bg-primary-500', 'text-white', 'font-semibold');
+                        btn.classList.add('bg-slate-200', 'dark:bg-slate-700');
+                    });
+                    this.classList.add('bg-primary-500', 'text-white', 'font-semibold');
+                    this.classList.remove('bg-slate-200', 'dark:bg-slate-700');
+                    updateDashboard(this.dataset.team, true);
+                });
+            });
+        }
+        
+        function handleResize() {
+            if (!state.dashboardInitialized) return;
+            // Debounce resize events
+            clearTimeout(state.resizeTimer);
+            state.resizeTimer = setTimeout(() => {
+                 updateDashboard($('.data-filter.bg-primary-500').dataset.team, false);
+            }, 150);
+        }
+        
+        // --- INITIALIZATION ---
+        function init() {
+            populateContent();
+            setupThemeToggle();
+            setupMobileMenu();
+            setupAnimations();
+            setupParticles();
+            setupDashboardControls();
+            setupSmoothScroll();
+            setupBackToTop();
+            
+            $('#current-year').textContent = new Date().getFullYear();
 
-            ScrollTrigger.create({ trigger: "#dashboard", start: "top 80%", onEnter: initDashboard, once: true });
-            
-            window.addEventListener("resize", handleResize);
-        }
+            ScrollTrigger.create({ trigger: "#dashboard", start: "top 80%", onEnter: initDashboard, once: true });
+            
+            window.addEventListener("resize", handleResize);
+        }
 
-        init();
+        init();
 
-        window.addEventListener('load', () => {
-            const preloader = $('#preloader');
-            if (preloader) {
-                preloader.classList.add('opacity-0');
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500); // Matches the transition duration
-            }
-        });
-    });
-    </script>
+        window.addEventListener('load', () => {
+            const preloader = $('#preloader');
+            if (preloader) {
+                preloader.classList.add('opacity-0');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500); // Matches the transition duration
+            }
+        });
+    });
+    </script>
 </body>
 </html>
