@@ -3,30 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Essam | Senior MIS Specialist & Data Analyst</title>
-    <meta name="description" content="Professional portfolio of Ahmed Essam showcasing expertise in Management Information Systems, Data Analysis, and Business Intelligence solutions.">
-    <link rel="canonical" href="https://ahmedessam.dev">
+    <title>Ahmed Essam | Customer Experience & Reporting Analyst</title>
+    <meta name="description" content="Professional portfolio of Ahmed Essam, Customer Experience & Reporting Analyst specializing in analytical solutions, Data Analysis, and Business Intelligence.">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Ahmed Essam | Senior MIS Specialist & Data Analyst">
-    <meta property="og:description" content="Professional portfolio showcasing expertise in Management Information Systems and Data Analysis.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ahmedessam.dev">
-    <meta property="og:image" content="https://placehold.co/1200x630/0ea5e9/ffffff?text=AE">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon (using placeholder for demonstration) -->
-    <link rel="icon" href="https://placehold.co/32x32/0ea5e9/ffffff?text=AE">
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style">
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    
-	
-    <!-- CSS & JS Libraries -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
@@ -35,1056 +20,898 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     
+    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        slate: { '50': '#f8fafc', '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8', '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a', '950': '#020617' },
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' }
+                        slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#020617' },
+                        primary: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' },
+                        complement: { 400: '#e879f9', 500: '#d946ef', 600: '#c026d3' },
+                        accent: { purple: '#a855f7', pink: '#ec4899', indigo: '#6366f1', teal: '#2dd4bf', 500: '#10b981', 600: '#059669' }
                     },
                     fontFamily: {
-                        sans: ['Montserrat', 'sans-serif']
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
                     },
                     animation: {
-                        'blob': 'blob 7s ease-in-out infinite',
+                        'blob': 'blob 10s ease-in-out infinite',
                         'gradient': 'gradient 8s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
                     },
                     keyframes: {
                         blob: {
                             '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(20px, -30px) scale(1.1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                             '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }
                         },
                         gradient: {
                             '0%': { 'background-position': '0% 50%' },
                             '50%': { 'background-position': '100% 50%' },
                             '100%': { 'background-position': '0% 50%' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' }
                         }
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden; 
+            font-size: 15px;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-blend-mode: overlay;
+        }
+        @media (min-width: 768px) { body { font-size: 16px; } }
+        h1, h2, h3, h4, h5, h6, .font-display, .kpi-value { font-family: 'Montserrat', sans-serif; }
+        
+
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        
+        /* Typography Gradients */
         .gradient-text {
-            background: linear-gradient(90deg, #0ea5e9, #7c3aed, #ec4899);
+            background: linear-gradient(135deg, #10b981 0%, #2dd4bf 40%, #6366f1 70%, #d946ef 100%);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            padding-right: 0.1em;
+            margin-right: -0.1em;
             animation: gradient 8s ease infinite;
         }
-        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
+        
+        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; pointer-events: none; }
         .kpi-value { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
-        .card-hover {
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        
+        /* Glassmorphism & Bento Cards - Obsidian Theme */
+        .glass { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(16px); 
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.05); 
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        .dark .glass { 
+            background: rgba(2, 6, 23, 0.6); 
+            border: 1px solid rgba(255, 255, 255, 0.03); 
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); 
         }
-        .text-balance { text-wrap: balance; }
-        .tooltip { position: relative; }
-        .tooltip .tooltip-text {
-            visibility: hidden; width: 120px; background-color: theme('colors.slate.800'); color: theme('colors.white');
-            text-align: center; border-radius: 6px; padding: 5px; position: absolute; z-index: 1; bottom: 125%; left: 50%;
-            transform: translateX(-50%); opacity: 0; transition: opacity 0.3s; font-size: 0.875rem;
+
+        .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); padding: 1.5rem; border-radius: 2.5rem; }
+        @media (min-width: 768px) { .bento-card { padding: 2.5rem; } }
+        .bento-card:hover { 
+            transform: translateY(-8px) scale(1.01); 
+            box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.2); 
+            border-color: rgba(16, 185, 129, 0.3);
         }
-        .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
-        .underline-animation { position: relative; display: inline-block; }
-        .underline-animation::after {
-            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 2px; bottom: -2px; left: 0;
-            background: linear-gradient(90deg, #0ea5e9, #7c3aed); transform-origin: bottom right; transition: transform 0.3s ease-out;
+        .dark .bento-card:hover { 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); 
+            border-color: rgba(16, 185, 129, 0.4); 
         }
-        .underline-animation:hover::after { transform: scaleX(1); transform-origin: bottom left; }
-        .typewriter-cursor {
-            display: inline-block; width: 3px; height: 1em; background-color: currentColor;
-            animation: blink 0.7s infinite; vertical-align: bottom;
+
+        /* Section Numbering */
+        .section-num {
+            position: absolute; top: -2rem; left: -1rem; font-size: 8rem; font-weight: 900;
+            color: rgba(16, 185, 129, 0.1); z-index: -1; pointer-events: none;
+            user-select: none; font-family: 'Montserrat', sans-serif;
         }
+        .dark .section-num { color: rgba(255, 255, 255, 0.02); }
+
+        @media (max-width: 767px) {
+            .section-num {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -1.5rem;
+                font-size: 6rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* D3.js Tooltip Styling */
+        .d3-tooltip {
+            position: absolute; text-align: left; padding: 10px 14px; font-size: 0.875rem;
+            font-family: 'Plus Jakarta Sans', sans-serif; background: rgba(15, 23, 42, 0.95);
+            color: #f8fafc; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;
+            pointer-events: none; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px); z-index: 1000; transition: opacity 0.2s ease;
+        }
+        .dark .d3-tooltip { background: rgba(248, 250, 252, 0.95); color: #0f172a; border-color: rgba(0, 0, 0, 0.1); }
+        
+        .typewriter-cursor { display: inline-block; width: 3px; height: 1em; background-color: currentColor; animation: blink 0.7s infinite; vertical-align: bottom; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
 </head>
-<body class="relative bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-200">
+<body class="bg-slate-50 text-slate-900 dark:bg-[#020617] dark:text-slate-100 transition-colors duration-300 antialiased">
+    
+    <!-- Mesh Gradients Background -->
+    <div class="fixed inset-0 z-[-2] pointer-events-none overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-emerald-500/10 blur-[130px] rounded-full animate-blob"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 blur-[130px] rounded-full animate-blob" style="animation-delay: 2s"></div>
+        <div class="absolute top-[20%] right-[10%] w-[45%] h-[45%] bg-fuchsia-500/5 blur-[130px] rounded-full animate-blob" style="animation-delay: 4s"></div>
+        <div class="absolute bottom-[20%] left-[10%] w-[40%] h-[40%] bg-violet-500/5 blur-[130px] rounded-full animate-blob" style="animation-delay: 6s"></div>
+    </div>
+    
+    <!-- Particles Background -->
     <div id="particles-js"></div>
+    
+
 
     <!-- Preloader -->
-    <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white dark:bg-slate-950 transition-opacity duration-500">
+    <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-50 dark:bg-slate-950 transition-opacity duration-500">
         <div class="relative w-24 h-24">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 opacity-20 animate-spin"></div>
-            <div class="absolute inset-2 rounded-full bg-gradient-to-r from-primary-400 to-primary-600 blur-sm opacity-30 animate-spin" style="animation-delay: 200ms;"></div>
-            <div class="absolute inset-4 flex items-center justify-center rounded-full bg-white dark:bg-slate-900">
-                <div class="w-6 h-6 rounded-full bg-primary-500 animate-pulse"></div>
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-20 animate-spin"></div>
+            <div class="absolute inset-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 blur-sm opacity-30 animate-spin" style="animation-delay: 200ms;"></div>
+            <div class="absolute inset-4 flex items-center justify-center rounded-full bg-white dark:bg-slate-950 shadow-inner">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 animate-pulse"></div>
             </div>
         </div>
     </div>
 
-    <!-- Header & Navigation -->
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#about" class="text-2xl font-bold gradient-text flex items-center">
-                
-                <span class="hidden sm:inline">Ahmed Essam</span>
-            </a>
+    <!-- Floating Navigation -->
+    <header id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl transition-all duration-300">
+        <nav class="glass rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+            <a href="#hero" class="text-xl font-display font-black gradient-text tracking-tighter magnetic-btn">AE</a>
             
-            <div class="flex items-center space-x-4 md:space-x-6">
-                <nav class="hidden md:flex space-x-8" id="desktop-nav">
-                    <!-- Nav links will be injected here -->
-                </nav>
-                
-                <button id="theme-toggle" class="text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors tooltip" aria-label="Toggle theme">
-                    <svg id="theme-icon-sun" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    <svg id="theme-icon-moon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    <span class="tooltip-text">Toggle Theme</span>
-                </button>
-                
-                 <button id="mobile-menu-button" class="md:hidden text-2xl text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400">
-                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-                 </button>
+            <div class="hidden md:flex items-center gap-8" id="desktop-nav">
+                <!-- Nav links injected via JS -->
             </div>
-        </div>
+            
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-200/50 dark:hover:bg-white/10 transition-colors magnetic-btn" aria-label="Toggle theme">
+                    <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                    <svg id="theme-icon-moon" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden p-2 text-slate-600 dark:text-slate-300 hover:text-primary-500 transition-colors">
+                     <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+                <a href="./Ahmed Essam.pdf" download class="hidden md:inline-flex items-center gap-2 bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-white text-[10px] font-black uppercase tracking-widest px-6 py-2.5 rounded-full magnetic-btn border border-slate-300 dark:border-white/10">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    CV
+                </a>
+                <a href="#contact" class="hidden md:inline-block bg-primary-500 text-white text-[10px] font-black uppercase tracking-widest px-6 py-2.5 rounded-full magnetic-btn shadow-lg shadow-primary-500/20">Contact Me</a>
+            </div>
+        </nav>
+        
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md">
-            <!-- Mobile nav links will be injected here -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 glass rounded-3xl p-6 flex flex-col space-y-4 shadow-2xl">
+            <!-- Mobile nav links injected via JS -->
         </div>
     </header>
 
-    <main class="container mx-auto px-6 pt-24 overflow-x-hidden">
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-32 overflow-x-hidden">
 
         <!-- Hero Section -->
-        <section id="about" class="min-h-screen flex items-center relative">
-            <div class="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-50 items-center">
-                <div class="order-2 lg:order-1 text-center lg:text-left">
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 leading-tight animate-target">
-                        <span class="gradient-text">Ahmed Essam</span>
-                    </h1>
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-600 dark:text-slate-400 sm:h-auto">
-                        <span id="typewriter"></span><span class="typewriter-cursor"></span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0 animate-target text-justify">
-                        Transforming raw data into strategic insights with enterprise-level MIS solutions. I specialize in crafting intuitive dashboards and automated reporting systems that drive digital transformation and empower data-driven decision making.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 animate-target">
-                        <a href="#contact" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-primary-500/20">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            Get In Touch
-                        </a>
-                        <a href="#projects" class="w-full sm:w-auto flex items-center justify-center gap-2 border border-primary-500 text-primary-500 dark:text-primary-400 hover:bg-primary-500/10 font-medium py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                            View Projects
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="order-1 lg:order-2 relative animate-target">
-                    <div class="relative w-full max-w-md mx-auto">
-                        <div class="absolute -inset-4 bg-gradient-to-r from-primary-400 to-primary-600 rounded-3xl blur-xl opacity-20 animate-pulse"></div>
-                        <div class="relative overflow-hidden rounded-2xl border-8 border-white dark:border-slate-900 shadow-2xl">
-                            <img src="./me.jpg" alt="Ahmed Essam" class="w-full h-auto object-cover" loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
-                            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                <h3 class="text-xl font-bold">Ahmed Essam</h3>
-                                <p class="text-primary-200">Data & Analytics Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="hidden lg:block absolute -z-10 w-64 h-64 rounded-full bg-primary-400/10 blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                    <div class="hidden lg:block absolute -z-10 w-96 h-96 rounded-full bg-purple-400/10 blur-3xl top-1/3 right-0 animate-blob"></div>
+        <section id="hero" class="grid lg:grid-cols-2 items-center gap-16 min-h-[75vh]">
+            <div class="relative group animate-target lg:order-2">
+                <div class="absolute -inset-10 bg-emerald-500/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div class="absolute -inset-10 bg-fuchsia-500/5 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-100"></div>
+                <div class="relative aspect-square rounded-[4rem] overflow-hidden border-[12px] border-white dark:border-slate-900 rotate-3 transition-transform group-hover:rotate-0 duration-700 ease-out animate-float mx-auto max-w-sm lg:max-w-none">
+                    <img src="./me.webp" alt="Ahmed Essam" onerror="this.src='https://placehold.co/800x800/1e293b/0ea5e9?text=Ahmed+Essam'" class="w-full h-full object-cover transition-all duration-700 scale-100 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
                 </div>
             </div>
-            
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
-                <a href="#experience" class="animate-bounce block p-2" aria-label="Scroll to next section">
-                    <svg class="w-8 h-8 text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
-                </a>
-            </div>
-        </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-16 md:py-24">
-            <div class="text-center mb-16">
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Career Journey</span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Professional Experience</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                    My career path has been focused on leveraging data to drive business value and operational efficiency.
+            <div class="space-y-8 z-10 lg:order-1 text-center lg:text-left">
+                <!-- <div class="inline-flex items-center gap-3 glass px-4 py-1.5 rounded-full animate-target">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-[10px] font-black uppercase tracking-[0.2em] text-primary-500">Analytics Architect</span>
+                </div> -->
+                <h1 class="font-display text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] animate-target relative">
+                    AHMED <br> <span class="gradient-text">ESSAM.</span>
+                    <div class="absolute -inset-x-20 top-1/2 -translate-y-1/2 h-1 bg-emerald-500/20 blur-3xl -z-10"></div>
+                </h1>
+                <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-700 dark:text-slate-300 h-[60px] sm:h-auto animate-target">
+                    <span id="typewriter"></span><span class="typewriter-cursor text-primary-500"></span>
+                </h2>
+                <p class="text-base md:text-lg text-slate-500 dark:text-slate-400 max-w-lg leading-relaxed animate-target mx-auto lg:mx-0">
+                    I don't just build reports; I architect <strong class="text-slate-800 dark:text-white text-lg">meaningful connections</strong> between raw data and business success. As a <strong class="text-primary-500">Customer Experience Analyst</strong>, my goal is to make every number tell a story that leads to a better experience.
                 </p>
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 animate-target">
+                    <a href="#experience" class="bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-200 text-white dark:text-slate-950 px-6 sm:px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition-colors magnetic-btn shadow-xl">See My Journey</a>
+                    <a href="./Ahmed Essam.pdf" download class="bg-slate-200 dark:bg-white/10 text-slate-800 dark:text-white px-6 sm:px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-xs transition-colors border border-slate-300 dark:border-white/10 shadow-xl magnetic-btn">Download CV</a>
+                    <div class="flex -space-x-3 magnetic-btn ml-2 sm:ml-0">
+                        <img src="./Colleagues/1.webp" onerror="this.src='https://placehold.co/100x100/1e293b/0ea5e9?text=Y'" class="w-12 h-12 rounded-full border-4 border-slate-50 dark:border-slate-950 object-cover shadow-lg">
+                        <img src="./Colleagues/4.webp" onerror="this.src='https://placehold.co/100x100/1e293b/0ea5e9?text=M'" class="w-12 h-12 rounded-full border-4 border-slate-50 dark:border-slate-950 object-cover shadow-lg">
+                        <div class="w-12 h-12 rounded-full border-4 border-slate-50 dark:border-slate-950 bg-primary-500 flex items-center justify-center text-[10px] font-black text-white shadow-lg">+7</div>
+                    </div>
+                </div>
             </div>
-            
-            <div id="experience-container" class="relative max-w-6xl mx-auto">
-                 <div class="absolute left-1/2 top-0 h-full w-0.5 bg-slate-200 dark:bg-slate-800 -translate-x-1/2">
-                     <div id="timeline-progress" class="w-full bg-gradient-to-b from-primary-500 to-purple-500" style="height: 0%"></div>
-                 </div>
-                 <!-- Experience items will be injected by JS -->
-            </div>
+
+            <!-- Scroll Indicator -->
+            <!-- <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-target opacity-50">
+                <span class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400">Explore</span>
+                <div class="w-px h-16 bg-gradient-to-b from-emerald-500/50 to-transparent">
+                    <div class="w-full h-1/4 bg-emerald-500 animate-[scroll_2s_infinite]"></div>
+                </div>
+            </div> -->
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-16 md:py-24 bg-slate-100/50 dark:bg-slate-900/50 rounded-3xl">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Expertise</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">My Tool Kit</h2>
-                </div>
-                
-                <div id="skills-container" class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-                    <!-- Skills will be injected by JavaScript -->
-                </div>
-            </div>
-        </section>
+        <style>
+            @keyframes scroll {
+                0% { transform: translateY(-100%); opacity: 0; }
+                50% { opacity: 1; }
+                100% { transform: translateY(400%); opacity: 0; }
+            }
+        </style>
         
-        <!-- Featured Projects Section -->
-        <section id="projects" class="py-16 md:py-24">
-             <div class="text-center mb-16">
-                <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">My Work</span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Featured Projects</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                    Here are some of the projects I'm proud to have worked on.
-                </p>
-            </div>
-            <div class="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-				<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <img src="./DashStant.png" alt="Project 1" class="w-full h-[300px] object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">DashStant | Zero-Setup Analytics</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">It’s not just a dashboard tool; it’s an autonomous analyst. You upload a raw, messy dataset, and the system instantly gets to work.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Web Development</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Data Analysis</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">AI</span>
-                        </div>
-                        <a href="https://www.linkedin.com/posts/ahmedessam14998_dataanalytics-businessintelligence-automation-activity-7415831113861906432-C96o?utm_source=share&utm_medium=member_desktop&rcm=ACoAACc9yEkBbKQHxZCnynSWriEftcPQ6afmdQI" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            View Demo 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                 </div>
-				 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                 <img src="./Leaves.png" alt="Project 1" class="w-full h-[300px] object-cover">
-				 <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Fully Automated MIS Leaves System</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">From manual tracking and static spreadsheets, transitioning to a fully interactive, custom-built web application. A solution that doesn't just "work," but genuinely streamlines internal processes and eliminates calculation errors.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Data Automation</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Web Development</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">User Experience</span>
-                        </div>
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7408943047918399488/" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            See Post
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-				</div>
-                 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <img src="./Automation.png" alt="Project 2" class="w-full h-[300px] object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Build Excel Data Factory</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">You don't always need an expensive cloud stack to build a robust data pipeline. You just need the right architecture.</p>
-                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Excel</span>
-                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Power Query</span>
-                            <span class="text-xs font-semibold bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full">Data Modeling</span>
-                        </div>
-                        <a href="https://www.linkedin.com/posts/ahmedessam14998_warehouse-using-excel-guide-activity-7413159780296486912-IRAG?utm_source=share&utm_medium=member_desktop&rcm=ACoAACc9yEkBbKQHxZCnynSWriEftcPQ6afmdQI" target="_blank" rel="noopener noreferrer" class="font-semibold text-purple-600 dark:text-purple-400 inline-flex items-center group">
-                            View the guide
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                 </div>
-				 <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <img src="./powerQueryChange.png" alt="Project 1" class="w-full h-[300px] object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Supercharge Your Power Query Transformations</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">A powerful, flexible, and robust custom function using Power Query M gives you complete control over how to handle common data cleaning challenges.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Advanced Excel</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">M Language</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Development</span>
-                        </div>
-                        <a href="https://dev.to/essam404/supercharge-your-power-query-transformations-a-flexible-function-for-changing-column-types-4e4e" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            Read atricle 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-					
-                 </div>
-				<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                 <img src="./FuzzyRename.png" alt="Project 1" class="w-full h-[300px] object-cover">
-				 <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">A Smart, Fuzzy-Match Excel Power Query Rename Function</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">A robust replacement for the standard rename function. Instead of blindly looking for an exact text match, this function uses a 3-tier search logic to find your columns, ensuring your query survives dirty data updates.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Advanced Excel</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">M Language</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Development</span>
-                        </div>
-                        <a href="https://dev.to/essam404/bulletproof-power-query-part-2-a-smart-fuzzy-match-rename-function-4n6c" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            Read atricle 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-				</div>
-				<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                 <img src="./DataTrans.jpg" alt="Project 1" class="w-full h-[300px] object-cover">
-				 <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">What is MIS and Data Transformation</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Ever wonder how businesses make sense of all the information they collect? That's a big part of what Management Information Systems (MIS) does.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Advanced Excel</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">M Language</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Development</span>
-                        </div>
-                        <a href="https://www.linkedin.com/posts/ahmedessam14998_mis-managementinformationsystems-businesstechnology-activity-7378443467989020672-T-j7" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            Follow the Series 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-				</div>
-				<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden card-hover">
-                    <img src="./dashboard.png" alt="Project 1" class="w-full h-[300px] object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Enterprise KPI Dashboard</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">An interactive Power BI dashboard for monitoring enterprise-wide Key Performance Indicators, providing real-time insights to executive leadership.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">Power BI</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">DAX</span>
-                            <span class="text-xs font-semibold bg-primary-100 dark:bg-primary-900/50 text-primary-800 dark:text-primary-200 px-2 py-1 rounded-full">SQL</span>
-                        </div>
-                        <a href="#dashboard" class="font-semibold text-primary-600 dark:text-primary-400 inline-flex items-center group">
-                            View Demo 
-                            <svg class="ml-1 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                 </div>
+        <!-- Philosophy Section - The "Authenticity" Layer -->
+        <section id="philosophy" class="animate-target py-12 border-y border-slate-200/50 dark:border-slate-800/30">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-1">
+                    <h3 class="font-display text-xs font-black uppercase tracking-[0.3em] text-primary-500 mb-4">My Philosophy</h3>
+                    <p class="text-2xl font-black tracking-tight leading-tight italic">"Data is the bridge between a business issue and a solution."</p>
+                </div>
+                <div class="md:col-span-2 space-y-6 text-slate-600 dark:text-slate-400">
+                    <p class="text-lg">
+                        I believe that behind every data point in a report, there's a real person having a real experience. My job isn't just to calculate percentages; it's to find the friction and remove it. 
+                    </p>
+                    <p class="text-lg">
+                        By combining <span class="text-slate-900 dark:text-white font-bold">technical expertise</span> with <span class="text-slate-900 dark:text-white font-bold">empathy</span>, I build tools that don't just show what happened, but explain why—and how to make it better.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="py-16 md:py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Live Dashboard Demo</h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-3xl mx-auto animate-target text-justify">
-                    <b>A Real-World Scenario:</b> This interactive dashboard simulates a Customer Service MIS I would design and build. The core objective is to empower managers with a live, consolidated view of their support operations. It's built to instantly highlight performance trends, pinpoint potential bottlenecks, and track agent efficiency, ultimately driving improvements in customer satisfaction.
+        <!-- Experience Section (Bento Grid) -->
+        <section id="experience" class="space-y-12 relative z-10 pt-20">
+            <div class="section-num">01</div>
+            <div class="text-center md:text-left mb-8 animate-target">
+                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">Professional <span class="gradient-text">Journey</span></h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">Leveraging data to drive business value.</p>
+            </div>
+            
+            <div id="experience-container" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                 <!-- Injected by JS -->
+            </div>
+        </section>
+
+        <!-- Skills Section (Bento Grid) -->
+        <section id="skills" class="space-y-12 relative z-10 pt-20">
+            <div class="section-num">02</div>
+            <div class="text-center md:text-left mb-8 animate-target">
+                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">Expertise & <span class="gradient-text">Stack</span></h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">Clustered for immediate identification.</p>
+            </div>
+            
+            <div id="skills-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <!-- Skills injected by JS -->
+            </div>
+        </section>
+
+
+
+        <!-- Case Studies (Bento Grid) -->
+        <section id="projects" class="space-y-12 relative z-10 pt-20">
+            <div class="section-num">03</div>
+            <div class="text-center md:text-left mb-8 animate-target">
+                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">Case <span class="gradient-text">Studies</span></h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">Real-world solutions applying architecture and automation.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6" id="projects-container">
+                 <!-- Projects injected via JS -->
+            </div>
+            
+        </section>
+
+        <!-- Live Dashboard Demo -->
+        <section id="dashboard" class="space-y-12 relative z-10 pt-20">
+            <div class="section-num">04</div>
+            <div class="text-center md:text-left mb-8 animate-target">
+                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">Operations <span class="gradient-text">Hub</span></h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg italic">
+                    Reactive Data Flow Simulation. <strong class="text-slate-800 dark:text-slate-200">Hover over charts to interact.</strong>
                 </p>
             </div>
             
-            <div class="max-w-6xl mx-auto p-4 md:p-8 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-lg animate-target">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-8" id="kpi-container">
-                    <!-- KPIs will be injected here -->
+            <!-- Dashboard KPIs -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 animate-target" id="kpi-container">
+                <!-- KPIs injected here -->
+            </div>
+            
+            <!-- Dashboard Filters -->
+            <div class="flex flex-wrap items-center gap-3 animate-target" id="dashboard-filters">
+                <!-- Filters injected here -->
+            </div>
+            
+            <!-- Dashboard Charts in Bento Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-target">
+                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
+                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Tickets by Priority</h4>
+                    <div id="bar-chart" class="w-full h-48 md:h-72"></div>
                 </div>
-                
-                <div class="flex flex-wrap justify-center items-center gap-4 mb-8" id="dashboard-filters">
-                    <span class="text-sm font-semibold">Filter by Team:</span>
-                    <!-- Filter buttons will be injected here -->
+                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
+                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Volume Trend</h4>
+                    <div id="line-chart" class="w-full h-48 md:h-72"></div>
                 </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Priority</h3><div id="bar-chart" class="w-full h-80"></div></div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets per Day</h3><div id="line-chart" class="w-full h-80"></div></div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Tickets by Channel</h3><div id="donut-chart-container" class="w-full h-[24rem] flex flex-col md:flex-row items-center justify-center"><div id="donut-chart" class="flex-grow h-full w-full"></div><div id="donut-legend" class="flex-shrink-0 p-2 space-y-1"></div></div></div>
-                    <div class="bg-slate-100/50 dark:bg-slate-800/50 p-4 rounded-lg"><h3 class="font-bold text-center mb-2">Top Agents by Tickets Solved</h3><div id="agent-chart" class="w-full h-80"></div></div>
+                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
+                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Distribution by Channel</h4>
+                    <div id="donut-chart-container" class="w-full h-[400px] md:h-72 flex flex-col md:flex-row items-center justify-center gap-6">
+                        <div id="donut-chart" class="flex-grow h-64 md:h-full w-full"></div>
+                        <div id="donut-legend" class="w-full md:w-1/3 p-4 text-sm flex flex-wrap md:flex-col justify-center items-center md:items-start gap-4 md:gap-2"></div>
+                    </div>
+                </div>
+                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
+                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Top Agents</h4>
+                    <div id="agent-chart" class="w-full h-48 md:h-72"></div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="py-16 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Endorsements</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">What Colleagues Say</h2>
-                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                        Feedback from managers and peers I've collaborated with on projects.
-                    </p>
-                </div>
-                
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\1.jpg" alt="Yahia Morsy" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-								<h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/yehia-morsy1/" target="_blank" rel="noopener noreferrer">Yahia Morsy</a>
-								</h4>
-								<p class="text-sm text-primary-500 dark:text-primary-400">MIS Manager - e& CX Solutions</p>
-							</div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">Essam consistently delivers very useful reports that contribute to the stability of the call center and support effective cost-saving decisions. His analytical skills are exceptional, providing visual and powerful insights, and his strong ownership ensures high-quality and timely outcomes.</p>
-                        </div>
-                    </div>
-                     <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\2.jpg" alt="Shady Abdelazeem" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/shady-abd-el-azeem-6a9ab8233/" target="_blank" rel="noopener noreferrer">Shady Abdelazeem</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">MIS Supervisor - e& CX Solutions</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">Congratulations Essam on being the top performer last quarter, you really deserve it, you’ve proven to be someone truly reliable at work. Your performance is always great, and your effort really shows. It honestly makes working with you a pleasure. You’ve made a real difference in our team.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\3.jpg" alt="Mostafa Rabeaa" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/mostafa-mohamed-466b53149/" target="_blank" rel="noopener noreferrer">Mostafa Rabeaa</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Bussines Intellgance L&D Supervisor</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">I'm speechless walahi ya Sadeky. There's no words can describe how talented you are, dedicated, mature, confident and your spirit. I'm lucky to work with you in a one team.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\4.jpg" alt="Mohamed Anwar" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/mohamed-anwar-a62228247/" target="_blank" rel="noopener noreferrer">Mohamed Anwar</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Senior Data Specialist | Master's in Business Analytics</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">I’m honored to be mentioned here. Essam is one of the most technically brilliant people I’ve ever worked with — he always has a smart solution for every challenge. Honestly, I’m too small to give feedback; I’m just learning from him every day.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\5.jpg" alt="Ahmed Atef" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/ahmed-atef-8b763b103/" target="_blank" rel="noopener noreferrer">Ahmed Atef</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Senior QA & Automation Engineer</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">Essam is an exceptional professional who has worked as both a Tester and an Analyst, consistently delivering high-quality work with remarkable attention to detail. His ability to understand requirements, identify hidden issues, and analyze complex situations makes him a true asset to any team.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\6.jpg" alt="Hajar Abdelaziz" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/hajar-abdelaziz/" target="_blank" rel="noopener noreferrer">Hajar Abdelaziz</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Senior Software QA Engineer</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">I had the chance to work with Ahmed on several projects, where I witnessed his strong problem-solving skills, analytical thinking, and ability to manage complex tasks under pressure. He approached issues methodically, broke them down into actionable steps, and coordinated solutions that benefited everyone involved. I’m confident that these qualities make him a valuable asset in any team or organization.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\7.jpg" alt="Abd Elrahman Eldemery" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/abd-elrahman-eldemery/" target="_blank" rel="noopener noreferrer">Abd Elrahman Eldemery</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">Senior MIS Specialist - e& CX Solutions</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">Essam is one of the most talented persons I’ve worked with. Having such an amazing, helpful, talented and passionate person like Essam is a great feeling and I hope he continues his work in this way and passion. Happy to work with him side by side and I hope to see him in better positions and more responsibilities that sure he will handle like a piece of cake.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\8.jpg" alt="Soha Mohamed" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/soha-mohamed-346014227/" target="_blank" rel="noopener noreferrer">Soha Mohamed</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">MIS Specialist - e& CX Solutions</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">Essam is truly a fantastic person to work with. His technical expertise is outstanding, and he’s always ready to help to an incredible extent. No matter how complex the issue is, Essam handles it calmly and efficiently, ensuring everything runs smoothly. His positive attitude and willingness to support others make a huge difference in our team. Working with him is always a pleasure.</p>
-                        </div>
-                    </div>
-					<div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-6 transition-all duration-200 hover:scale-[1.02] card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="min-w-14 min-h-14 max-w-14 max-h-14 rounded-full overflow-hidden border-2 border-primary-500">
-                                <img src="Colleagues\9.jpg" alt="Habiba Ehab" class="w-full h-full object-cover" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-bold text-slate-700 dark:text-slate-200">
-									<a href="https://www.linkedin.com/in/habiba-ehab-032661255/" target="_blank" rel="noopener noreferrer">Habiba Ehab</a></h4>
-                                <p class="text-sm text-primary-500 dark:text-primary-400">MIS Specialist - e& CX Solutions</p>
-                            </div>
-                        </div>
-                         <div class="text-slate-600 dark:text-slate-300 mb-4">
-                             <svg class="w-8 h-8 text-slate-300 dark:text-slate-600 mb-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>
-                            <p class="italic">Essam has been an incredible mentor since I joined e&. He always takes the time to teach and support me, even when he’s busy. He’s extremely professional, knowledgeable, and truly inspiring to learn from.</p>
-                        </div>
-                    </div>
-                </div>
+        <section id="testimonials" class="space-y-12 relative z-10 pt-20">
+            <div class="section-num">05</div>
+            <div class="text-center md:text-left mb-8 animate-target">
+                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest"><span class="gradient-text">Endorsements</span></h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">What colleagues say about my work.</p>
+            </div>
+            
+            <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonials injected by JS -->
             </div>
         </section>
-        
+
         <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24">
-             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200 mb-4 animate-target">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 gradient-text animate-target pb-2">Let's Collaborate</h2>
-                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto text-balance animate-target">
-                        I'm always open to discussing new projects and creative ideas.
+        <section id="contact" class="pb-12 animate-target relative z-10">
+            <div class="bg-slate-900 dark:bg-[#020617] text-white p-16 md:p-24 rounded-[4rem] md:rounded-[5rem] text-center relative overflow-hidden shadow-2xl border border-white/5">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500"></div>
+                
+                <div class="max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-5xl md:text-7xl font-black tracking-tighter leading-none mb-6">Let's solve <br><span class="gradient-text">complexity.</span></h2>
+                    <p class="text-slate-400 text-lg md:text-xl leading-relaxed">
+                        Whether you're looking to automate a data pipeline, architect a reporting system, or simply want to talk about the future of data—I'm always open to meaningful conversations.
                     </p>
                 </div>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-target">
-                    <div class="bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col items-center text-center card-hover">
-                         <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center mb-4">
-                             <svg class="w-8 h-8 text-primary-600 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Email Me</h3>
-                        <p class="text-slate-500 dark:text-slate-400 mb-4">Reach out for project inquiries or collaborations.</p>
-                        <a href="mailto:ahmed.essam14998@gmail.com" class="font-semibold text-primary-600 dark:text-primary-400 underline-animation">ahmed.essam14998@gmail.com</a>
-                    </div>
-                     <div class="bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-8 rounded-2xl flex flex-col items-center text-center card-hover">
-                         <div class="w-16 h-16 rounded-full bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center mb-4">
-                            <svg class="w-8 h-8 text-primary-600 dark:text-primary-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">Connect on LinkedIn</h3>
-                        <p class="text-slate-500 dark:text-slate-400 mb-4">Let's connect and expand our professional network.</p>
-                        <a href="https://linkedin.com/in/ahmedessam14998" target="_blank" rel="noopener noreferrer" class="font-semibold text-primary-600 dark:text-primary-400 underline-animation">ahmedessam14998</a>
-                    </div>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="mailto:ahmed.essam14998@gmail.com" class="glass flex items-center justify-center gap-3 bg-white/10 border-white/20 px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-emerald-500 hover:text-white transition-all magnetic-btn shadow-lg hover:shadow-emerald-500/20">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/ahmedessam14998" target="_blank" rel="noopener noreferrer" class="glass flex items-center justify-center gap-3 bg-white/10 border-white/20 px-10 py-5 rounded-2xl font-black uppercase text-xs tracking-widest hover:bg-cyan-500 hover:text-white transition-all magnetic-btn shadow-lg hover:shadow-cyan-500/20">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
                 </div>
-             </div>
+            </div>
         </section>
 
     </main>
     
     <!-- Footer -->
-    <footer class="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div class="container mx-auto px-6 py-8 text-center text-slate-500 dark:text-slate-400">
-            <p>&copy; <span id="current-year"></span> Ahmed Essam. All rights reserved.</p>
-        </div>
+    <footer class="py-10 border-t border-slate-200 dark:border-slate-800/50 text-center text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 relative z-10">
+        &copy; <span id="current-year"></span> Ahmed Essam • Customer Experience & Reporting Analyst
     </footer>
 
-    <button id="back-to-top" class="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-primary-500 text-white shadow-lg opacity-0 translate-y-4 transition-all duration-200 hover:bg-primary-600 hover:scale-110" aria-label="Back to top">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
-    </button>
+    <!-- Project Modal Removed -->
+
+
+    <!-- D3 Tooltip Container -->
+    <div id="d3-tooltip" class="d3-tooltip" style="opacity: 0;"></div>
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         gsap.registerPlugin(TextPlugin, ScrollTrigger, ScrollToPlugin);
         
-        // --- CONFIGURATION & DATA --- , { href: "#dashboard", title: "Dashboard" }
+        // --- DATA CONFIGURATION ---
         const APP_CONFIG = {
-            navLinks: [ { href: "#about", title: "About" }, { href: "#experience", title: "Experience" }, { href: "#skills", title: "Skills" }, { href: "#projects", title: "Projects" }, { href: "#testimonials", title: "Endorsements"}, { href: "#contact", title: "Contact" } ],
+            navLinks: [ { href: "#experience", title: "Experience" }, { href: "#skills", title: "Expertise" }, { href: "#projects", title: "Projects" }, { href: "#testimonials", title: "Endorsements" }, { href: "#dashboard", title: "Dashboard"} ],
             experiences: [
-                { period: "Jul 2025 - Present", role: "Senior MIS Specialist", company: "e& CX Solutions", details: ["Architected and launched MIS solutions that serve the entire enterprise. My primary focus is on breaking down data silos, which has boosted data accessibility for key stakeholders. ", "Developed dynamic, automated dashboards that reduced executive reporting time from days to hours.", "Led digital transformation initiatives that aligned data strategies with business objectives."] },
-                { period: "Jan 2024 - Jun 2025", role: "Training and Quality Engineer", company: "Egyptian Company for Innovating Education Technologies (BEDO)", details: ["Redesigned QA processes, achieving faster testing cycles and measurable quality improvements.", "Developed and delivered technical training programs that achieved the highest client satisfaction ratings."] },
-                { period: "Sep 2021 - Dec 2023", role: "Data Analyst", company: "Srour Group", details: ["Automated reporting workflows using VBA and Python, saving hours of manual work weekly.", "Conducted root cause analyses that identified operational bottlenecks, leading to a 50% reduction in system downtime."] }
+                { period: "Mar 2026 — Present", role: "Customer Solutions & Reporting Analyst", company: "e& CX Solutions", details: ["Transitioned into the CX Analysis team to drive advanced reporting and tailored analytics for complex business needs.", "Automated Business Review data processing and resolved historical data gaps, ensuring absolute data integrity for executive reporting."] },
+                { period: "Jul 2025 — Feb 2026", role: "MIS Specialist", company: "e& CX Solutions", details: ["Architected MIS solutions serving the entire enterprise, breaking data silos and boosting accessibility for stakeholders.", "Developed dynamic, automated dashboards that reduced executive reporting time from days to hours.", "Led digital transformation initiatives that aligned data strategies with business objectives."] },
+                { period: "Jan 2024 - Jun 2025", role: "Training & Quality Engineer", company: "Egyptian Company for Innovating Education Technologies", details: ["Redesigned QA processes achieving faster testing cycles and measurable quality improvements.", "Developed and delivered technical training programs with the highest client satisfaction ratings."] },
+                { period: "Sep 2021 — Dec 2023", role: "Data Analyst", company: "Srour Group", details: ["Automated reporting workflows using VBA and Python, saving hours of manual work weekly.", "Conducted root cause analyses identifying operational bottlenecks, leading to a 50% reduction in system downtime."] }
             ],
             skills: [
-                { name: "Power BI", icon: `<path d="M2 13h6v8H2v-8zM9 3h6v18H9V3zM16 8h6v13h-6V8z"/>` },
-                { name: "SQL", icon: `<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>` },
-                { name: "Advanced Excel", icon: `<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline>` },
-                { name: "Python", icon: `<path d="M14.5 9.5a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 0 0 6.33 2.17.5.5 0 0 1 .84.52 4.5 4.5 0 0 1-8.17-2.69v-1a4.5 4.5 0 0 1 9 0v1a.5.5 0 0 1-1 0v-1z"/><path d="M9.5 14.5a3.5 3.5 0 0 0 7 0v-1a3.5 3.5 0 0 0-6.33-2.17.5.5 0 0 1-.84-.52 4.5 4.5 0 0 1 8.17 2.69v1a4.5 4.5 0 0 1-9 0v-1a.5.5 0 0 1 1 0v1z"/>` },
-                { name: "Data Warehousing", icon: `<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>` },
-                { name: "ETL Processes", icon: `<path d="M2 12h4l3 8 3-16 3 8h4"/>` },
-                { name: "Power Query", icon: `<path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/>` },
-                { name: "VBA", icon: `<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>` },
-                { name: "Agile Practices", icon: `<path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>` },
-                { name: "ISTQB", icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>` }
+                { name: "Power BI", icon: 'M16 8h6v13h-6V8zM9 3h6v18H9V3zM2 13h6v8H2v-8z', color: 'text-primary-500' },
+                { name: "SQL", icon: 'M12 2C6.48 2 2 4.02 2 6.5s4.48 4.5 10 4.5 10-2.02 10-4.5S17.52 2 12 2zm0 13c-5.52 0-10-2.02-10-4.5v3c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-3c0 2.48-4.48 4.5-10 4.5zm0 4.5c-5.52 0-10-2.02-10-4.5v3c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-3c0 2.48-4.48 4.5-10 4.5z', color: 'text-accent-purple' },
+                { name: "Advanced Excel", icon: 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm4-8h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6v-2z', color: 'text-emerald-500' },
+                { name: "Python", icon: 'M14.25.3c-.9 0-1.45.07-1.45.07l-.05.13v2.33h2.45V3h-3.48c-.7 0-1.25.56-1.25 1.25v2.75c0 .7.56 1.25 1.25 1.25h1.27v-1.18c0-.6.44-1.1 1-1.1h3.1c.6 0 1.1.44 1.1 1v2.35c0 .6-.44 1.1-1.1 1.1h-2.3v-1.1h-1.2v2.75c0 .7.56 1.25 1.25 1.25h1.2c2.4 0 2.4-1.25 2.4-1.25v-1.2l-.05-.13c0-.3 0-.67-.25-1.13a3 3 0 0 0-.58-.8c-.3-.3-.66-.5-1-.58-.42-.1-.85-.13-1.27-.13h-1.2V9.1c0-.6-.44-1.1-1.1-1.1h-3.1c-.6 0-1.1.44-1.1 1v3.2c0 .6.44 1.1 1.1 1.1h2.8c.7 0 1.25-.56 1.25-1.25V10.1h-1.2V8.9c0-.6-.44-1.1-1-1.1h-1.28l.01-1.17c0-2.4 2.4-2.4 2.4-2.4h1.1V1.8s-.1-1.5-2.9-1.5z', color: 'text-sky-500' },
+                { name: "Data Warehousing", icon: 'M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z', color: 'text-pink-500' },
+                { name: "ETL Processes", icon: 'M13 14h-2V9H8l4-5 4 5h-3v5zM5 13H3a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2v2h2v4H3v-4h2v-2z', color: 'text-orange-500' },
+                { name: "Power Query", icon: 'M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z', color: 'text-indigo-500' },
+                { name: "VBA", icon: 'M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z', color: 'text-cyan-500' },
+                { name: "Agile Practices", icon: 'M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z', color: 'text-rose-500' },
+                { name: "ISTQB", icon: 'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z', color: 'text-blue-500' }
+            ],
+            projects: [
+                 { title: "DashStant | Zero-Setup Analytics", img: "./DashStant.webp", tags: "Web Apps, AI Integration", link: "https://www.linkedin.com/posts/ahmedessam14998_dataanalytics-businessintelligence-automation-activity-7415831113861906432-C96o", description: "Developed an AI-integrated web app that automates data cleaning and chart generation, reducing time-to-insight from hours to seconds—enabling instant decision-making for non-technical users." },
+                 { title: "Automated MIS Leaves System", img: "./Leaves.webp", tags: "Automation, Web", link: "https://www.linkedin.com/feed/update/urn:li:activity:7408943047918399488/", description: "Architected a digital tracking system to replace manual spreadsheets, eliminating calculation errors and providing real-time audit trails—streamlining operations for entire departments." },
+                 { title: "Excel Data Factory Framework", img: "./Automation.webp", tags: "Architecture, VBA", link: "https://www.linkedin.com/posts/ahmedessam14998_warehouse-using-excel-guide-activity-7413159780296486912-IRAG", description: "Engineered a robust roadmap for enterprise-grade data pipelines within a flexible Excel/VBA framework—democratizing advanced BI for teams without enterprise software access." },
+                 { title: "Power Query Transformation Engine", img: "./powerQueryChange.webp", tags: "M Language", link: "https://dev.to/essam404/supercharge-your-power-query-transformations-a-flexible-function-for-changing-column-types-4e4e", description: "Customized a resilient M function for dynamic column type transformations—ensuring 100% data integrity across complex, shifting datasets." },
+                 { title: "Fuzzy-Match Column Renaming", img: "./FuzzyRename.webp", tags: "Data Integrity", link: "https://dev.to/essam404/bulletproof-power-query-part-2-a-smart-fuzzy-match-rename-function-4n6c", description: "Developed a 3-tier fuzzy-match logic function to ensure Power Query stability—reducing dashboard maintenance downtime by over 80%." },
+                 { title: "MIS & Transformation Guide", img: "./DataTrans.webp", tags: "Thought Leadership", link: "https://www.linkedin.com/posts/ahmedessam14998_mis-managementinformationsystems-businesstechnology-activity-7378443467989020672-T-j7", description: "Authored a thought-leadership series breaking down strategic MIS mechanics—mentoring the next generation of data practitioners with actionable frameworks." },
+                 { title: "Enterprise KPI Hub", img: "./dashboard.webp", tags: "Power BI, Dashboard", link: "#dashboard", description: "Built an interactive Power BI dashboard for executive leadership—centralizing KPIs into a single source of truth for high-stakes operational reviews." }
+            ],
+            testimonials: [
+                { name: "Yahia Morsy", role: "MIS Manager - e& CX Solutions", link: "https://www.linkedin.com/in/yehia-morsy1/", img: "Colleagues/1.webp", text: "Essam consistently delivers very useful reports that contribute to the stability of the call center and support effective cost-saving decisions. His analytical skills are exceptional, providing visual and powerful insights, and his strong ownership ensures high-quality and timely outcomes." },
+                { name: "Shady Abdelazeem", role: "MIS Supervisor - e& CX Solutions", link: "https://www.linkedin.com/in/shady-abd-el-azeem-6a9ab8233/", img: "Colleagues/2.webp", text: "Congratulations Essam on being the top performer last quarter, you really deserve it, you’ve proven to be someone truly reliable at work. Your performance is always great, and your effort really shows. It honestly makes working with you a pleasure. You’ve made a real difference in our team." },
+                { name: "Mostafa Rabeaa", role: "Bussines Intellgance L&D Supervisor", link: "https://www.linkedin.com/in/mostafa-mohamed-466b53149/", img: "Colleagues/3.webp", text: "I'm speechless walahi ya Sadeky. There's no words can describe how talented you are, dedicated, mature, confident and your spirit. I'm lucky to work with you in a one team." },
+                { name: "Mohamed Anwar", role: "Senior Data Analyst - e& CX Solutions | Master's in Business Analytics", link: "https://www.linkedin.com/in/mohamed-anwar-a62228247/", img: "Colleagues/4.webp", text: "I’m honored to be mentioned here. Essam is one of the most technically brilliant people I’ve ever worked with — he always has a smart solution for every challenge. Honestly, I’m too small to give feedback; I’m just learning from him every day." },
+                { name: "Ahmed Atef", role: "Senior QA & Automation Engineer - Augustus Media", link: "https://www.linkedin.com/in/ahmed-atef-8b763b103/", img: "Colleagues/5.webp", text: "Essam is an exceptional professional who has worked as both a Tester and an Analyst, consistently delivering high-quality work with remarkable attention to detail. His ability to understand requirements, identify hidden issues, and analyze complex situations makes him a true asset to any team." },
+                { name: "Hajar Abdelaziz", role: "Senior Software QA Engineer - Siemens", link: "https://www.linkedin.com/in/hajar-abdelaziz/", img: "Colleagues/6.webp", text: "I had the chance to work with Ahmed on several projects, where I witnessed his strong problem-solving skills, analytical thinking, and ability to manage complex tasks under pressure. He approached issues methodically, broke them down into actionable steps, and coordinated solutions that benefited everyone involved." },
+                { name: "Abd Elrahman Eldemery", role: "Senior MIS Specialist - e& CX Solutions", link: "https://www.linkedin.com/in/abd-elrahman-eldemery/", img: "Colleagues/7.webp", text: "Essam is one of the most talented persons I’ve worked with. Having such an amazing, helpful, talented and passionate person like Essam is a great feeling. Happy to work with him side by side and I hope to see him in better positions and more responsibilities that sure he will handle like a piece of cake." },
+                { name: "Soha Mohamed", role: "MIS Specialist - e& CX Solutions", link: "https://www.linkedin.com/in/soha-mohamed-346014227/", img: "Colleagues/8.webp", text: "Essam is truly a fantastic person to work with. His technical expertise is outstanding, and he’s always ready to help to an incredible extent. No matter how complex the issue is, Essam handles it calmly and efficiently, ensuring everything runs smoothly. His positive attitude makes a huge difference in our team." },
+                { name: "Habiba Ehab", role: "MIS Specialist - e& CX Solutions", link: "https://www.linkedin.com/in/habiba-ehab-032661255/", img: "Colleagues/9.webp", text: "Essam has been an incredible mentor since I joined e&. He always takes the time to teach and support me, even when he’s busy. He’s extremely professional, knowledgeable, and truly inspiring to learn from." }
             ],
             dashboard: {
-                kpis: [ { id: 'CSAT', title: 'CSAT', color: 'text-sky-500', good: 'up', unit: '%' }, { id: 'aht', title: 'Avg. Handling Time', color: 'text-violet-500', good: 'down', unit: 's' }, { id: 'fcr', title: 'FCR', color: 'text-emerald-500', good: 'up', unit: '%' }, { id: 'tickets', title: 'Open Tickets', color: 'text-amber-500', good: 'down', unit: '' } ],
+                kpis: [ 
+                    { id: 'nps', title: 'NPS', color: 'text-emerald-500', unit: '' }, 
+                    { id: 'aht', title: 'AHT', color: 'text-cyan-400', unit: 's' }, 
+                    { id: 'fcr', title: 'FCR', color: 'text-emerald-400', unit: '%' }, 
+                    { id: 'tickets', title: 'Queue', color: 'text-teal-400', unit: '' } 
+                ],
                 filters: ['All', 'Tech', 'Billing'],
-                chartMargin: {top: 20, right: 30, bottom: 40, left: 70}
+                chartMargin: {top: 15, right: 15, bottom: 30, left: 40}
             }
         };
 
         // --- GLOBAL STATE ---
-        let state = {
-            theme: localStorage.getItem('theme') || 'light',
-            dashboardInitialized: false,
-            particlesInstance: null,
-            mockData: [],
-            chartElements: {},
-            resizeTimer: null
-        };
+        let state = { theme: localStorage.getItem('theme') || 'dark', dashboardInitialized: false, mockData: [], chartElements: {}, tooltip: d3.select("#d3-tooltip") };
+        const $ = (s) => document.querySelector(s);
+        const $$ = (s) => document.querySelectorAll(s);
 
-        // --- DOM HELPER ---
-        const $ = (selector) => document.querySelector(selector);
-        const $$ = (selector) => document.querySelectorAll(selector);
-
-        // --- DYNAMIC CONTENT INJECTION ---
+        // --- DOM INJECTION ---
         function populateContent() {
-            // Navigation
-            const navLinksHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium underline-animation">${link.title}</a>`).join('');
-            $('#desktop-nav').innerHTML = navLinksHTML;
-            const mobileNavLinksHTML = `<nav class="flex flex-col space-y-4">${APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="nav-link block py-2 hover:text-sky-500 dark:hover:text-sky-400 transition-colors">${link.title}</a>`).join('')}</nav>`;
-            $('#mobile-menu').innerHTML = mobileNavLinksHTML;
+            // Nav
+            $('#desktop-nav').innerHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="text-[11px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors magnetic-btn nav-link">${link.title}</a>`).join('');
+            $('#mobile-menu').innerHTML = APP_CONFIG.navLinks.map(link => `<a href="${link.href}" class="text-sm font-black uppercase tracking-widest text-slate-700 dark:text-slate-300 hover:text-primary-500 nav-link">${link.title}</a>`).join('');
 
-            // Experience
-            const expContainer = $('#experience-container');
-            expContainer.innerHTML += APP_CONFIG.experiences.map((exp, index) => {
-                const isEven = index % 2 === 0;
-                const timelineClass = isEven ? 'md:flex-row-reverse' : '';
-                const contentAlign = isEven ? 'md:pl-16' : 'md:pr-16';
-                const timeAlign = isEven ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left';
+            // Experience (Bento style)
+            $('#experience-container').innerHTML = APP_CONFIG.experiences.map(exp => `
+                <div class="bento-card glass rounded-[2.5rem] md:rounded-[3rem] space-y-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase bg-primary-500/10 text-primary-500 px-3 py-1 rounded-full">${exp.period}</span>
+                        <h3 class="font-display text-xl md:text-3xl font-black mt-4 text-slate-800 dark:text-white">${exp.role}</h3>
+                        <p class="text-primary-600 dark:text-primary-400 font-bold mt-1 text-xs md:text-sm">${exp.company}</p>
+                    </div>
+                    <ul class="space-y-4 text-xs md:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        ${exp.details.map(d => `<li class="experience-bullet">${d}</li>`).join('')}
+                    </ul>
+                </div>
+            `).join('');
+
+            // Skills (Bento style)
+            $('#skills-container').innerHTML = APP_CONFIG.skills.map(s => `
+                <div class="glass p-6 rounded-[2.5rem] text-center bento-card cursor-default group">
+                    <svg class="w-8 h-8 mx-auto mb-4 ${s.color} group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="${s.icon}"/></svg>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-700 dark:text-slate-300">${s.name}</p>
+                </div>
+            `).join('');
+
+            // Projects (Bento Grid spanning 12 cols)
+            const colSpans = ['md:col-span-8', 'md:col-span-4', 'md:col-span-4', 'md:col-span-4', 'md:col-span-4', 'md:col-span-6', 'md:col-span-6'];
+            $('#projects-container').innerHTML = APP_CONFIG.projects.map((proj, i) => {
+                const span = colSpans[i] || 'md:col-span-6';
+                const isLarge = span === 'md:col-span-8';
+                const imgClass = isLarge ? 'absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700' : 'w-full h-48 object-cover rounded-[2rem] mb-6 transition-all duration-700';
+                
+                const finalAction = proj.link === '#dashboard' 
+                    ? `window.location.href='#dashboard'` 
+                    : `window.open('${proj.link}', '_blank')`;
 
                 return `
-                <div class="relative animate-target mb-12">
-                     <div class="absolute hidden md:block w-5 h-5 rounded-full bg-primary-500 border-4 border-slate-50 dark:border-slate-950 shadow-lg top-1 left-1/2 -translate-x-1/2"></div>
-                    <div class="md:flex items-start ${timelineClass}">
-                        <div class="md:w-1/2 ${contentAlign}">
-                             <div class="md:hidden mb-4 text-sm font-medium text-primary-600 dark:text-primary-400">${exp.period}</div>
-                            <div class="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md shadow-sm card-hover">
-                                <h3 class="text-2xl font-bold mb-1">${exp.role}</h3>
-                                <p class="text-primary-500 dark:text-primary-400 font-medium mb-4">${exp.company}</p>
-                                <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-justify">
-                                    ${exp.details.map(d => `<li class="flex items-start"><svg class="flex-shrink-0 h-5 w-5 text-primary-500 mr-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><span>${d}</span></li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="hidden md:flex md:w-1/2 flex-shrink-0 pt-2 relative items-center ${timeAlign} ${isEven ? 'justify-end' : 'justify-start'}">
-                            <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-200">${exp.period}</span>
+                <div class="${span} bento-card ${isLarge ? 'bg-slate-950 h-[500px]' : 'glass p-8'} rounded-[3.5rem] relative overflow-hidden group cursor-pointer flex flex-col justify-between shadow-lg" onclick="${finalAction}">
+                    ${isLarge ? `<img src="${proj.img}" onerror="this.src='https://placehold.co/800x500/1e293b/0ea5e9?text=View'" class="${imgClass}">` : `<div class="overflow-hidden rounded-[2rem] mb-6 shadow-md"><img src="${proj.img}" onerror="this.src='https://placehold.co/600x400/1e293b/0ea5e9?text=View'" class="${imgClass}"></div>`}
+                    <div class="${isLarge ? 'absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-10 md:p-12 flex flex-col justify-end z-10' : 'flex flex-col flex-grow'}">
+                        ${isLarge ? `<div class="flex gap-2 mb-4">${proj.tags.split(',').map(t => `<span class="bg-primary-500 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase w-fit">${t.trim()}</span>`).join('')}</div>` : ''}
+                        <h3 class="font-display text-2xl md:text-4xl font-black mb-4 ${isLarge ? 'text-white' : 'text-slate-800 dark:text-white'} group-hover:text-primary-500 transition-colors">${proj.title}</h3>
+                        <p class="${isLarge ? 'text-slate-300' : 'text-slate-500 dark:text-slate-400'} text-sm leading-relaxed mb-6 flex-grow italic">
+                            ${proj.description}
+                        </p>
+                        <div class="flex items-center text-xs font-black uppercase tracking-widest ${isLarge ? 'text-white' : 'text-primary-500'} group-hover:text-complement-500 transition-colors">
+                            ${proj.link === '#dashboard' ? 'View Demo' : 'Access Resource'} <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
-                </div>`;
+                </div>
+                `;
             }).join('');
 
-            // Skills
-            const skillsContainer = $('#skills-container');
-            skillsContainer.innerHTML = APP_CONFIG.skills.map(skill => `
-                <div class="animate-target bg-white/70 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 backdrop-blur-md rounded-xl p-4 sm:p-6 text-center transition-all duration-200 hover:scale-105 card-hover">
-                    <div class="text-primary-500 dark:text-primary-400 w-12 h-12 mx-auto mb-4 flex items-center justify-center text-3xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${skill.icon}</svg>
+            // Testimonials (Bento Style)
+            $('#testimonials-container').innerHTML = APP_CONFIG.testimonials.map(t => `
+                <div class="glass p-8 rounded-[3rem] bento-card flex flex-col h-full relative">
+                    <div class="flex items-start justify-between mb-6 relative z-10">
+                        <div class="flex items-center gap-4">
+                            <img src="${t.img}" onerror="this.src='https://placehold.co/100x100/1e293b/0ea5e9?text=${t.name.charAt(0)}'" class="w-12 h-12 rounded-full border-2 border-primary-500 object-cover shadow-md shrink-0">
+                            <div>
+                                <p class="text-[12px] font-black text-slate-800 dark:text-white hover:text-primary-500 transition-colors">
+                                    <a href="${t.link}" target="_blank" rel="noopener noreferrer" class="magnetic-btn inline-block">${t.name}</a>
+                                </p>
+                                <p class="text-[9px] text-slate-500 dark:text-slate-400 uppercase font-bold tracking-widest mt-0.5">${t.role}</p>
+                            </div>
+                        </div>
+                        <svg class="w-8 h-8 text-primary-500/20 shrink-0 ml-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                     </div>
-                    <h3 class="font-semibold text-slate-700 dark:text-slate-200">${skill.name}</h3>
-                </div>
-            `).join('');
-            
-            // Dashboard KPIs and Filters
-             $('#kpi-container').innerHTML = APP_CONFIG.dashboard.kpis.map(kpi => `
-                <div class="p-4 bg-slate-100/50 dark:bg-slate-800/80 rounded-lg text-center transition-transform duration-200 hover:scale-105">
-                    <h4 class="text-sm font-semibold text-slate-500 dark:text-slate-400">${kpi.title}</h4>
-                    <div class="flex-col items-baseline justify-center gap-2">
-                        <p id="kpi-${kpi.id}" class="text-4xl font-black ${kpi.color} kpi-value">0</p>
-                        <div id="kpi-${kpi.id}-change" class="font-semibold text-xs"></div>
-                    </div>
+                    <p class="text-sm italic text-slate-600 dark:text-slate-400 leading-relaxed relative z-10">
+                        ${t.text}
+                    </p>
                 </div>
             `).join('');
 
-            $('#dashboard-filters').innerHTML += APP_CONFIG.dashboard.filters.map((filter, index) => `
-                <button class="data-filter ${index === 0 ? 'bg-primary-500 text-white font-semibold' : 'bg-slate-200 dark:bg-slate-700'} py-1 px-3 rounded-md text-sm transition-colors" data-team="${filter}">${filter}</button>
+            // Dashboard KPIs & Filters
+            $('#kpi-container').innerHTML = APP_CONFIG.dashboard.kpis.map(kpi => `
+                <div class="glass p-6 rounded-[2.5rem] text-center bento-card">
+                    <p class="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">${kpi.title}</p>
+                    <div id="kpi-${kpi.id}" class="text-4xl md:text-5xl font-black ${kpi.color} kpi-value">0</div>
+                    <div id="kpi-${kpi.id}-change" class="text-[10px] font-bold mt-2"></div>
+                </div>
+            `).join('');
+
+            $('#dashboard-filters').innerHTML = APP_CONFIG.dashboard.filters.map((filter, index) => `
+                <button class="data-filter ${index === 0 ? 'is-active bg-slate-800 dark:bg-white text-white dark:text-slate-900 shadow-lg pointer-events-none' : 'glass text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50'} px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all magnetic-btn" data-team="${filter}">${filter}</button>
             `).join('');
         }
 
-        // --- THEME MANAGEMENT ---
-        function applyTheme(theme) {
-            document.documentElement.classList.toggle('dark', theme === 'dark');
-            $('#theme-icon-sun').classList.toggle('hidden', theme !== 'dark');
-            $('#theme-icon-moon').classList.toggle('hidden', theme === 'dark');
-
+        // --- UI & THEME ---
+        function updateTheme() {
+            document.documentElement.classList.toggle('dark', state.theme === 'dark');
+            $('#theme-icon-sun').classList.toggle('hidden', state.theme !== 'dark');
+            $('#theme-icon-moon').classList.toggle('hidden', state.theme === 'dark');
+            
             if (state.particlesInstance) {
-                const colors = theme === 'dark' ? ["#334155", "#4338ca", "#be185d"] : ["#0ea5e9", "#7c3aed", "#ec4899"];
-                state.particlesInstance.options.particles.color.value = colors;
+                state.particlesInstance.options.particles.color.value = state.theme === 'dark' ? ["#10b981", "#2dd4bf"] : ["#059669", "#0891b2"];
+                state.particlesInstance.options.particles.links.color = state.theme === 'dark' ? "#064e3b" : "#cbd5e1";
                 state.particlesInstance.refresh();
             }
+            
             if (state.dashboardInitialized) {
-                updateDashboard($('.data-filter.bg-primary-500').dataset.team, false);
+                const activeFilter = $('.data-filter.is-active');
+                if (activeFilter) updateDashboard(activeFilter.dataset.team, false);
             }
         }
-        
-        function setupThemeToggle() {
-            applyTheme(state.theme);
-            $('#theme-toggle').addEventListener('click', () => {
-                state.theme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-                localStorage.setItem('theme', state.theme);
-                applyTheme(state.theme);
-            });
-        }
-        
-        // --- UI & INTERACTIONS ---
-        function setupMobileMenu() {
-            $('#mobile-menu-button').addEventListener('click', () => $('#mobile-menu').classList.toggle('hidden'));
-            $$('#mobile-menu .nav-link').forEach(link => {
-                link.addEventListener('click', () => $('#mobile-menu').classList.add('hidden'));
-            });
-        }
 
-        function setupAnimations() {
-            // Typewriter effect
-            gsap.to('#typewriter', {
-                text: "Senior MIS Specialist & Data Analyst",
-                duration: 3, ease: "none", delay: 1
-            });
+        $('#theme-toggle').onclick = () => {
+            state.theme = state.theme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', state.theme);
+            updateTheme();
+        };
 
-            // General element fade-in
-            gsap.utils.toArray('.animate-target').forEach(el => {
-                gsap.from(el, { opacity: 0, y: 50, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' } });
+        $('#mobile-menu-button').onclick = () => $('#mobile-menu').classList.toggle('hidden');
+        $$('#mobile-menu .nav-link').forEach(link => link.onclick = () => $('#mobile-menu').classList.add('hidden'));
+
+        // --- CUSTOM CURSOR & MAGNETIC ---
+        function initCursor() {
+            if (window.innerWidth < 768) return; // Disable on mobile
+            const dot = $('#cursor-dot');
+            const ring = $('#cursor-ring');
+            let isMoving = false;
+            
+            window.addEventListener('mousemove', (e) => {
+                if (!isMoving) {
+                    requestAnimationFrame(() => {
+                        dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+                        ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+                        isMoving = false;
+                    });
+                    isMoving = true;
+                }
             });
             
-            // Timeline progress animation
-            gsap.to("#timeline-progress", {
-                height: "100%", ease: 'none',
-                scrollTrigger: {
-                    trigger: "#experience-container",
-                    start: "top center", end: "bottom center", scrub: true
-                }
+            document.querySelectorAll('a, button, .bento-card, .data-filter').forEach(el => {
+                el.addEventListener('mouseenter', () => gsap.to(ring, { scale: 1.6, background: 'rgba(14, 165, 233, 0.1)' }));
+                el.addEventListener('mouseleave', () => gsap.to(ring, { scale: 1, background: 'transparent' }));
+            });
+
+            document.querySelectorAll('.magnetic-btn').forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const r = btn.getBoundingClientRect();
+                    gsap.to(btn, { x: (e.clientX - r.left - r.width/2) * 0.3, y: (e.clientY - r.top - r.height/2) * 0.3, duration: 0.4 });
+                });
+                btn.addEventListener('mouseleave', () => gsap.to(btn, { x: 0, y: 0, duration: 0.6, ease: "elastic.out(1, 0.3)" }));
+            });
+        }
+
+        // --- ANIMATIONS & PARTICLES ---
+        function setupAnimations() {
+            gsap.to('#typewriter', { text: "Data & BI Architecture Specialist", duration: 2.5, ease: "none", delay: 0.5 });
+            gsap.utils.toArray('.animate-target').forEach(el => {
+                gsap.from(el, { opacity: 0, y: 30, duration: 0.6, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none none' } });
             });
         }
 
         function setupParticles() {
-            const colors = state.theme === 'dark' ? ["#334155", "#4338ca", "#be185d"] : ["#0ea5e9", "#7c3aed", "#ec4899"];
             tsParticles.load("particles-js", {
                 fpsLimit: 60,
                 particles: {
-                    number: { value: 50, density: { enable: true, value_area: 800 } },
-                    color: { value: colors },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-                    size: { value: 3, random: true },
-                    move: { enable: true, speed: 1, direction: "none", random: true, straight: false, out_mode: "out" },
+                    number: { value: 15, density: { enable: true, value_area: 800 } },
+                    color: { value: ["#10b981", "#2dd4bf"] },
+                    links: { enable: true, color: "#064e3b", distance: 150, opacity: 0.1, width: 1 },
+                    move: { enable: true, speed: 0.5, direction: "none", random: false, straight: false, out_mode: "out" },
+                    size: { value: 2, random: true },
+                    opacity: { value: 0.5 }
                 },
-                interactivity: { events: { onhover: { enable: true, mode: "bubble" }, resize: true }, modes: { bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 } } },
+                interactivity: { events: { onhover: { enable: true, mode: "grab" } }, modes: { grab: { distance: 140, links: { opacity: 0.5 } } } },
                 detectRetina: true,
-            }).then(container => state.particlesInstance = container);
-        }
-
-        function setupSmoothScroll() {
-            $$('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    // Set duration to 0 for an instant jump
-                    gsap.to(window, { duration: 0, scrollTo: { y: this.getAttribute('href'), offsetY: 80 } });
-                });
-            });
-        }
-        
-        function setupBackToTop() {
-            const toTopBtn = $('#back-to-top');
-            gsap.to(toTopBtn, {
-                autoAlpha: 1, y: 0,
-                scrollTrigger: {
-                    trigger: 'body', start: '20% top',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-            toTopBtn.addEventListener('click', () => {
-                // Set duration to 0 for an instant jump
-                gsap.to(window, { duration: 0, scrollTo: 0 });
+            }).then(container => {
+                state.particlesInstance = container;
+                updateTheme();
             });
         }
 
-        // --- DASHBOARD LOGIC ---
+        // --- D3 DASHBOARD ---
         function generateMockData() {
-            const teams = ["Tech", "Billing"], agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] }, priorities = ["High", "Medium", "Low"], channels = ["Phone", "Email", "Chat"], data = [];
-            const today = new Date("2025-09-14T12:00:00Z");
-            for (let i = 0; i < 2000; i++) {
+            const teams = ["Tech", "Billing"], agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] }, data = [];
+            const today = new Date();
+            for (let i = 0; i < 1500; i++) {
                 const team = teams[Math.floor(Math.random() * teams.length)], date = new Date(today);
-                date.setDate(today.getDate() - Math.floor(Math.random() * 60));
-                data.push({ id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agents[team][Math.floor(Math.random() * agents[team].length)], priority: priorities[Math.floor(Math.random() * priorities.length)], channel: channels[Math.floor(Math.random() * channels.length)], handlingTime: Math.floor(Math.random() * 300) + 5, fcr: Math.random() > 0.15, CSAT: Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 9 : Math.floor(Math.random() * 8) + 1 });
+                date.setDate(today.getDate() - Math.floor(Math.random() * 30));
+                data.push({
+                    id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agents[team][Math.floor(Math.random() * agents[team].length)],
+                    priority: Math.random() > 0.7 ? "High" : (Math.random() > 0.4 ? "Medium" : "Low"),
+                    channel: Math.random() > 0.6 ? "Phone" : (Math.random() > 0.3 ? "Chat" : "Email"),
+                    handlingTime: Math.floor(Math.random() * 240) + 60, fcr: Math.random() > 0.2,
+                    nps: Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 9 : Math.floor(Math.random() * 8) + 1
+                });
             }
             return data;
         }
 
-        function calculateMetrics(data) {
-            if (data.length === 0) return { CSAT: 0, aht: 0, fcr: 0, tickets: 0 };
-            const promoters = data.filter(d => d.CSAT >= 9).length;
-            const detractors = data.filter(d => d.CSAT <= 6).length;
-            return {
-                CSAT: Math.round(((promoters - detractors) / data.length) * 100),
-                aht: Math.round(data.reduce((acc, curr) => acc + curr.handlingTime, 0) / data.length),
-                fcr: Math.round(data.filter(d => d.fcr).length / data.length * 100),
-                tickets: data.length
-            };
-        }
+        const showTooltip = (html, e) => state.tooltip.html(html).style("opacity", 1).style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px");
+        const hideTooltip = () => state.tooltip.style("opacity", 0);
 
-        function updateKPIs(currentData, previousData, useTransition = true) {
-            const currentMetrics = calculateMetrics(currentData);
-            const previousMetrics = calculateMetrics(previousData);
-
-            APP_CONFIG.dashboard.kpis.forEach(kpi => {
-                const getChange = (current, previous) => {
-                    if (previous === 0) return { change: null, arrow: '' };
-                    const change = ((current - previous) / previous) * 100;
-                    return { change, arrow: change >= 0 ? '▲' : '▼' };
-                };
-                const changeData = getChange(currentMetrics[kpi.id], previousMetrics[kpi.id]);
-                const changeEl = $(`#kpi-${kpi.id}-change`);
-                
-                if (changeData.change !== null) {
-                    const isGood = (kpi.good === 'up' && changeData.change >= 0) || (kpi.good === 'down' && changeData.change <= 0);
-                    changeEl.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-red-500'}">${changeData.arrow} ${changeData.change.toFixed(1)}%</span> vs LMTD`;
-                } else {
-                    changeEl.textContent = 'vs LMTD';
-                }
-                
-                const target = $(`#kpi-${kpi.id}`);
-                gsap.to(target, { textContent: currentMetrics[kpi.id], duration: useTransition ? 1.5 : 0, ease: "power1.inOut", snap: { textContent: 1 }, onUpdate: () => target.textContent = `${Math.round(parseFloat(target.textContent))}${kpi.unit}` });
-            });
-        }
-        
         function initChart(chartId, chartConfig) {
             const el = $(chartId);
-            // This line was removed to prevent flickering on updates: d3.select(el).select("svg").remove();
             const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", "100%");
             if (chartId !== '#donut-chart') {
                 const { chartMargin } = APP_CONFIG.dashboard;
                 const g = svg.append("g").attr("transform", `translate(${chartMargin.left},${chartMargin.top})`);
-                g.append("g").attr("class", "x-axis");
-                g.append("g").attr("class", "y-axis");
-                g.append("defs");
+                g.append("g").attr("class", "x-axis font-sans text-xs"); g.append("g").attr("class", "y-axis font-sans text-xs"); g.append("defs");
                 state.chartElements[chartId] = { el, svg: g, ...chartConfig };
             } else {
-                 state.chartElements[chartId] = { el, svg: svg.append("g"), ...chartConfig };
+                state.chartElements[chartId] = { el, svg: svg.append("g"), ...chartConfig };
             }
         }
-        
+
         function getChartColors() {
             const isDark = document.documentElement.classList.contains('dark');
-            return {
-                axisColor: isDark ? "#475569" : "#cbd5e1",
-                textColor: isDark ? "#94a3b8" : "#64748b",
-                lineColor: isDark ? "#818cf8" : "#6366f1",
-            };
+            return { axisColor: isDark ? "#334155" : "#e2e8f0", textColor: isDark ? "#94a3b8" : "#64748b", lineColor: "#0ea5e9" };
         }
 
-        // --- CHART DRAWING FUNCTIONS ---
         function drawBarChart(data, useTransition) {
             const { el, svg, x, y } = state.chartElements['#bar-chart'];
             const { chartMargin } = APP_CONFIG.dashboard;
-            const width = el.clientWidth - chartMargin.left - chartMargin.right;
-            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors();
-            const t = d3.transition().duration(useTransition ? 500 : 0);
-            
-            const priorityData = d3.rollups(data, v => v.length, d => d.priority).map(([key, value]) => ({priority: key, value}));
+            const w = el.clientWidth - chartMargin.left - chartMargin.right, h = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors(), t = d3.transition().duration(useTransition ? 500 : 0);
+            const pData = d3.rollups(data, v => v.length, d => d.priority).map(([k, v]) => ({priority: k, value: v}));
             const priorities = ["High", "Medium", "Low"];
-            x.domain(priorities).range([0, width]).padding(0.4);
-            y.domain([0, d3.max(priorityData, d => d.value) || 10]).range([height, 0]);
+            
+            x.domain(priorities).range([0, w]).padding(0.4);
+            y.domain([0, d3.max(pData, d => d.value) || 10]).range([h, 0]);
 
-            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
+            svg.select(".x-axis").attr("transform", `translate(0, ${h})`).transition(t).call(d3.axisBottom(x).tickSize(0).tickPadding(10));
+            svg.select(".y-axis").transition(t).call(d3.axisLeft(y).ticks(4).tickSize(-w));
             svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor).style("font-family", "Plus Jakarta Sans");
+            svg.selectAll(".y-axis .tick line").style("stroke-dasharray", "3,3").style("opacity", 0.5);
 
-            const colorScale = d3.scaleOrdinal().domain(priorities).range(["#ef4444", "#f59e0b", "#10b981"]);
-            const bars = svg.selectAll(".bar").data(priorityData, d => d.priority);
+            const cScale = d3.scaleOrdinal().domain(priorities).range(["#ec4899", "#f59e0b", "#10b981"]); // Pink High, Amber Med, Emerald Low
+            const bars = svg.selectAll(".bar").data(pData, d => d.priority);
 
-            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.priority)).attr("rx", 3).attr("x", d => x(d.priority)).attr("y", y(0)).attr("width", x.bandwidth()).attr("height", 0)
-                .merge(bars).transition(t).attr("x", d => x(d.priority)).attr("width", x.bandwidth()).attr("y", d => y(d.value)).attr("height", d => height - y(d.value));
+            bars.enter().append("rect").attr("class", "bar").attr("fill", d => cScale(d.priority)).attr("rx", 6)
+                .attr("x", d => x(d.priority)).attr("y", y(0)).attr("width", x.bandwidth()).attr("height", 0)
+                .on("mouseover", function(e, d) { d3.select(this).attr("opacity", 0.8); showTooltip(`<strong>${d.priority}</strong><br/>${d.value} Tickets`, e); })
+                .on("mousemove", (e) => state.tooltip.style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px"))
+                .on("mouseout", function() { d3.select(this).attr("opacity", 1); hideTooltip(); })
+                .merge(bars).transition(t).attr("x", d => x(d.priority)).attr("width", x.bandwidth()).attr("y", d => y(d.value)).attr("height", d => h - y(d.value));
             bars.exit().transition(t).attr("y", y(0)).attr("height", 0).remove();
         }
-        
+
         function drawLineChart(data, useTransition) {
-             const { el, svg, x, y } = state.chartElements['#line-chart'];
+            const { el, svg, x, y } = state.chartElements['#line-chart'];
             const { chartMargin } = APP_CONFIG.dashboard;
-            const width = el.clientWidth - chartMargin.left - chartMargin.right;
-            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors();
-            const t = d3.transition().duration(useTransition ? 500 : 0);
+            const w = el.clientWidth - chartMargin.left - chartMargin.right, h = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors(), t = d3.transition().duration(useTransition ? 500 : 0);
+            const dData = d3.rollups(data, v => v.length, d => d.date).map(([k, v]) => ({date: d3.timeParse("%Y-%m-%d")(k), value: v})).sort((a, b) => a.date - b.date);
+            
+            if(!dData.length) return;
+            x.domain(d3.extent(dData, d => d.date)).range([0, w]);
+            y.domain([0, (d3.max(dData, d => d.value) || 10) * 1.1]).range([h, 0]);
 
-            const dailyData = d3.rollups(data, v => v.length, d => d.date).map(([key, value]) => ({date: d3.timeParse("%Y-%m-%d")(key), value})).sort((a, b) => a.date - b.date);
-
-            x.domain(d3.extent(dailyData, d => d.date)).range([0, width]);
-            y.domain([0, d3.max(dailyData, d => d.value) || 10]).range([height, 0]);
-
-            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat("%b %d")));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
+            svg.select(".x-axis").attr("transform", `translate(0, ${h})`).transition(t).call(d3.axisBottom(x).ticks(4).tickFormat(d3.timeFormat("%b %d")).tickSize(0).tickPadding(10));
+            svg.select(".y-axis").transition(t).call(d3.axisLeft(y).ticks(4).tickSize(-w));
             svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor).style("font-family", "Plus Jakarta Sans");
+            svg.selectAll(".y-axis .tick line").style("stroke-dasharray", "3,3").style("opacity", 0.5);
 
             const line = d3.line().x(d => x(d.date)).y(d => y(d.value)).curve(d3.curveMonotoneX);
-            const area = d3.area().x(d => x(d.date)).y0(height).y1(d => y(d.value)).curve(d3.curveMonotoneX);
+            const area = d3.area().x(d => x(d.date)).y0(h).y1(d => y(d.value)).curve(d3.curveMonotoneX);
 
-            const gradient = svg.select("defs").html("").append("linearGradient").attr("id", "area-gradient").attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
-            gradient.append("stop").attr("offset", "0%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0.4);
-            gradient.append("stop").attr("offset", "100%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0);
+            const grad = svg.select("defs").html("").append("linearGradient").attr("id", "area-grad").attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
+            grad.append("stop").attr("offset", "0%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0.3);
+            grad.append("stop").attr("offset", "100%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0);
 
-            svg.selectAll(".area-path").data([dailyData]).join("path").attr("class", "area-path").attr("fill", "url(#area-gradient)").transition(t).attr("d", area);
-            svg.selectAll(".line-path").data([dailyData]).join("path").attr("class", "line-path").attr("fill", "none").attr("stroke", colors.lineColor).attr("stroke-width", 2.5).transition(t).attr("d", line);
+            svg.selectAll(".area-path").data([dData]).join("path").attr("class", "area-path").attr("fill", "url(#area-grad)").transition(t).attr("d", area);
+            svg.selectAll(".line-path").data([dData]).join("path").attr("class", "line-path").attr("fill", "none").attr("stroke", colors.lineColor).attr("stroke-width", 3).transition(t).attr("d", line);
+            
+            const dots = svg.selectAll(".dot").data(dData, d => d.date);
+            dots.enter().append("circle").attr("class", "dot").attr("r", 4).attr("fill", state.theme === 'dark' ? '#0f172a' : '#fff').attr("stroke", colors.lineColor).attr("stroke-width", 2)
+                .on("mouseover", function(e, d) { d3.select(this).attr("r", 6); showTooltip(`<strong>${d3.timeFormat("%b %d")(d.date)}</strong><br/>${d.value} Tickets`, e); })
+                .on("mouseout", function() { d3.select(this).attr("r", 4); hideTooltip(); })
+                .merge(dots).transition(t).attr("cx", d => x(d.date)).attr("cy", d => y(d.value));
+            dots.exit().remove();
         }
 
         function drawDonutChart(data, useTransition) {
             const { el, svg } = state.chartElements['#donut-chart'];
-            const width = el.clientWidth, height = el.clientHeight;
-            const radius = Math.min(width, height) / 2.5;
+            const w = el.clientWidth, h = el.clientHeight, radius = Math.min(w, h) / 2.2;
             const t = d3.transition().duration(useTransition ? 500 : 0);
 
-            svg.attr("transform", `translate(${width / 2}, ${height / 2})`);
-            const channelData = d3.rollups(data, v => v.length, d => d.channel);
-            
-            const color = d3.scaleOrdinal().domain(channelData.map(d => d[0])).range(["#38bdf8", "#818cf8", "#c084fc"]);
-            const pie = d3.pie().value(d => d[1]).sort(null);
-            const arc = d3.arc().innerRadius(radius * 0.6).outerRadius(radius);
+            svg.attr("transform", `translate(${w / 2}, ${h / 2})`);
+            const cData = d3.rollups(data, v => v.length, d => d.channel).map(([k,v]) => ({key:k, value:v}));
+            const color = d3.scaleOrdinal().domain(cData.map(d => d.key)).range(["#10b981", "#2dd4bf", "#14b8a6"]);
+            const pie = d3.pie().value(d => d.value).sort(null);
+            const arc = d3.arc().innerRadius(radius * 0.65).outerRadius(radius).cornerRadius(6).padAngle(0.02);
+            const arcHover = d3.arc().innerRadius(radius * 0.65).outerRadius(radius * 1.05).cornerRadius(6).padAngle(0.02);
 
-            const slices = svg.selectAll("path").data(pie(channelData), d => d.data[0]);
-            slices.enter().append("path").attr("fill", d => color(d.data[0])).each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
+            const slices = svg.selectAll("path").data(pie(cData), d => d.data.key);
+            slices.enter().append("path").attr("fill", d => color(d.data.key))
+                .on("mouseover", function(e, d) { d3.select(this).transition().duration(200).attr("d", arcHover); showTooltip(`<strong>${d.data.key}</strong><br/>${d.data.value} Tickets`, e); })
+                .on("mousemove", (e) => state.tooltip.style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px"))
+                .on("mouseout", function() { d3.select(this).transition().duration(200).attr("d", arc); hideTooltip(); })
+                .each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
                 .merge(slices).transition(t).attrTween("d", function(d) {
-                    const i = d3.interpolate(this._current, d);
-                    this._current = i(0);
-                    return t => arc(i(t));
+                    const i = d3.interpolate(this._current, d); this._current = i(0); return t => arc(i(t));
                 });
             slices.exit().transition(t).attrTween("d", function(d) {
-                const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle});
-                return t => arc(i(t));
+                const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle}); return t => arc(i(t));
             }).remove();
 
-            const legendContainer = d3.select("#donut-legend").html("");
-            const legendItems = legendContainer.selectAll(".legend-item").data(channelData, d => d[0]);
-            const legendEnter = legendItems.enter().append("div").attr("class", "legend-item flex items-center text-xs");
-            legendEnter.append("div").attr("class", "w-3 h-3 rounded-sm mr-2").style("background-color", d => color(d[0]));
-            legendEnter.append("span").text(d => `${d[0]} (${d[1]})`);
-            legendItems.exit().remove();
+            const leg = d3.select("#donut-legend").html("");
+            const legItems = leg.selectAll(".leg-item").data(cData, d => d.key);
+            const legEnter = legItems.enter().append("div").attr("class", "flex items-center gap-3 text-slate-600 dark:text-slate-300");
+            legEnter.append("div").attr("class", "w-3 h-3 rounded-full shadow-sm shrink-0").style("background-color", d => color(d.key));
+            legEnter.append("span").attr("class", "font-bold text-[10px] uppercase tracking-widest").text(d => d.key);
+            legEnter.append("span").attr("class", "ml-2 text-slate-400 font-bold text-[10px]").text(d => d.value);
+        }
+
+        function updateAxesStyle(svg, colors) {
+            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
+            svg.selectAll(".tick text").style("fill", colors.textColor).style("font-family", "Plus Jakarta Sans");
         }
 
         function drawAgentChart(data, useTransition) {
-             const { el, svg, x, y } = state.chartElements['#agent-chart'];
+            const { el, svg, x, y } = state.chartElements['#agent-chart'];
             const { chartMargin } = APP_CONFIG.dashboard;
-            const width = el.clientWidth - chartMargin.left - chartMargin.right;
-            const height = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors();
-            const t = d3.transition().duration(useTransition ? 500 : 0);
-
-            const agentData = d3.rollups(data, v => v.length, d => d.agent).map(([key, value]) => ({agent: key, value})).sort((a,b) => b.value - a.value).slice(0, 8);
+            const w = el.clientWidth - chartMargin.left - chartMargin.right, h = el.clientHeight - chartMargin.top - chartMargin.bottom;
+            const colors = getChartColors(), t = d3.transition().duration(useTransition ? 500 : 0);
+            const aData = d3.rollups(data, v => v.length, d => d.agent).map(([k, v]) => ({agent: k, value: v})).sort((a,b) => b.value - a.value).slice(0, 5);
             
-            y.domain(agentData.map(d => d.agent)).range([0, height]).padding(0.2);
-            x.domain([0, d3.max(agentData, d => d.value) || 10]).range([0, width]);
+            y.domain(aData.map(d => d.agent)).range([0, h]).padding(0.4);
+            x.domain([0, (d3.max(aData, d => d.value) || 10) * 1.1]).range([0, w]);
 
-            svg.select(".x-axis").attr("transform", `translate(0, ${height})`).transition(t).call(d3.axisBottom(x));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y));
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor);
+            svg.select(".x-axis").attr("transform", `translate(0, ${h})`).transition(t).call(d3.axisBottom(x).ticks(4).tickSize(0).tickPadding(5));
+            svg.select(".y-axis").transition(t).call(d3.axisLeft(y).tickSize(0).tickPadding(10));
+            updateAxesStyle(svg, colors);
+            svg.select(".y-axis").selectAll(".domain").remove(); 
+            svg.select(".x-axis").selectAll(".domain").style("stroke", colors.axisColor);
 
-            const colorScale = d3.scaleOrdinal(d3.schemeTableau10).domain(agentData.map(d => d.agent));
-            const bars = svg.selectAll(".bar").data(agentData, d => d.agent);
-
-            bars.enter().append("rect").attr("class", "bar").attr("fill", d => colorScale(d.agent)).attr("rx", 3).attr("x", x(0)).attr("y", d => y(d.agent)).attr("width", 0).attr("height", y.bandwidth())
+            const bars = svg.selectAll(".bar").data(aData, d => d.agent);
+            bars.enter().append("rect").attr("class", "bar").attr("fill", "#10b981").attr("rx", 6)
+                .attr("x", x(0)).attr("y", d => y(d.agent)).attr("width", 0).attr("height", y.bandwidth())
+                .on("mouseover", function(e, d) { d3.select(this).attr("fill", "#34d399"); showTooltip(`<strong>Agent ${d.agent}</strong><br/>${d.value} Resolutions`, e); })
+                .on("mousemove", (e) => state.tooltip.style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px"))
+                .on("mouseout", function() { d3.select(this).attr("fill", "#10b981"); hideTooltip(); })
                 .merge(bars).transition(t).attr("width", d => x(d.value)).attr("y", d => y(d.agent)).attr("height", y.bandwidth());
             bars.exit().transition(t).attr("width", 0).remove();
         }
-        
-        // --- DASHBOARD CONTROLLER ---
+
         function updateDashboard(team, useTransition = true) {
-            const today = new Date("2025-09-14T12:00:00Z");
-            const sevenDaysAgo = new Date(today);
-            sevenDaysAgo.setDate(today.getDate() - 6);
-            
-            const previousPeriodEnd = new Date(today.getFullYear(), today.getMonth(), 0);
-            const previousPeriodStart = new Date(previousPeriodEnd.getFullYear(), previousPeriodEnd.getMonth(), 1);
-
+            const today = new Date(), last7Days = new Date(today); last7Days.setDate(today.getDate() - 7);
+            const prevStart = new Date(today); prevStart.setDate(today.getDate() - 14);
             const parseDate = d3.timeParse("%Y-%m-%d");
-            const baseData = (team === "All") ? state.mockData : state.mockData.filter(d => d.team === team);
 
-            const currentData = baseData.filter(d => {
-                const date = parseDate(d.date);
-                return date >= sevenDaysAgo && date <= today;
-            });
-            const previousData = baseData.filter(d => {
-                const date = parseDate(d.date);
-                return date >= previousPeriodStart && date <= previousPeriodEnd;
-            });
+            const bData = (team === "All") ? state.mockData : state.mockData.filter(d => d.team === team);
+            const curData = bData.filter(d => { const dt = parseDate(d.date); return dt >= last7Days && dt <= today; });
+            const prevData = bData.filter(d => { const dt = parseDate(d.date); return dt >= prevStart && dt < last7Days; });
             
-            updateKPIs(currentData, previousData, useTransition);
-            drawBarChart(currentData, useTransition);
-            drawLineChart(currentData, useTransition);
-            drawDonutChart(currentData, useTransition);
-            drawAgentChart(currentData, useTransition);
+            const curM = APP_CONFIG.dashboard.kpis.reduce((acc, k) => {
+                if(k.id === 'nps') acc.nps = Math.round(((curData.filter(d=>d.nps>=9).length - curData.filter(d=>d.nps<=6).length)/Math.max(1,curData.length))*100);
+                if(k.id === 'aht') acc.aht = Math.round(curData.reduce((a,c)=>a+c.handlingTime,0)/Math.max(1,curData.length));
+                if(k.id === 'fcr') acc.fcr = Math.round(curData.filter(d=>d.fcr).length/Math.max(1,curData.length)*100);
+                if(k.id === 'tickets') acc.tickets = curData.length;
+                return acc;
+            }, {});
+            const prevM = APP_CONFIG.dashboard.kpis.reduce((acc, k) => {
+                if(k.id === 'nps') acc.nps = Math.round(((prevData.filter(d=>d.nps>=9).length - prevData.filter(d=>d.nps<=6).length)/Math.max(1,prevData.length))*100);
+                if(k.id === 'aht') acc.aht = Math.round(prevData.reduce((a,c)=>a+c.handlingTime,0)/Math.max(1,prevData.length));
+                if(k.id === 'fcr') acc.fcr = Math.round(prevData.filter(d=>d.fcr).length/Math.max(1,prevData.length)*100);
+                if(k.id === 'tickets') acc.tickets = prevData.length;
+                return acc;
+            }, {});
+
+            APP_CONFIG.dashboard.kpis.forEach(k => {
+                const prev = prevM[k.id], cur = curM[k.id], el = $(`#kpi-${k.id}-change`);
+                if (prev === 0) el.textContent = 'vs Prev 7D';
+                else {
+                    const chg = ((cur - prev) / prev) * 100, isGood = (k.id==='aht'||k.id==='tickets') ? chg<=0 : chg>=0;
+                    el.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-rose-500'} flex items-center justify-center gap-1"><svg class="w-3 h-3 transform ${chg<0?'rotate-180':''}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>${Math.abs(chg).toFixed(1)}%</span>`;
+                }
+                const tEl = $(`#kpi-${k.id}`);
+                gsap.to(tEl, { textContent: cur, duration: useTransition?1:0, ease: "power2.out", snap: { textContent: 1 }, onUpdate: () => tEl.textContent = `${Math.round(parseFloat(tEl.textContent))}${k.unit}` });
+            });
+
+            drawBarChart(curData, useTransition); drawLineChart(curData, useTransition); drawDonutChart(curData, useTransition); drawAgentChart(curData, useTransition);
         }
 
         function initDashboard() {
             if (state.dashboardInitialized) return;
-            
-            // Initialize charts ONCE to prevent flickering
-            initChart('#bar-chart', { x: d3.scaleBand(), y: d3.scaleLinear() });
-            initChart('#line-chart', { x: d3.scaleTime(), y: d3.scaleLinear() });
-            initChart('#donut-chart', {});
-            initChart('#agent-chart', { x: d3.scaleLinear(), y: d3.scaleBand() });
-
-            state.mockData = generateMockData();
-            updateDashboard("All", false);
-            state.dashboardInitialized = true;
+            initChart('#bar-chart', { x: d3.scaleBand(), y: d3.scaleLinear() }); initChart('#line-chart', { x: d3.scaleTime(), y: d3.scaleLinear() });
+            initChart('#donut-chart', {}); initChart('#agent-chart', { x: d3.scaleLinear(), y: d3.scaleBand() });
+            state.mockData = generateMockData(); updateDashboard("All", false); state.dashboardInitialized = true;
         }
 
-        function setupDashboardControls() {
-            $$('.data-filter').forEach(button => {
-                button.addEventListener('click', function() {
-                    $$('.data-filter').forEach(btn => {
-                        btn.classList.remove('bg-primary-500', 'text-white', 'font-semibold');
-                        btn.classList.add('bg-slate-200', 'dark:bg-slate-700');
-                    });
-                    this.classList.add('bg-primary-500', 'text-white', 'font-semibold');
-                    this.classList.remove('bg-slate-200', 'dark:bg-slate-700');
-                    updateDashboard(this.dataset.team, true);
-                });
+        // Using event delegation for dynamic dashboard filters
+        $('#dashboard-filters').addEventListener('click', function(e) {
+            const btn = e.target.closest('.data-filter');
+            if (!btn) return;
+            
+            $$('.data-filter').forEach(b => {
+                b.classList.remove('is-active', 'bg-slate-800', 'dark:bg-white', 'text-white', 'dark:text-slate-900', 'shadow-lg', 'pointer-events-none');
+                b.classList.add('glass', 'text-slate-600', 'dark:text-slate-300');
             });
-        }
-        
-        function handleResize() {
+            btn.classList.add('is-active', 'bg-slate-800', 'dark:bg-white', 'text-white', 'dark:text-slate-900', 'shadow-lg', 'pointer-events-none');
+            btn.classList.remove('glass', 'text-slate-600', 'dark:text-slate-300');
+            updateDashboard(btn.dataset.team, true);
+        });
+
+        window.addEventListener("resize", () => {
             if (!state.dashboardInitialized) return;
-            // Debounce resize events
-            clearTimeout(state.resizeTimer);
+            clearTimeout(state.resizeTimer); 
             state.resizeTimer = setTimeout(() => {
-                 updateDashboard($('.data-filter.bg-primary-500').dataset.team, false);
-            }, 150);
-        }
+                const activeBtn = $('.data-filter.is-active');
+                if(activeBtn) updateDashboard(activeBtn.dataset.team, false);
+            }, 200);
+        });
+
+
+
+        // --- INIT ---
+        populateContent();
+        updateTheme();
+        setupAnimations();
+        setupParticles();
+        $('#current-year').textContent = new Date().getFullYear();
         
-        // --- INITIALIZATION ---
-        function init() {
-            populateContent();
-            setupThemeToggle();
-            setupMobileMenu();
-            setupAnimations();
-            setupParticles();
-            setupDashboardControls();
-            setupSmoothScroll();
-            setupBackToTop();
-            
-            $('#current-year').textContent = new Date().getFullYear();
-
-            ScrollTrigger.create({ trigger: "#dashboard", start: "top 80%", onEnter: initDashboard, once: true });
-            
-            window.addEventListener("resize", handleResize);
-        }
-
-        init();
-
+        ScrollTrigger.create({ trigger: "#dashboard", start: "top 75%", onEnter: initDashboard, once: true });
+        
         window.addEventListener('load', () => {
-            const preloader = $('#preloader');
-            if (preloader) {
-                preloader.classList.add('opacity-0');
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500); // Matches the transition duration
-            }
+            const pre = $('#preloader');
+            if (pre) { pre.classList.add('opacity-0'); setTimeout(() => pre.style.display = 'none', 500); }
         });
     });
     </script>
 </body>
 </html>
-
