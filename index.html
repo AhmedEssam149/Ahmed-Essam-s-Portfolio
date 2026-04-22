@@ -127,7 +127,7 @@
         /* Section Numbering */
         .section-num {
             position: absolute; top: -2rem; left: -1rem; font-size: 8rem; font-weight: 900;
-            color: rgba(16, 185, 129, 0.1); z-index: -1; pointer-events: none;
+            color: rgba(16, 185, 129, 0.3); z-index: -1; pointer-events: none;
             user-select: none; font-family: 'Montserrat', sans-serif;
         }
         .dark .section-num { color: rgba(255, 255, 255, 0.02); }
@@ -136,10 +136,11 @@
             .section-num {
                 left: 50%;
                 transform: translateX(-50%);
-                top: -1.5rem;
-                font-size: 6rem;
+                top: -2rem;
+                font-size: 5rem;
                 width: 100%;
                 text-align: center;
+                opacity: 0.75;
             }
         }
 
@@ -184,8 +185,8 @@
     </div>
 
     <!-- Floating Navigation -->
-    <header id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-6xl transition-all duration-300">
-        <nav class="glass rounded-full px-6 py-3 flex items-center justify-between shadow-2xl">
+    <header class="fixed top-6 left-0 w-full z-50 px-4 sm:px-8">
+            <nav class="glass max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between rounded-full shadow-lg border border-white/20">
             <a href="#hero" class="text-xl font-display font-black gradient-text tracking-tighter magnetic-btn">AE</a>
             
             <div class="hidden md:flex items-center gap-8" id="desktop-nav">
@@ -214,14 +215,14 @@
         </div>
     </header>
 
-    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-32 overflow-x-hidden">
+    <main class="pt-24 pb-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-24 md:space-y-32 overflow-x-hidden">
 
         <!-- Hero Section -->
         <section id="hero" class="grid lg:grid-cols-2 items-center gap-16 min-h-[75vh]">
             <div class="relative group animate-target lg:order-2">
                 <div class="absolute -inset-10 bg-emerald-500/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div class="absolute -inset-10 bg-fuchsia-500/5 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-100"></div>
-                <div class="relative aspect-square rounded-[4rem] overflow-hidden border-[12px] border-white dark:border-slate-900 rotate-3 transition-transform group-hover:rotate-0 duration-700 ease-out animate-float mx-auto max-w-sm lg:max-w-none">
+                <div class="relative aspect-square rounded-[4rem] overflow-hidden border-[12px] border-white dark:border-slate-900 rotate-3 transition-transform group-hover:rotate-0 duration-700 ease-out animate-float mx-auto w-[90%] sm:max-w-sm lg:max-w-none">
                     <img src="./me.webp" alt="Ahmed Essam" onerror="this.src='https://placehold.co/800x800/1e293b/0ea5e9?text=Ahmed+Essam'" class="w-full h-full object-cover transition-all duration-700 scale-100 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
                 </div>
@@ -271,8 +272,8 @@
         </style>
         
         <!-- Philosophy Section - The "Authenticity" Layer -->
-        <section id="philosophy" class="animate-target py-12 border-y border-slate-200/50 dark:border-slate-800/30">
-            <div class="grid md:grid-cols-3 gap-12 items-center">
+        <section id="philosophy" class="animate-target py-16 border-y border-slate-200/50 dark:border-slate-800/30">
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12 items-center text-center md:text-left px-4">
                 <div class="md:col-span-1">
                     <h3 class="font-display text-xs font-black uppercase tracking-[0.3em] text-primary-500 mb-4">My Philosophy</h3>
                     <p class="text-2xl font-black tracking-tight leading-tight italic">"Data is the bridge between a business issue and a solution."</p>
@@ -389,7 +390,7 @@
 
         <!-- Contact Section -->
         <section id="contact" class="pb-12 animate-target relative z-10">
-            <div class="bg-slate-900 dark:bg-[#020617] text-white p-16 md:p-24 rounded-[4rem] md:rounded-[5rem] text-center relative overflow-hidden shadow-2xl border border-white/5">
+            <div class="bg-slate-900 dark:bg-[#020617] text-white p-8 sm:p-16 md:p-24 rounded-[3rem] md:rounded-[5rem] text-center relative overflow-hidden shadow-2xl border border-white/5">
                 <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500"></div>
                 
                 <div class="max-w-3xl mx-auto mb-16">
@@ -545,7 +546,7 @@
 
             // Testimonials (Bento Style)
             $('#testimonials-container').innerHTML = APP_CONFIG.testimonials.map(t => `
-                <div class="glass p-8 rounded-[3rem] bento-card flex flex-col h-full relative">
+                <div class="glass p-6 sm:p-8 rounded-[2.5rem] md:rounded-[3rem] bento-card flex flex-col h-full relative">
                     <div class="flex items-start justify-between mb-6 relative z-10">
                         <div class="flex items-center gap-4">
                             <img src="${t.img}" onerror="this.src='https://placehold.co/100x100/1e293b/0ea5e9?text=${t.name.charAt(0)}'" class="w-12 h-12 rounded-full border-2 border-primary-500 object-cover shadow-md shrink-0">
