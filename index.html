@@ -142,6 +142,7 @@
                 text-align: center;
                 opacity: 0.75;
             }
+            button, a { -webkit-tap-highlight-color: transparent; }
         }
 
         /* D3.js Tooltip Styling */
@@ -379,7 +380,7 @@
         <section id="testimonials" class="space-y-12 relative z-10 pt-20">
             <div class="section-num">05</div>
             <div class="text-center md:text-left mb-8 animate-target">
-                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest"><span class="gradient-text">Endorsements</span></h2>
+                <h2 class="font-display text-3xl md:text-5xl font-black tracking-tighter uppercase tracking-widest"><span class="gradient-text">Endorsements</span></h2>
                 <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">What colleagues say about my work.</p>
             </div>
             
@@ -575,7 +576,7 @@
             `).join('');
 
             $('#dashboard-filters').innerHTML = APP_CONFIG.dashboard.filters.map((filter, index) => `
-                <button class="data-filter ${index === 0 ? 'is-active bg-slate-800 dark:bg-white text-white dark:text-slate-900 shadow-lg pointer-events-none' : 'glass text-slate-600 dark:text-slate-300 hover:bg-white/50 dark:hover:bg-slate-800/50'} px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all magnetic-btn" data-team="${filter}">${filter}</button>
+                <button class="data-filter ${index === 0 ? 'is-active bg-emerald-500 text-white shadow-lg pointer-events-none' : 'glass text-slate-600 dark:text-slate-300 hover:bg-emerald-500/10'} px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all magnetic-btn" data-team="${filter}">${filter}</button>
             `).join('');
         }
 
@@ -883,10 +884,10 @@
             if (!btn) return;
             
             $$('.data-filter').forEach(b => {
-                b.classList.remove('is-active', 'bg-slate-800', 'dark:bg-white', 'text-white', 'dark:text-slate-900', 'shadow-lg', 'pointer-events-none');
+                b.classList.remove('is-active', 'bg-emerald-500', 'text-white', 'shadow-lg', 'pointer-events-none');
                 b.classList.add('glass', 'text-slate-600', 'dark:text-slate-300');
             });
-            btn.classList.add('is-active', 'bg-slate-800', 'dark:bg-white', 'text-white', 'dark:text-slate-900', 'shadow-lg', 'pointer-events-none');
+            btn.classList.add('is-active', 'bg-emerald-500', 'text-white', 'shadow-lg', 'pointer-events-none');
             btn.classList.remove('glass', 'text-slate-600', 'dark:text-slate-300');
             updateDashboard(btn.dataset.team, true);
         });
