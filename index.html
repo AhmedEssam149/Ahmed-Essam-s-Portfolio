@@ -7,7 +7,7 @@
     <meta name="description" content="Professional portfolio of Ahmed Essam, Customer Experience & Reporting Analyst specializing in analytical solutions, Data Analysis, and Business Intelligence.">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2310b981'/><stop offset='40%' stop-color='%232dd4bf'/><stop offset='70%' stop-color='%236366f1'/><stop offset='100%' stop-color='%23d946ef'/></linearGradient></defs><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Montserrat, sans-serif' font-weight='900' font-size='60' fill='url(%23g)'>AE</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2310b981'/><stop offset='40%' stop-color='%232dd4bf'/><stop offset='70%' stop-color='%236366f1'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Montserrat, sans-serif' font-weight='900' font-size='60' fill='url(%23g)'>AE</text></svg>">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,6 @@
     
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -32,7 +31,7 @@
                     colors: {
                         slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a', 950: '#020617' },
                         primary: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' },
-                        complement: { 400: '#e879f9', 500: '#d946ef', 600: '#c026d3' },
+                        complement: { 400: '#a78bfa', 500: '#8b5cf6', 600: '#7c3aed' },
                         accent: { purple: '#a855f7', pink: '#ec4899', indigo: '#6366f1', teal: '#2dd4bf', 500: '#10b981', 600: '#059669' }
                     },
                     fontFamily: {
@@ -86,7 +85,7 @@
         
         /* Typography Gradients */
         .gradient-text {
-            background: linear-gradient(135deg, #10b981 0%, #2dd4bf 40%, #6366f1 70%, #d946ef 100%);
+            background: linear-gradient(135deg, #10b981 0%, #2dd4bf 40%, #6366f1 70%, #8b5cf6 100%);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -101,8 +100,8 @@
         /* Glassmorphism & Bento Cards - Obsidian Theme */
         .glass { 
             background: rgba(255, 255, 255, 0.7); 
-            backdrop-filter: blur(16px); 
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.5); 
             box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.05); 
         }
@@ -112,7 +111,7 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); 
         }
 
-        .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); padding: 1.5rem; border-radius: 2.5rem; }
+        .bento-card { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease; padding: 1.5rem; border-radius: 2.5rem; will-change: transform; }
         @media (min-width: 768px) { .bento-card { padding: 2.5rem; } }
         .bento-card:hover { 
             transform: translateY(-8px) scale(1.01); 
@@ -137,7 +136,7 @@
                 left: 50%;
                 transform: translateX(-50%);
                 top: -2rem;
-                font-size: 5rem;
+                font-size: 8rem;
                 width: 100%;
                 text-align: center;
                 opacity: 0.75;
@@ -145,18 +144,30 @@
             button, a { -webkit-tap-highlight-color: transparent; }
         }
 
-        /* D3.js Tooltip Styling */
-        .d3-tooltip {
-            position: absolute; text-align: left; padding: 10px 14px; font-size: 0.875rem;
-            font-family: 'Plus Jakarta Sans', sans-serif; background: rgba(15, 23, 42, 0.95);
-            color: #f8fafc; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;
-            pointer-events: none; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(8px); z-index: 1000; transition: opacity 0.2s ease;
-        }
-        .dark .d3-tooltip { background: rgba(248, 250, 252, 0.95); color: #0f172a; border-color: rgba(0, 0, 0, 0.1); }
-        
         .typewriter-cursor { display: inline-block; width: 3px; height: 1em; background-color: currentColor; animation: blink 0.7s infinite; vertical-align: bottom; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Scroll Progress */
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 3px; z-index: 200; background: linear-gradient(90deg, #10b981, #2dd4bf, #6366f1, #8b5cf6); width: 0%; transition: width 0.1s linear; }
+
+        /* Impact Stats */
+        .stat-card { position: relative; overflow: hidden; min-width: 0; }
+        .stat-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(16,185,129,0.05) 0%, rgba(99,102,241,0.05) 100%); opacity: 0; transition: opacity 0.4s; }
+        .stat-card:hover::before { opacity: 1; }
+        .stat-number { font-family: 'Montserrat', sans-serif; font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 900; line-height: 1; white-space: nowrap; overflow: hidden; }
+
+        /* Toolkit */
+        .toolkit-group { border-radius: 2rem; padding: 1.5rem; transition: all 0.3s ease; }
+        .toolkit-group:hover { transform: translateY(-4px); }
+        .tool-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.2s; cursor: default; }
+        .tool-pill:hover { transform: scale(1.05); }
+
+        /* Experience Timeline */
+        .experience-bullet { position: relative; padding-left: 1.25rem; }
+        .experience-bullet::before { content: '\25B8'; position: absolute; left: 0; color: #10b981; font-size: 0.75rem; top: 0.1rem; }
+
+        /* Nav active indicator */
+        .nav-link.active { color: #10b981 !important; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-[#020617] dark:text-slate-100 transition-colors duration-300 antialiased">
@@ -219,12 +230,12 @@
     <main class="pt-24 pb-20 px-4 sm:px-8 max-w-7xl mx-auto space-y-24 md:space-y-32 overflow-x-hidden">
 
         <!-- Hero Section -->
-        <section id="hero" class="grid lg:grid-cols-2 items-center gap-16 min-h-[75vh]">
+        <section id="hero" class="grid lg:grid-cols-2 items-center gap-8 min-h-[75vh]">
             <div class="relative group animate-target lg:order-2">
                 <div class="absolute -inset-10 bg-emerald-500/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div class="absolute -inset-10 bg-fuchsia-500/5 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-100"></div>
                 <div class="relative aspect-square rounded-[4rem] overflow-hidden border-[12px] border-white dark:border-slate-900 rotate-3 transition-transform group-hover:rotate-0 duration-700 ease-out animate-float mx-auto w-[90%] sm:max-w-sm lg:max-w-none">
-                    <img src="./me.webp" alt="Ahmed Essam" onerror="this.src='https://placehold.co/800x800/1e293b/0ea5e9?text=Ahmed+Essam'" class="w-full h-full object-cover transition-all duration-700 scale-100 group-hover:scale-105">
+                    <img src="./IMG_2027.webp" alt="Ahmed Essam" onerror="this.src='https://placehold.co/800x800/1e293b/0ea5e9?text=Ahmed+Essam'" class="w-full h-full object-cover transition-all duration-700 scale-100 group-hover:scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
                 </div>
             </div>
@@ -264,14 +275,6 @@
             </div> -->
         </section>
 
-        <style>
-            @keyframes scroll {
-                0% { transform: translateY(-100%); opacity: 0; }
-                50% { opacity: 1; }
-                100% { transform: translateY(400%); opacity: 0; }
-            }
-        </style>
-        
         <!-- Philosophy Section - The "Authenticity" Layer -->
         <section id="philosophy" class="animate-target py-16 border-y border-slate-200/50 dark:border-slate-800/30">
             <div class="grid md:grid-cols-3 gap-8 md:gap-12 items-center text-center md:text-left px-4">
@@ -284,7 +287,7 @@
                         I believe that behind every data point in a report, there's a real person having a real experience. My job isn't just to calculate percentages; it's to find the friction and remove it. 
                     </p>
                     <p class="text-lg">
-                        By combining <span class="text-slate-900 dark:text-white font-bold">technical expertise</span> with <span class="text-slate-900 dark:text-white font-bold">empathy</span>, I build tools that don't just show what happened, but explain why—and how to make it better.
+                        By combining <span class="text-slate-900 dark:text-white font-bold">technical expertise</span> with <span class="text-slate-900 dark:text-white font-bold">empathy</span>, I build tools that don't just show what happened, but explain why and how to make it better.
                     </p>
                 </div>
             </div>
@@ -332,46 +335,29 @@
             
         </section>
 
-        <!-- Live Dashboard Demo -->
-        <section id="dashboard" class="space-y-12 relative z-10 pt-20">
+        <!-- Impact & Numbers Section -->
+        <section id="impact" class="space-y-16 relative z-10 pt-20">
             <div class="section-num">04</div>
-            <div class="text-center md:text-left mb-8 animate-target">
-                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">Operations <span class="gradient-text">Hub</span></h2>
-                <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg italic">
-                    Reactive Data Flow Simulation. <strong class="text-slate-800 dark:text-slate-200">Hover over charts to interact.</strong>
-                </p>
-            </div>
-            
-            <!-- Dashboard KPIs -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 animate-target" id="kpi-container">
-                <!-- KPIs injected here -->
-            </div>
-            
-            <!-- Dashboard Filters -->
-            <div class="flex flex-wrap items-center gap-3 animate-target" id="dashboard-filters">
-                <!-- Filters injected here -->
-            </div>
-            
-            <!-- Dashboard Charts in Bento Layout -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-target">
-                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
-                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Tickets by Priority</h4>
-                    <div id="bar-chart" class="w-full h-48 md:h-72"></div>
+
+            <!-- By The Numbers -->
+            <div class="animate-target">
+                <div class="text-center md:text-left mb-10">
+                    <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">By The <span class="gradient-text">Numbers</span></h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">Real impact, measured and delivered.</p>
                 </div>
-                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
-                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Volume Trend</h4>
-                    <div id="line-chart" class="w-full h-48 md:h-72"></div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" id="stats-grid">
+                    <!-- Stats injected by JS -->
                 </div>
-                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
-                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Distribution by Channel</h4>
-                    <div id="donut-chart-container" class="w-full h-[400px] md:h-72 flex flex-col md:flex-row items-center justify-center gap-6">
-                        <div id="donut-chart" class="flex-grow h-64 md:h-full w-full"></div>
-                        <div id="donut-legend" class="w-full md:w-1/3 p-4 text-sm flex flex-wrap md:flex-col justify-center items-center md:items-start gap-4 md:gap-2"></div>
-                    </div>
+            </div>
+
+            <!-- Toolkit Arsenal -->
+            <div class="animate-target">
+                <div class="text-center md:text-left mb-10">
+                    <h2 class="font-display text-4xl md:text-5xl font-black tracking-tighter uppercase tracking-widest">Toolkit <span class="gradient-text">Arsenal</span></h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-3 text-lg">The weapons of choice, grouped by purpose.</p>
                 </div>
-                <div class="glass p-6 md:p-8 rounded-[3rem] bento-card relative">
-                    <h4 class="font-display font-black text-slate-800 dark:text-slate-200 mb-4 text-xl">Top Agents</h4>
-                    <div id="agent-chart" class="w-full h-48 md:h-72"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5" id="toolkit-grid">
+                    <!-- Toolkit groups injected by JS -->
                 </div>
             </div>
         </section>
@@ -424,8 +410,7 @@
     <!-- Project Modal Removed -->
 
 
-    <!-- D3 Tooltip Container -->
-    <div id="d3-tooltip" class="d3-tooltip" style="opacity: 0;"></div>
+
 
     <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -433,18 +418,18 @@
         
         // --- DATA CONFIGURATION ---
         const APP_CONFIG = {
-            navLinks: [ { href: "#experience", title: "Experience" }, { href: "#skills", title: "Expertise" }, { href: "#projects", title: "Projects" }, { href: "#testimonials", title: "Endorsements" }, { href: "#dashboard", title: "Dashboard"} ],
+            navLinks: [ { href: "#experience", title: "Experience" }, { href: "#skills", title: "Expertise" }, { href: "#projects", title: "Projects" }, { href: "#impact", title: "Impact" }, { href: "#testimonials", title: "Endorsements" } ],
             experiences: [
-                { period: "Mar 2026 — Present", role: "Customer Solutions & Reporting Analyst", company: "e& CX Solutions", details: ["Transitioned into the CX Analysis team to drive advanced reporting and tailored analytics for complex business needs.", "Automated Business Review data processing and resolved historical data gaps, ensuring absolute data integrity for executive reporting."] },
-                { period: "Jul 2025 — Feb 2026", role: "MIS Specialist", company: "e& CX Solutions", details: ["Architected MIS solutions serving the entire enterprise, breaking data silos and boosting accessibility for stakeholders.", "Developed dynamic, automated dashboards that reduced executive reporting time from days to hours.", "Led digital transformation initiatives that aligned data strategies with business objectives."] },
+                { period: "Mar 2026 – Present", role: "Customer Solutions & Reporting Analyst", company: "e& CX Solutions", details: ["Transitioned into the CX Analysis team to drive advanced reporting and tailored analytics for complex business needs.", "Automated Business Review data processing and resolved historical data gaps, ensuring absolute data integrity for executive reporting."] },
+                { period: "Jul 2025 – Feb 2026", role: "MIS Specialist", company: "e& CX Solutions", details: ["Architected MIS solutions serving the entire enterprise, breaking data silos and boosting accessibility for stakeholders.", "Developed dynamic, automated dashboards that reduced executive reporting time from days to hours.", "Led digital transformation initiatives that aligned data strategies with business objectives."] },
                 { period: "Jan 2024 - Jun 2025", role: "Training & Quality Engineer", company: "Egyptian Company for Innovating Education Technologies", details: ["Redesigned QA processes achieving faster testing cycles and measurable quality improvements.", "Developed and delivered technical training programs with the highest client satisfaction ratings."] },
-                { period: "Sep 2021 — Dec 2023", role: "Data Analyst", company: "Srour Group", details: ["Automated reporting workflows using VBA and Python, saving hours of manual work weekly.", "Conducted root cause analyses identifying operational bottlenecks, leading to a 50% reduction in system downtime."] }
+                { period: "Sep 2021 – Dec 2023", role: "Data Analyst", company: "Srour Group", details: ["Automated reporting workflows using VBA and Python, saving hours of manual work weekly.", "Conducted root cause analyses identifying operational bottlenecks, leading to a 50% reduction in system downtime."] }
             ],
             skills: [
                 { name: "Power BI", icon: 'M16 8h6v13h-6V8zM9 3h6v18H9V3zM2 13h6v8H2v-8z', color: 'text-primary-500' },
                 { name: "SQL", icon: 'M12 2C6.48 2 2 4.02 2 6.5s4.48 4.5 10 4.5 10-2.02 10-4.5S17.52 2 12 2zm0 13c-5.52 0-10-2.02-10-4.5v3c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-3c0 2.48-4.48 4.5-10 4.5zm0 4.5c-5.52 0-10-2.02-10-4.5v3c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-3c0 2.48-4.48 4.5-10 4.5z', color: 'text-accent-purple' },
                 { name: "Advanced Excel", icon: 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h2v2H7V7zm0 4h2v2H7v-2zm0 4h2v2H7v-2zm4-8h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6v-2z', color: 'text-emerald-500' },
-                { name: "Python", icon: 'M14.25.3c-.9 0-1.45.07-1.45.07l-.05.13v2.33h2.45V3h-3.48c-.7 0-1.25.56-1.25 1.25v2.75c0 .7.56 1.25 1.25 1.25h1.27v-1.18c0-.6.44-1.1 1-1.1h3.1c.6 0 1.1.44 1.1 1v2.35c0 .6-.44 1.1-1.1 1.1h-2.3v-1.1h-1.2v2.75c0 .7.56 1.25 1.25 1.25h1.2c2.4 0 2.4-1.25 2.4-1.25v-1.2l-.05-.13c0-.3 0-.67-.25-1.13a3 3 0 0 0-.58-.8c-.3-.3-.66-.5-1-.58-.42-.1-.85-.13-1.27-.13h-1.2V9.1c0-.6-.44-1.1-1.1-1.1h-3.1c-.6 0-1.1.44-1.1 1v3.2c0 .6.44 1.1 1.1 1.1h2.8c.7 0 1.25-.56 1.25-1.25V10.1h-1.2V8.9c0-.6-.44-1.1-1-1.1h-1.28l.01-1.17c0-2.4 2.4-2.4 2.4-2.4h1.1V1.8s-.1-1.5-2.9-1.5z', color: 'text-sky-500' },
+                { name: "Python", icon: 'M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.03v-2.87s-.109-3.408 3.345-3.408h5.77s3.234.052 3.234-3.13V3.296S18.28 0 11.914 0zm-3.22 1.862a1.043 1.043 0 1 1 0 2.085 1.042 1.042 0 0 1 0-2.085zm8.12 7.902v2.87s.109 3.408-3.345 3.408H7.699S4.465 16.19 4.465 19.37v3.334S3.957 24 9.986 24c6.03 0 5.824-2.718 5.824-2.718l-.007-2.752H9.99v-.826h8.12s3.903-.455 3.903-6.635c0-6.18-3.403-5.963-3.403-5.963h-2.03v-.04zm-2.86 10.235a1.043 1.043 0 1 1 0 2.085 1.042 1.042 0 0 1 0-2.085z', color: 'text-sky-500' },
                 { name: "Data Warehousing", icon: 'M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z', color: 'text-pink-500' },
                 { name: "ETL Processes", icon: 'M13 14h-2V9H8l4-5 4 5h-3v5zM5 13H3a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2v2h2v4H3v-4h2v-2z', color: 'text-orange-500' },
                 { name: "Power Query", icon: 'M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z', color: 'text-indigo-500' },
@@ -464,7 +449,7 @@
             testimonials: [
                 { name: "Yahia Morsy", role: "MIS Manager - e& CX Solutions", link: "https://www.linkedin.com/in/yehia-morsy1/", img: "Colleagues/1.webp", text: "Essam consistently delivers very useful reports that contribute to the stability of the call center and support effective cost-saving decisions. His analytical skills are exceptional, providing visual and powerful insights, and his strong ownership ensures high-quality and timely outcomes." },
                 { name: "Shady Abdelazeem", role: "MIS Supervisor - e& CX Solutions", link: "https://www.linkedin.com/in/shady-abd-el-azeem-6a9ab8233/", img: "Colleagues/2.webp", text: "Congratulations Essam on being the top performer last quarter, you really deserve it, you’ve proven to be someone truly reliable at work. Your performance is always great, and your effort really shows. It honestly makes working with you a pleasure. You’ve made a real difference in our team." },
-                { name: "Mostafa Rabeaa", role: "Bussines Intellgance L&D Supervisor", link: "https://www.linkedin.com/in/mostafa-mohamed-466b53149/", img: "Colleagues/3.webp", text: "I'm speechless walahi ya Sadeky. There's no words can describe how talented you are, dedicated, mature, confident and your spirit. I'm lucky to work with you in a one team." },
+                { name: "Mostafa Rabeaa", role: "Business Intelligence L&D Supervisor - Bespin Global MEA", link: "https://www.linkedin.com/in/mostafa-mohamed-466b53149/", img: "Colleagues/3.webp", text: "I'm speechless walahi ya Sadeky. There's no words can describe how talented you are, dedicated, mature, confident and your spirit. I'm lucky to work with you in a one team." },
                 { name: "Mohamed Anwar", role: "Senior Data Analyst - e& CX Solutions | Master's in Business Analytics", link: "https://www.linkedin.com/in/mohamed-anwar-a62228247/", img: "Colleagues/4.webp", text: "I’m honored to be mentioned here. Essam is one of the most technically brilliant people I’ve ever worked with — he always has a smart solution for every challenge. Honestly, I’m too small to give feedback; I’m just learning from him every day." },
                 { name: "Ahmed Atef", role: "Senior QA & Automation Engineer - Augustus Media", link: "https://www.linkedin.com/in/ahmed-atef-8b763b103/", img: "Colleagues/5.webp", text: "Essam is an exceptional professional who has worked as both a Tester and an Analyst, consistently delivering high-quality work with remarkable attention to detail. His ability to understand requirements, identify hidden issues, and analyze complex situations makes him a true asset to any team." },
                 { name: "Hajar Abdelaziz", role: "Senior Software QA Engineer - Siemens", link: "https://www.linkedin.com/in/hajar-abdelaziz/", img: "Colleagues/6.webp", text: "I had the chance to work with Ahmed on several projects, where I witnessed his strong problem-solving skills, analytical thinking, and ability to manage complex tasks under pressure. He approached issues methodically, broke them down into actionable steps, and coordinated solutions that benefited everyone involved." },
@@ -472,20 +457,24 @@
                 { name: "Soha Mohamed", role: "MIS Specialist - e& CX Solutions", link: "https://www.linkedin.com/in/soha-mohamed-346014227/", img: "Colleagues/8.webp", text: "Essam is truly a fantastic person to work with. His technical expertise is outstanding, and he’s always ready to help to an incredible extent. No matter how complex the issue is, Essam handles it calmly and efficiently, ensuring everything runs smoothly. His positive attitude makes a huge difference in our team." },
                 { name: "Habiba Ehab", role: "MIS Specialist - e& CX Solutions", link: "https://www.linkedin.com/in/habiba-ehab-032661255/", img: "Colleagues/9.webp", text: "Essam has been an incredible mentor since I joined e&. He always takes the time to teach and support me, even when he’s busy. He’s extremely professional, knowledgeable, and truly inspiring to learn from." }
             ],
-            dashboard: {
-                kpis: [ 
-                    { id: 'nps', title: 'NPS', color: 'text-emerald-500', unit: '' }, 
-                    { id: 'aht', title: 'AHT', color: 'text-cyan-400', unit: 's' }, 
-                    { id: 'fcr', title: 'FCR', color: 'text-emerald-400', unit: '%' }, 
-                    { id: 'tickets', title: 'Queue', color: 'text-teal-400', unit: '' } 
-                ],
-                filters: ['All', 'Tech', 'Billing'],
-                chartMargin: {top: 15, right: 15, bottom: 30, left: 40}
-            }
+            impactStats: [
+                { value: 4, suffix: '+', label: 'Years of Experience', color: 'text-emerald-500', icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' },
+                { value: 50, suffix: '+', label: 'Automations Built', color: 'text-cyan-400', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+                { value: 1500, suffix: '+', label: 'Hours Saved', color: 'text-violet-400', icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z' },
+                { value: 7, suffix: '+', label: 'Case Studies', color: 'text-violet-400', icon: 'M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
+                { value: 9, suffix: '+', label: 'Endorsements', color: 'text-teal-400', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z' },
+                { value: 4, suffix: '+', label: 'Companies Served', color: 'text-amber-400', icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4' }
+            ],
+            toolkitGroups: [
+                { label: 'Analytics & BI', color: 'bg-emerald-500/10 border border-emerald-500/20', labelColor: 'text-emerald-500', pillBg: 'bg-emerald-500/15 text-emerald-800 dark:text-emerald-100', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', tools: ['Power BI', 'SQL', 'Advanced Excel'] },
+                { label: 'Automation & ETL', color: 'bg-cyan-500/10 border border-cyan-500/20', labelColor: 'text-cyan-500', pillBg: 'bg-cyan-500/15 text-cyan-800 dark:text-cyan-100', icon: 'M13 10V3L4 14h7v7l9-11h-7z', tools: ['VBA', 'Power Query', 'ETL Processes', 'Data Warehousing'] },
+                { label: 'Programming', color: 'bg-violet-500/10 border border-violet-500/20', labelColor: 'text-violet-500', pillBg: 'bg-violet-500/15 text-violet-800 dark:text-violet-100', icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4', tools: ['Python', 'JavaScript', 'M Language', 'DAX'] },
+                { label: 'Quality & Methods', color: 'bg-violet-500/10 border border-violet-500/20', labelColor: 'text-violet-600', pillBg: 'bg-violet-500/15 text-violet-800 dark:text-violet-100', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', tools: ['ISTQB', 'Agile', 'QA Engineering', 'KPI Design'] }
+            ]
         };
 
         // --- GLOBAL STATE ---
-        let state = { theme: localStorage.getItem('theme') || 'dark', dashboardInitialized: false, mockData: [], chartElements: {}, tooltip: d3.select("#d3-tooltip") };
+        let state = { theme: localStorage.getItem('theme') || 'dark' };
         const $ = (s) => document.querySelector(s);
         const $$ = (s) => document.querySelectorAll(s);
 
@@ -566,18 +555,6 @@
                 </div>
             `).join('');
 
-            // Dashboard KPIs & Filters
-            $('#kpi-container').innerHTML = APP_CONFIG.dashboard.kpis.map(kpi => `
-                <div class="glass p-6 rounded-[2.5rem] text-center bento-card">
-                    <p class="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">${kpi.title}</p>
-                    <div id="kpi-${kpi.id}" class="text-4xl md:text-5xl font-black ${kpi.color} kpi-value">0</div>
-                    <div id="kpi-${kpi.id}-change" class="text-[10px] font-bold mt-2"></div>
-                </div>
-            `).join('');
-
-            $('#dashboard-filters').innerHTML = APP_CONFIG.dashboard.filters.map((filter, index) => `
-                <button class="data-filter ${index === 0 ? 'is-active bg-emerald-500 text-white shadow-lg pointer-events-none' : 'glass text-slate-600 dark:text-slate-300 hover:bg-emerald-500/10'} px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all magnetic-btn" data-team="${filter}">${filter}</button>
-            `).join('');
         }
 
         // --- UI & THEME ---
@@ -592,10 +569,6 @@
                 state.particlesInstance.refresh();
             }
             
-            if (state.dashboardInitialized) {
-                const activeFilter = $('.data-filter.is-active');
-                if (activeFilter) updateDashboard(activeFilter.dataset.team, false);
-            }
         }
 
         $('#theme-toggle').onclick = () => {
@@ -605,39 +578,6 @@
         };
 
         $('#mobile-menu-button').onclick = () => $('#mobile-menu').classList.toggle('hidden');
-        $$('#mobile-menu .nav-link').forEach(link => link.onclick = () => $('#mobile-menu').classList.add('hidden'));
-
-        // --- CUSTOM CURSOR & MAGNETIC ---
-        function initCursor() {
-            if (window.innerWidth < 768) return; // Disable on mobile
-            const dot = $('#cursor-dot');
-            const ring = $('#cursor-ring');
-            let isMoving = false;
-            
-            window.addEventListener('mousemove', (e) => {
-                if (!isMoving) {
-                    requestAnimationFrame(() => {
-                        dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-                        ring.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-                        isMoving = false;
-                    });
-                    isMoving = true;
-                }
-            });
-            
-            document.querySelectorAll('a, button, .bento-card, .data-filter').forEach(el => {
-                el.addEventListener('mouseenter', () => gsap.to(ring, { scale: 1.6, background: 'rgba(14, 165, 233, 0.1)' }));
-                el.addEventListener('mouseleave', () => gsap.to(ring, { scale: 1, background: 'transparent' }));
-            });
-
-            document.querySelectorAll('.magnetic-btn').forEach(btn => {
-                btn.addEventListener('mousemove', (e) => {
-                    const r = btn.getBoundingClientRect();
-                    gsap.to(btn, { x: (e.clientX - r.left - r.width/2) * 0.3, y: (e.clientY - r.top - r.height/2) * 0.3, duration: 0.4 });
-                });
-                btn.addEventListener('mouseleave', () => gsap.to(btn, { x: 0, y: 0, duration: 0.6, ease: "elastic.out(1, 0.3)" }));
-            });
-        }
 
         // --- ANIMATIONS & PARTICLES ---
         function setupAnimations() {
@@ -666,252 +606,82 @@
             });
         }
 
-        // --- D3 DASHBOARD ---
-        function generateMockData() {
-            const teams = ["Tech", "Billing"], agents = { "Tech": ["Ali", "Fatima", "Youssef", "Nour", "Omar", "Aya"], "Billing": ["Hassan", "Layla", "Khaled", "Salma", "Mona", "Said"] }, data = [];
-            const today = new Date();
-            for (let i = 0; i < 1500; i++) {
-                const team = teams[Math.floor(Math.random() * teams.length)], date = new Date(today);
-                date.setDate(today.getDate() - Math.floor(Math.random() * 30));
-                data.push({
-                    id: i, date: d3.timeFormat("%Y-%m-%d")(date), team: team, agent: agents[team][Math.floor(Math.random() * agents[team].length)],
-                    priority: Math.random() > 0.7 ? "High" : (Math.random() > 0.4 ? "Medium" : "Low"),
-                    channel: Math.random() > 0.6 ? "Phone" : (Math.random() > 0.3 ? "Chat" : "Email"),
-                    handlingTime: Math.floor(Math.random() * 240) + 60, fcr: Math.random() > 0.2,
-                    nps: Math.random() < 0.7 ? Math.floor(Math.random() * 2) + 9 : Math.floor(Math.random() * 8) + 1
+        // --- IMPACT & TOOLKIT ---
+        function populateImpact() {
+            $('#stats-grid').innerHTML = APP_CONFIG.impactStats.map(s => `
+                <div class="glass p-4 rounded-[2rem] bento-card stat-card text-center group min-w-0">
+                    <svg class="w-5 h-5 mx-auto mb-2 ${s.color} group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="${s.icon}"/></svg>
+                    <div class="stat-number ${s.color}" data-target="${s.value}" data-suffix="${s.suffix}">0</div>
+                    <p class="text-[9px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 mt-2 leading-tight">${s.label}</p>
+                </div>
+            `).join('');
+
+            $('#toolkit-grid').innerHTML = APP_CONFIG.toolkitGroups.map(g => `
+                <div class="toolkit-group glass bento-card">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-9 h-9 rounded-xl ${g.color} flex items-center justify-center">
+                            <svg class="w-5 h-5 ${g.labelColor}" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="${g.icon}"/></svg>
+                        </div>
+                        <h3 class="font-display font-black text-sm uppercase tracking-widest ${g.labelColor}">${g.label}</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        ${g.tools.map(t => `<span class="tool-pill ${g.pillBg}">${t}</span>`).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function animateCounters() {
+            document.querySelectorAll('.stat-number').forEach(el => {
+                const target = parseInt(el.dataset.target, 10);
+                const suffix = el.dataset.suffix || '';
+                gsap.to({ val: 0 }, {
+                    val: target, duration: 1.8, ease: 'power2.out',
+                    onUpdate: function() { el.textContent = Math.round(this.targets()[0].val) + suffix; }
                 });
-            }
-            return data;
+            });
         }
 
-        const showTooltip = (html, e) => state.tooltip.html(html).style("opacity", 1).style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px");
-        const hideTooltip = () => state.tooltip.style("opacity", 0);
+        // --- SCROLL PROGRESS ---
+        let scrollTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    const doc = document.documentElement;
+                    const scrolled = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
 
-        function initChart(chartId, chartConfig) {
-            const el = $(chartId);
-            const svg = d3.select(el).append("svg").attr("width", "100%").attr("height", "100%");
-            if (chartId !== '#donut-chart') {
-                const { chartMargin } = APP_CONFIG.dashboard;
-                const g = svg.append("g").attr("transform", `translate(${chartMargin.left},${chartMargin.top})`);
-                g.append("g").attr("class", "x-axis font-sans text-xs"); g.append("g").attr("class", "y-axis font-sans text-xs"); g.append("defs");
-                state.chartElements[chartId] = { el, svg: g, ...chartConfig };
-            } else {
-                state.chartElements[chartId] = { el, svg: svg.append("g"), ...chartConfig };
-            }
-        }
+                    // Guard: check element exists before modifying
+                    const scrollProgressEl = $('#scroll-progress');
+                    if (scrollProgressEl) scrollProgressEl.style.width = scrolled + '%';
 
-        function getChartColors() {
-            const isDark = document.documentElement.classList.contains('dark');
-            return { axisColor: isDark ? "#334155" : "#e2e8f0", textColor: isDark ? "#94a3b8" : "#64748b", lineColor: "#0ea5e9" };
-        }
-
-        function drawBarChart(data, useTransition) {
-            const { el, svg, x, y } = state.chartElements['#bar-chart'];
-            const { chartMargin } = APP_CONFIG.dashboard;
-            const w = el.clientWidth - chartMargin.left - chartMargin.right, h = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors(), t = d3.transition().duration(useTransition ? 500 : 0);
-            const pData = d3.rollups(data, v => v.length, d => d.priority).map(([k, v]) => ({priority: k, value: v}));
-            const priorities = ["High", "Medium", "Low"];
-            
-            x.domain(priorities).range([0, w]).padding(0.4);
-            y.domain([0, d3.max(pData, d => d.value) || 10]).range([h, 0]);
-
-            svg.select(".x-axis").attr("transform", `translate(0, ${h})`).transition(t).call(d3.axisBottom(x).tickSize(0).tickPadding(10));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y).ticks(4).tickSize(-w));
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor).style("font-family", "Plus Jakarta Sans");
-            svg.selectAll(".y-axis .tick line").style("stroke-dasharray", "3,3").style("opacity", 0.5);
-
-            const cScale = d3.scaleOrdinal().domain(priorities).range(["#ec4899", "#f59e0b", "#10b981"]); // Pink High, Amber Med, Emerald Low
-            const bars = svg.selectAll(".bar").data(pData, d => d.priority);
-
-            bars.enter().append("rect").attr("class", "bar").attr("fill", d => cScale(d.priority)).attr("rx", 6)
-                .attr("x", d => x(d.priority)).attr("y", y(0)).attr("width", x.bandwidth()).attr("height", 0)
-                .on("mouseover", function(e, d) { d3.select(this).attr("opacity", 0.8); showTooltip(`<strong>${d.priority}</strong><br/>${d.value} Tickets`, e); })
-                .on("mousemove", (e) => state.tooltip.style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px"))
-                .on("mouseout", function() { d3.select(this).attr("opacity", 1); hideTooltip(); })
-                .merge(bars).transition(t).attr("x", d => x(d.priority)).attr("width", x.bandwidth()).attr("y", d => y(d.value)).attr("height", d => h - y(d.value));
-            bars.exit().transition(t).attr("y", y(0)).attr("height", 0).remove();
-        }
-
-        function drawLineChart(data, useTransition) {
-            const { el, svg, x, y } = state.chartElements['#line-chart'];
-            const { chartMargin } = APP_CONFIG.dashboard;
-            const w = el.clientWidth - chartMargin.left - chartMargin.right, h = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors(), t = d3.transition().duration(useTransition ? 500 : 0);
-            const dData = d3.rollups(data, v => v.length, d => d.date).map(([k, v]) => ({date: d3.timeParse("%Y-%m-%d")(k), value: v})).sort((a, b) => a.date - b.date);
-            
-            if(!dData.length) return;
-            x.domain(d3.extent(dData, d => d.date)).range([0, w]);
-            y.domain([0, (d3.max(dData, d => d.value) || 10) * 1.1]).range([h, 0]);
-
-            svg.select(".x-axis").attr("transform", `translate(0, ${h})`).transition(t).call(d3.axisBottom(x).ticks(4).tickFormat(d3.timeFormat("%b %d")).tickSize(0).tickPadding(10));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y).ticks(4).tickSize(-w));
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor).style("font-family", "Plus Jakarta Sans");
-            svg.selectAll(".y-axis .tick line").style("stroke-dasharray", "3,3").style("opacity", 0.5);
-
-            const line = d3.line().x(d => x(d.date)).y(d => y(d.value)).curve(d3.curveMonotoneX);
-            const area = d3.area().x(d => x(d.date)).y0(h).y1(d => y(d.value)).curve(d3.curveMonotoneX);
-
-            const grad = svg.select("defs").html("").append("linearGradient").attr("id", "area-grad").attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
-            grad.append("stop").attr("offset", "0%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0.3);
-            grad.append("stop").attr("offset", "100%").attr("stop-color", colors.lineColor).attr("stop-opacity", 0);
-
-            svg.selectAll(".area-path").data([dData]).join("path").attr("class", "area-path").attr("fill", "url(#area-grad)").transition(t).attr("d", area);
-            svg.selectAll(".line-path").data([dData]).join("path").attr("class", "line-path").attr("fill", "none").attr("stroke", colors.lineColor).attr("stroke-width", 3).transition(t).attr("d", line);
-            
-            const dots = svg.selectAll(".dot").data(dData, d => d.date);
-            dots.enter().append("circle").attr("class", "dot").attr("r", 4).attr("fill", state.theme === 'dark' ? '#0f172a' : '#fff').attr("stroke", colors.lineColor).attr("stroke-width", 2)
-                .on("mouseover", function(e, d) { d3.select(this).attr("r", 6); showTooltip(`<strong>${d3.timeFormat("%b %d")(d.date)}</strong><br/>${d.value} Tickets`, e); })
-                .on("mouseout", function() { d3.select(this).attr("r", 4); hideTooltip(); })
-                .merge(dots).transition(t).attr("cx", d => x(d.date)).attr("cy", d => y(d.value));
-            dots.exit().remove();
-        }
-
-        function drawDonutChart(data, useTransition) {
-            const { el, svg } = state.chartElements['#donut-chart'];
-            const w = el.clientWidth, h = el.clientHeight, radius = Math.min(w, h) / 2.2;
-            const t = d3.transition().duration(useTransition ? 500 : 0);
-
-            svg.attr("transform", `translate(${w / 2}, ${h / 2})`);
-            const cData = d3.rollups(data, v => v.length, d => d.channel).map(([k,v]) => ({key:k, value:v}));
-            const color = d3.scaleOrdinal().domain(cData.map(d => d.key)).range(["#10b981", "#2dd4bf", "#14b8a6"]);
-            const pie = d3.pie().value(d => d.value).sort(null);
-            const arc = d3.arc().innerRadius(radius * 0.65).outerRadius(radius).cornerRadius(6).padAngle(0.02);
-            const arcHover = d3.arc().innerRadius(radius * 0.65).outerRadius(radius * 1.05).cornerRadius(6).padAngle(0.02);
-
-            const slices = svg.selectAll("path").data(pie(cData), d => d.data.key);
-            slices.enter().append("path").attr("fill", d => color(d.data.key))
-                .on("mouseover", function(e, d) { d3.select(this).transition().duration(200).attr("d", arcHover); showTooltip(`<strong>${d.data.key}</strong><br/>${d.data.value} Tickets`, e); })
-                .on("mousemove", (e) => state.tooltip.style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px"))
-                .on("mouseout", function() { d3.select(this).transition().duration(200).attr("d", arc); hideTooltip(); })
-                .each(function(d) { this._current = { startAngle: 0, endAngle: 0 }; })
-                .merge(slices).transition(t).attrTween("d", function(d) {
-                    const i = d3.interpolate(this._current, d); this._current = i(0); return t => arc(i(t));
+                    // Active nav link highlight
+                    const sections = ['hero','experience','skills','projects','impact','testimonials','contact'];
+                    let current = '';
+                    sections.forEach(id => {
+                        const el = document.getElementById(id);
+                        if (el && doc.scrollTop >= el.offsetTop - 120) current = id;
+                    });
+                    $$('.nav-link').forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+                    });
+                    scrollTicking = false;
                 });
-            slices.exit().transition(t).attrTween("d", function(d) {
-                const i = d3.interpolate(this._current, {startAngle: d.endAngle, endAngle: d.endAngle}); return t => arc(i(t));
-            }).remove();
-
-            const leg = d3.select("#donut-legend").html("");
-            const legItems = leg.selectAll(".leg-item").data(cData, d => d.key);
-            const legEnter = legItems.enter().append("div").attr("class", "flex items-center gap-3 text-slate-600 dark:text-slate-300");
-            legEnter.append("div").attr("class", "w-3 h-3 rounded-full shadow-sm shrink-0").style("background-color", d => color(d.key));
-            legEnter.append("span").attr("class", "font-bold text-[10px] uppercase tracking-widest").text(d => d.key);
-            legEnter.append("span").attr("class", "ml-2 text-slate-400 font-bold text-[10px]").text(d => d.value);
-        }
-
-        function updateAxesStyle(svg, colors) {
-            svg.selectAll(".domain, .tick line").style("stroke", colors.axisColor);
-            svg.selectAll(".tick text").style("fill", colors.textColor).style("font-family", "Plus Jakarta Sans");
-        }
-
-        function drawAgentChart(data, useTransition) {
-            const { el, svg, x, y } = state.chartElements['#agent-chart'];
-            const { chartMargin } = APP_CONFIG.dashboard;
-            const w = el.clientWidth - chartMargin.left - chartMargin.right, h = el.clientHeight - chartMargin.top - chartMargin.bottom;
-            const colors = getChartColors(), t = d3.transition().duration(useTransition ? 500 : 0);
-            const aData = d3.rollups(data, v => v.length, d => d.agent).map(([k, v]) => ({agent: k, value: v})).sort((a,b) => b.value - a.value).slice(0, 5);
-            
-            y.domain(aData.map(d => d.agent)).range([0, h]).padding(0.4);
-            x.domain([0, (d3.max(aData, d => d.value) || 10) * 1.1]).range([0, w]);
-
-            svg.select(".x-axis").attr("transform", `translate(0, ${h})`).transition(t).call(d3.axisBottom(x).ticks(4).tickSize(0).tickPadding(5));
-            svg.select(".y-axis").transition(t).call(d3.axisLeft(y).tickSize(0).tickPadding(10));
-            updateAxesStyle(svg, colors);
-            svg.select(".y-axis").selectAll(".domain").remove(); 
-            svg.select(".x-axis").selectAll(".domain").style("stroke", colors.axisColor);
-
-            const bars = svg.selectAll(".bar").data(aData, d => d.agent);
-            bars.enter().append("rect").attr("class", "bar").attr("fill", "#10b981").attr("rx", 6)
-                .attr("x", x(0)).attr("y", d => y(d.agent)).attr("width", 0).attr("height", y.bandwidth())
-                .on("mouseover", function(e, d) { d3.select(this).attr("fill", "#34d399"); showTooltip(`<strong>Agent ${d.agent}</strong><br/>${d.value} Resolutions`, e); })
-                .on("mousemove", (e) => state.tooltip.style("left", (e.pageX + 15) + "px").style("top", (e.pageY - 28) + "px"))
-                .on("mouseout", function() { d3.select(this).attr("fill", "#10b981"); hideTooltip(); })
-                .merge(bars).transition(t).attr("width", d => x(d.value)).attr("y", d => y(d.agent)).attr("height", y.bandwidth());
-            bars.exit().transition(t).attr("width", 0).remove();
-        }
-
-        function updateDashboard(team, useTransition = true) {
-            const today = new Date(), last7Days = new Date(today); last7Days.setDate(today.getDate() - 7);
-            const prevStart = new Date(today); prevStart.setDate(today.getDate() - 14);
-            const parseDate = d3.timeParse("%Y-%m-%d");
-
-            const bData = (team === "All") ? state.mockData : state.mockData.filter(d => d.team === team);
-            const curData = bData.filter(d => { const dt = parseDate(d.date); return dt >= last7Days && dt <= today; });
-            const prevData = bData.filter(d => { const dt = parseDate(d.date); return dt >= prevStart && dt < last7Days; });
-            
-            const curM = APP_CONFIG.dashboard.kpis.reduce((acc, k) => {
-                if(k.id === 'nps') acc.nps = Math.round(((curData.filter(d=>d.nps>=9).length - curData.filter(d=>d.nps<=6).length)/Math.max(1,curData.length))*100);
-                if(k.id === 'aht') acc.aht = Math.round(curData.reduce((a,c)=>a+c.handlingTime,0)/Math.max(1,curData.length));
-                if(k.id === 'fcr') acc.fcr = Math.round(curData.filter(d=>d.fcr).length/Math.max(1,curData.length)*100);
-                if(k.id === 'tickets') acc.tickets = curData.length;
-                return acc;
-            }, {});
-            const prevM = APP_CONFIG.dashboard.kpis.reduce((acc, k) => {
-                if(k.id === 'nps') acc.nps = Math.round(((prevData.filter(d=>d.nps>=9).length - prevData.filter(d=>d.nps<=6).length)/Math.max(1,prevData.length))*100);
-                if(k.id === 'aht') acc.aht = Math.round(prevData.reduce((a,c)=>a+c.handlingTime,0)/Math.max(1,prevData.length));
-                if(k.id === 'fcr') acc.fcr = Math.round(prevData.filter(d=>d.fcr).length/Math.max(1,prevData.length)*100);
-                if(k.id === 'tickets') acc.tickets = prevData.length;
-                return acc;
-            }, {});
-
-            APP_CONFIG.dashboard.kpis.forEach(k => {
-                const prev = prevM[k.id], cur = curM[k.id], el = $(`#kpi-${k.id}-change`);
-                if (prev === 0) el.textContent = 'vs Prev 7D';
-                else {
-                    const chg = ((cur - prev) / prev) * 100, isGood = (k.id==='aht'||k.id==='tickets') ? chg<=0 : chg>=0;
-                    el.innerHTML = `<span class="${isGood ? 'text-emerald-500' : 'text-rose-500'} flex items-center justify-center gap-1"><svg class="w-3 h-3 transform ${chg<0?'rotate-180':''}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>${Math.abs(chg).toFixed(1)}%</span>`;
-                }
-                const tEl = $(`#kpi-${k.id}`);
-                gsap.to(tEl, { textContent: cur, duration: useTransition?1:0, ease: "power2.out", snap: { textContent: 1 }, onUpdate: () => tEl.textContent = `${Math.round(parseFloat(tEl.textContent))}${k.unit}` });
-            });
-
-            drawBarChart(curData, useTransition); drawLineChart(curData, useTransition); drawDonutChart(curData, useTransition); drawAgentChart(curData, useTransition);
-        }
-
-        function initDashboard() {
-            if (state.dashboardInitialized) return;
-            initChart('#bar-chart', { x: d3.scaleBand(), y: d3.scaleLinear() }); initChart('#line-chart', { x: d3.scaleTime(), y: d3.scaleLinear() });
-            initChart('#donut-chart', {}); initChart('#agent-chart', { x: d3.scaleLinear(), y: d3.scaleBand() });
-            state.mockData = generateMockData(); updateDashboard("All", false); state.dashboardInitialized = true;
-        }
-
-        // Using event delegation for dynamic dashboard filters
-        $('#dashboard-filters').addEventListener('click', function(e) {
-            const btn = e.target.closest('.data-filter');
-            if (!btn) return;
-            
-            $$('.data-filter').forEach(b => {
-                b.classList.remove('is-active', 'bg-emerald-500', 'text-white', 'shadow-lg', 'pointer-events-none');
-                b.classList.add('glass', 'text-slate-600', 'dark:text-slate-300');
-            });
-            btn.classList.add('is-active', 'bg-emerald-500', 'text-white', 'shadow-lg', 'pointer-events-none');
-            btn.classList.remove('glass', 'text-slate-600', 'dark:text-slate-300');
-            updateDashboard(btn.dataset.team, true);
-        });
-
-        window.addEventListener("resize", () => {
-            if (!state.dashboardInitialized) return;
-            clearTimeout(state.resizeTimer); 
-            state.resizeTimer = setTimeout(() => {
-                const activeBtn = $('.data-filter.is-active');
-                if(activeBtn) updateDashboard(activeBtn.dataset.team, false);
-            }, 200);
-        });
-
-
+                scrollTicking = true;
+            }
+        }, { passive: true });
 
         // --- INIT ---
         populateContent();
+        populateImpact();
+        // Wire up mobile menu close after links are injected
+        $$('#mobile-menu .nav-link').forEach(link => link.onclick = () => $('#mobile-menu').classList.add('hidden'));
         updateTheme();
         setupAnimations();
         setupParticles();
         $('#current-year').textContent = new Date().getFullYear();
-        
-        ScrollTrigger.create({ trigger: "#dashboard", start: "top 75%", onEnter: initDashboard, once: true });
-        
+
+        ScrollTrigger.create({ trigger: '#impact', start: 'top 80%', onEnter: animateCounters, once: true });
+
         window.addEventListener('load', () => {
             const pre = $('#preloader');
             if (pre) { pre.classList.add('opacity-0'); setTimeout(() => pre.style.display = 'none', 500); }
